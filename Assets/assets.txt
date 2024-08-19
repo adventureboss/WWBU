@@ -1,0 +1,4 @@
+This directory is for globally neecessary assets.
+- title music
+- background music if we decide not to use specific audio for each room
+- fonts

@@ -1,0 +1,1 @@
+Items we can highlight and the player can click but do not get added to the player's inventory

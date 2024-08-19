@@ -1,0 +1,21 @@
+== Directory Structure ==
+
+I (stephen) may have overengineered this but I figured we could stay organized early and keep from
+stepping on each others toes because git and Godot are not always the best of friends.
+
+I stole pretty much all of this idea from DevDuck's video on how he organizes his project. It's not
+set in stone, but it might be helpful for us to get started: https://www.youtube.com/watch?v=4az0VX9ApcA
+
+In general, most things are going to end up in the entities directory. This is pretty much anything that's visible
+or any things that are specific to an entity. A room might be an entity and we should consider making it so we can 
+give that room it's own music if we want to so it might look like
+
+Entities
+ -> Environments
+  -> GreenHouse
+	 -> Audio
+	   -> somesound.mp3
+	 -> Sprite (for the look of the room)
+	 -> Items
+	
+Somehting like that. Still a lot to think about in terms of how to lay out our clues or interactable objects.

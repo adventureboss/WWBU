@@ -1,0 +1,2 @@
+Likely a single gd script for holding config info like volume levels or other
+things that can impact how the game runs or plays.

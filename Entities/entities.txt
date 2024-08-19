@@ -1,0 +1,10 @@
+Anything that can appear in the game world or is interactable by the player
+
+- items
+- navigation
+- ui
+etc.
+
+Player
+ - PlayerState
+   - PlayerState.gd

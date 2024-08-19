@@ -1,0 +1,2 @@
+This UI directory is for things that will display on the screen for the player to see and/or interact
+with.

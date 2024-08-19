@@ -1,0 +1,2 @@
+resources that are not specific to this game but could be potentially reused in other games.
+Great for copy/paste if we ever need it.
