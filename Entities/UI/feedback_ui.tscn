@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cn0l5edcjur5j"]
+
+[node name="FeedbackUI" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(960, 200)
+layout_mode = 1
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.593134, 0.593134, 0.593134, 1)

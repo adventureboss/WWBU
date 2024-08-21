@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://dlnnfto6a8v3l"]
+
+[ext_resource type="PackedScene" uid="uid://c8g1fuq5n6emy" path="res://Entities/UI/inventory_ui.tscn" id="1_yrpye"]
+[ext_resource type="PackedScene" uid="uid://6rnieq0sfws5" path="res://Entities/UI/direction_controls.tscn" id="2_tbafa"]
+[ext_resource type="PackedScene" uid="uid://swc1yu0aoten" path="res://Entities/UI/view_ui.tscn" id="3_tfduk"]
+[ext_resource type="PackedScene" uid="uid://cn0l5edcjur5j" path="res://Entities/UI/feedback_ui.tscn" id="4_nciu2"]
+
+[node name="Interface" type="Node2D"]
+
+[node name="UIContainer" type="HBoxContainer" parent="."]
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_constants/separation = 0
+
+[node name="LeftUI" type="VBoxContainer" parent="UIContainer"]
+custom_minimum_size = Vector2(320, 720)
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="InventoryUI" parent="UIContainer/LeftUI" instance=ExtResource("1_yrpye")]
+layout_mode = 2
+
+[node name="DirectionControls" parent="UIContainer/LeftUI" instance=ExtResource("2_tbafa")]
+layout_mode = 2
+
+[node name="RightUI" type="VBoxContainer" parent="UIContainer"]
+custom_minimum_size = Vector2(960, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/separation = 0
+
+[node name="ViewUI" parent="UIContainer/RightUI" instance=ExtResource("3_tfduk")]
+layout_mode = 2
+
+[node name="FeedbackUI" parent="UIContainer/RightUI" instance=ExtResource("4_nciu2")]
+layout_mode = 2

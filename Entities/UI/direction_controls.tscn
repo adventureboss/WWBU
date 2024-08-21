@@ -1,0 +1,39 @@
+[gd_scene load_steps=2 format=3 uid="uid://6rnieq0sfws5"]
+
+[ext_resource type="Texture2D" uid="uid://cnm0qdd783ixb" path="res://Entities/UI/inventory_background.png" id="1_yyqa6"]
+
+[node name="DirectionControls" type="Control"]
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 3
+anchors_preset = 0
+size_flags_vertical = 3
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 0
+offset_right = 320.0
+offset_bottom = 200.0
+texture = ExtResource("1_yyqa6")
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 0
+offset_left = 95.0
+offset_top = 54.0
+offset_right = 216.0
+offset_bottom = 126.0
+columns = 2
+
+[node name="Button" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "NORTH"
+
+[node name="Button2" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "EAST"
+
+[node name="Button3" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "SOUTH"
+
+[node name="Button4" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "WEST"

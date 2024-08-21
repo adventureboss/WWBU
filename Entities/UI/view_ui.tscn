@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://swc1yu0aoten"]
+
+[node name="ViewUI" type="Control"]
+custom_minimum_size = Vector2(0, 520)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(960, 520)
+layout_mode = 2
+offset_right = 960.0
+offset_bottom = 520.0
+color = Color(1.20327e-07, 0.350592, 0.350785, 1)
