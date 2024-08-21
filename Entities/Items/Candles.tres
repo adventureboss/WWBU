@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://n0mu2mq6o75i"]
+
+[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_jpry7"]
+[ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_vsnlu"]
+
+[resource]
+script = ExtResource("1_vsnlu")
+Sprite = ExtResource("1_jpry7")
+DisplayName = "A Pack of Birthday Candles"
