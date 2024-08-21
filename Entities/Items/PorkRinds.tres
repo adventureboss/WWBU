@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cubghtmvbnoql"]
+
+[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_hxko1"]
+[ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_plfbp"]
+
+[resource]
+script = ExtResource("1_plfbp")
+Sprite = ExtResource("1_hxko1")
+DisplayName = "Bag of Pork Rinds"

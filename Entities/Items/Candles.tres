@@ -6,4 +6,4 @@
 [resource]
 script = ExtResource("1_vsnlu")
 Sprite = ExtResource("1_jpry7")
-DisplayName = "A Pack of Birthday Candles"
+DisplayName = "Pack of Birthday Candles"

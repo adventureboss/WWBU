@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://2nluh4i06by7"]
+
+[ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_401xv"]
+[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_xm5aa"]
+
+[resource]
+script = ExtResource("1_401xv")
+Sprite = ExtResource("1_xm5aa")
+DisplayName = "Wine Bottle (Open)"
