@@ -7,6 +7,12 @@ signal item_removed(item: Item)
 func _ready() -> void:
 	pass # Replace with function body.
 
+func has_item(item: Item) -> bool:
+	return false
+	
+func clear():
+	pass
+
 func add_item(item: Item):
 	emit_signal("item_added", item)
 	
