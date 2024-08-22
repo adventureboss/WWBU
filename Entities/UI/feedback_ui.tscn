@@ -1,12 +1,66 @@
-[gd_scene format=3 uid="uid://cn0l5edcjur5j"]
+[gd_scene load_steps=4 format=3 uid="uid://cn0l5edcjur5j"]
+
+[ext_resource type="Script" path="res://Entities/UI/dialogue_bubble/balloon.gd" id="1_ejjx5"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_label.gd" id="1_oadsk"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="2_yujku"]
 
 [node name="FeedbackUI" type="Control"]
 layout_mode = 3
 anchors_preset = 0
+script = ExtResource("1_ejjx5")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 custom_minimum_size = Vector2(960, 200)
 layout_mode = 1
 offset_right = 40.0
 offset_bottom = 40.0
-color = Color(0.593134, 0.593134, 0.593134, 1)
+color = Color(0.0333155, 0.00422447, 0, 1)
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(960, 200)
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 200.0
+
+[node name="Responses" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+offset_right = 173.0
+offset_bottom = 56.0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 25
+
+[node name="ResponsesMenu" type="VBoxContainer" parent="Panel/Responses" node_paths=PackedStringArray("response_template")]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 8
+theme_override_constants/separation = 2
+script = ExtResource("2_yujku")
+response_template = NodePath("ResponseExample")
+
+[node name="ResponseExample" type="Button" parent="Panel/Responses/ResponsesMenu"]
+layout_mode = 2
+text = "Response example"
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/MarginContainer"]
+layout_mode = 2
+
+[node name="CharacterLabel" type="Label" parent="Panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Test Character"
+
+[node name="DialogueLabel" type="RichTextLabel" parent="Panel/MarginContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "The dialogue goes here"
+script = ExtResource("1_oadsk")
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
