@@ -21,10 +21,12 @@ func clear():
 func add_item(item: Item):
 	items[item] = true
 	emit_signal("item_added", item)
+	print("Item %s added" % item.DisplayName)
 	
 func remove_item(item: Item):
 	items.erase(item)
 	emit_signal("item_removed", item)
+	print("Item %s removed" % item.DisplayName)
 
 func can_combine_items(first: Item, other: Item) -> bool:
 	return _find_recipe(first, other) != null
