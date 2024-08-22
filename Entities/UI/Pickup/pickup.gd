@@ -2,6 +2,11 @@ extends TextureRect
 
 @export var item: Item
 
+@export var dialogue_resource: DialogueResource
+@export var dialogue_start: String = "start"
+
+@onready var dialogue_bubble = get_tree().get_first_node_in_group("dialogue_bubble")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	var state = PersistenceSystem.get_object_state(self, true) #True indicates the pickup is active in the world, false that it isn't
@@ -17,5 +22,7 @@ func pick_up():
 
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
-		if event.pressed:
+		if event.pressed: # need to put a timer or something in here to prevent single click triggering
+			dialogue_bubble.start(dialogue_resource, dialogue_start)
+		if event.double_click:
 			pick_up()
