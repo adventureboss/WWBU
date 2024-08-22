@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://dlnnfto6a8v3l"]
+[gd_scene load_steps=10 format=3 uid="uid://dlnnfto6a8v3l"]
 
 [ext_resource type="Script" path="res://Entities/UI/inventory_ui.gd" id="1_ofw8k"]
 [ext_resource type="Texture2D" uid="uid://cnm0qdd783ixb" path="res://Entities/UI/inventory_background.png" id="2_gdyel"]
 [ext_resource type="PackedScene" uid="uid://6rnieq0sfws5" path="res://Entities/UI/direction_controls.tscn" id="2_tbafa"]
-[ext_resource type="PackedScene" uid="uid://cn0l5edcjur5j" path="res://Entities/UI/feedback_ui.tscn" id="4_nciu2"]
+[ext_resource type="Script" path="res://Entities/Dialogues/dialogue_bubble.gd" id="4_2xt7w"]
+[ext_resource type="PackedScene" uid="uid://b82mptdsj4xi0" path="res://Entities/Items/interactable.tscn" id="5_beoei"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_label.gd" id="5_lgtok"]
+[ext_resource type="Resource" uid="uid://bt6mxeuex1kaf" path="res://Entities/Dialogues/flashlight.dialogue" id="6_lhryy"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="6_t8cb0"]
+[ext_resource type="Resource" uid="uid://bun11tkgi5hwf" path="res://Entities/Items/Flashlight.tres" id="6_tap1s"]
 
 [node name="Interface" type="Node2D"]
 
@@ -56,13 +61,87 @@ theme_override_constants/separation = 0
 [node name="ViewUI" type="Control" parent="UIContainer/RightUI"]
 custom_minimum_size = Vector2(0, 520)
 layout_mode = 2
+mouse_filter = 2
 
 [node name="ColorRect" type="ColorRect" parent="UIContainer/RightUI/ViewUI"]
 custom_minimum_size = Vector2(960, 520)
 layout_mode = 2
 offset_right = 960.0
 offset_bottom = 520.0
+mouse_filter = 2
 color = Color(1.20327e-07, 0.350592, 0.350785, 1)
 
-[node name="FeedbackUI" parent="UIContainer/RightUI" instance=ExtResource("4_nciu2")]
+[node name="Interactable" parent="UIContainer/RightUI/ViewUI" instance=ExtResource("5_beoei")]
+offset_left = 226.0
+offset_top = 232.0
+offset_right = 226.0
+offset_bottom = 232.0
+item = ExtResource("6_tap1s")
+dialogue_resource = ExtResource("6_lhryy")
+
+[node name="FeedbackUI" type="Node2D" parent="UIContainer/RightUI" groups=["dialogue_bubble"]]
+position = Vector2(0, 520)
+script = ExtResource("4_2xt7w")
+
+[node name="Balloon" type="Control" parent="UIContainer/RightUI/FeedbackUI"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(960, 200)
+layout_mode = 3
+anchors_preset = 0
+
+[node name="ColorRect" type="ColorRect" parent="UIContainer/RightUI/FeedbackUI/Balloon"]
+custom_minimum_size = Vector2(960, 200)
+layout_mode = 0
+offset_right = 960.0
+offset_bottom = 200.0
+color = Color(0, 0, 0, 1)
+
+[node name="Panel" type="Panel" parent="UIContainer/RightUI/FeedbackUI/Balloon"]
+layout_mode = 0
+
+[node name="DialogueContainer" type="MarginContainer" parent="UIContainer/RightUI/FeedbackUI/Balloon"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIContainer/RightUI/FeedbackUI/Balloon/DialogueContainer"]
 layout_mode = 2
+
+[node name="CharacterLabel" type="RichTextLabel" parent="UIContainer/RightUI/FeedbackUI/Balloon/DialogueContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "Character"
+
+[node name="DialogueLabel" type="RichTextLabel" parent="UIContainer/RightUI/FeedbackUI/Balloon/DialogueContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "Test Dialogue"
+script = ExtResource("5_lgtok")
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+
+[node name="ResponsesContainer" type="MarginContainer" parent="UIContainer/RightUI/FeedbackUI/Balloon"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+
+[node name="ResponsesMenu" type="Container" parent="UIContainer/RightUI/FeedbackUI/Balloon/ResponsesContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("6_t8cb0")
+
+[node name="Button" type="Button" parent="UIContainer/RightUI/FeedbackUI/Balloon/ResponsesContainer/ResponsesMenu"]
+layout_mode = 2
+text = "Response Button"

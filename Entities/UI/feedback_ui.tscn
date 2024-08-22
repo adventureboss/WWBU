@@ -1,12 +1,70 @@
-[gd_scene format=3 uid="uid://cn0l5edcjur5j"]
+[gd_scene load_steps=4 format=3 uid="uid://cn0l5edcjur5j"]
 
-[node name="FeedbackUI" type="Control"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_label.gd" id="1_kd8np"]
+[ext_resource type="Script" path="res://Entities/Dialogues/dialogue_bubble.gd" id="1_kyeet"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="2_g6ule"]
+
+[node name="FeedbackUI" type="Node2D"]
+script = ExtResource("1_kyeet")
+
+[node name="Balloon" type="Control" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(960, 200)
 layout_mode = 3
 anchors_preset = 0
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="ColorRect" type="ColorRect" parent="Balloon"]
 custom_minimum_size = Vector2(960, 200)
+offset_right = 960.0
+offset_bottom = 200.0
+color = Color(0, 0, 0, 1)
+
+[node name="Panel" type="Panel" parent="Balloon"]
+layout_mode = 0
+
+[node name="DialogueContainer" type="MarginContainer" parent="Balloon"]
 layout_mode = 1
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0.593134, 0.593134, 0.593134, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/DialogueContainer"]
+layout_mode = 2
+
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/DialogueContainer/VBoxContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+text = "Character"
+
+[node name="DialogueLabel" type="RichTextLabel" parent="Balloon/DialogueContainer/VBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_vertical = 3
+text = "Test Dialogue"
+script = ExtResource("1_kd8np")
+skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+
+[node name="ResponsesContainer" type="MarginContainer" parent="Balloon"]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 10
+
+[node name="ResponsesMenu" type="Container" parent="Balloon/ResponsesContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+script = ExtResource("2_g6ule")
+
+[node name="Button" type="Button" parent="Balloon/ResponsesContainer/ResponsesMenu"]
+layout_mode = 2
+text = "Response Button"
