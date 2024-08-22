@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://b62u7quc5dgun"]
+
+[ext_resource type="Resource" uid="uid://dgj2niaho5sbp" path="res://Entities/Items/Lighter.tres" id="1_6cavx"]
+[ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_s71oy"]
+[ext_resource type="Script" path="res://Entities/Items/recipe.gd" id="2_l8dl7"]
+[ext_resource type="Resource" uid="uid://n0mu2mq6o75i" path="res://Entities/Items/Candles.tres" id="2_qsugt"]
+[ext_resource type="Resource" uid="uid://n5ro0wiiigjw" path="res://Entities/Items/LitCandles.tres" id="4_rpqg5"]
+
+[resource]
+script = ExtResource("2_l8dl7")
+item = ExtResource("1_6cavx")
+other = ExtResource("2_qsugt")
+produces = Array[ExtResource("1_s71oy")]([ExtResource("1_6cavx"), ExtResource("4_rpqg5")])

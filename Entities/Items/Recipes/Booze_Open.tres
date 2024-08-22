@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://hfmjyqri2jqs"]
+
+[ext_resource type="Resource" uid="uid://cibx4clraql1k" path="res://Entities/Items/Booze_ScrewInCork.tres" id="1_dlhew"]
+[ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_s40nw"]
+[ext_resource type="Script" path="res://Entities/Items/recipe.gd" id="2_kcq3l"]
+[ext_resource type="Resource" uid="uid://dsujiens4qpr1" path="res://Entities/Items/Hammer.tres" id="2_q7buw"]
+[ext_resource type="Resource" uid="uid://2nluh4i06by7" path="res://Entities/Items/Booze_Open.tres" id="4_vieid"]
+[ext_resource type="Resource" uid="uid://dlecfy3r6pdft" path="res://Entities/Items/Screw.tres" id="5_ykqqc"]
+
+[resource]
+script = ExtResource("2_kcq3l")
+item = ExtResource("1_dlhew")
+other = ExtResource("2_q7buw")
+produces = Array[ExtResource("1_s40nw")]([ExtResource("4_vieid"), ExtResource("2_q7buw"), ExtResource("5_ykqqc")])
