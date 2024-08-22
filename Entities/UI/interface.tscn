@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlnnfto6a8v3l"]
+[gd_scene load_steps=5 format=3 uid="uid://dlnnfto6a8v3l"]
 
 [ext_resource type="Script" path="res://Entities/UI/inventory_ui.gd" id="1_ofw8k"]
 [ext_resource type="Texture2D" uid="uid://cnm0qdd783ixb" path="res://Entities/UI/inventory_background.png" id="2_gdyel"]
 [ext_resource type="PackedScene" uid="uid://6rnieq0sfws5" path="res://Entities/UI/direction_controls.tscn" id="2_tbafa"]
-[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="3_m884e"]
 [ext_resource type="PackedScene" uid="uid://cn0l5edcjur5j" path="res://Entities/UI/feedback_ui.tscn" id="4_nciu2"]
 
 [node name="Interface" type="Node2D"]
@@ -44,82 +43,6 @@ theme_override_constants/margin_bottom = 17
 layout_direction = 2
 layout_mode = 2
 columns = 3
-
-[node name="Slot1" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-texture = ExtResource("3_m884e")
-expand_mode = 1
-
-[node name="Slot2" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Slot3" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Slot4" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Slot5" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Slot6" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Slot7" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Slot8" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Slot9" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Slot10" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Slot11" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Slot12" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Slot13" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Slot14" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-expand_mode = 1
-
-[node name="Slot15" type="TextureRect" parent="UIContainer/LeftUI/InventoryUI/MarginContainer/InventoryGrid"]
-custom_minimum_size = Vector2(90, 90)
-layout_mode = 2
-expand_mode = 1
 
 [node name="DirectionControls" parent="UIContainer/LeftUI" instance=ExtResource("2_tbafa")]
 layout_mode = 2
