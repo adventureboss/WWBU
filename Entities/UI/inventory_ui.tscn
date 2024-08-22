@@ -2,7 +2,22 @@
 
 [ext_resource type="Texture2D" uid="uid://cnm0qdd783ixb" path="res://Entities/UI/inventory_background.png" id="1_w5qyx"]
 [ext_resource type="Texture2D" uid="uid://byegslptaosk0" path="res://Entities/UI/inventory_empty.png" id="2_lq1bx"]
-[ext_resource type="Script" path="res://Entities/UI/slot.gd" id="3_4hemd"]
+
+[sub_resource type="GDScript" id="GDScript_w8w0k"]
+script/source = "extends Button
+class_name InventorySlot
+
+@export var Item: Item
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
 
 [node name="InventoryUI" type="Control"]
 custom_minimum_size = Vector2(0, 520)
@@ -34,74 +49,74 @@ columns = 3
 [node name="Slot" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
 
 [node name="Slot2" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
 
 [node name="Slot3" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
 
 [node name="Slot4" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
 
 [node name="Slot5" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
 
 [node name="Slot6" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
 
 [node name="Slot7" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
 
 [node name="Slot8" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
 
 [node name="Slot9" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
 
 [node name="Slot10" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
 
 [node name="Slot11" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
 
 [node name="Slot12" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
 
 [node name="Slot13" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
 
 [node name="Slot14" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
 
 [node name="Slot15" type="Button" parent="MarginContainer/InventoryGrid"]
 layout_mode = 2
 icon = ExtResource("2_lq1bx")
-script = ExtResource("3_4hemd")
+script = SubResource("GDScript_w8w0k")
