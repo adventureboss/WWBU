@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://1lo83hf88q04"]
+
+[ext_resource type="Script" path="res://Entities/UI/Pickup/pickup.gd" id="1_ofomb"]
+[ext_resource type="Resource" uid="uid://n0mu2mq6o75i" path="res://Entities/Items/Candles.tres" id="2_4rkqs"]
+
+[node name="Pickup" type="TextureRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1190.0
+offset_bottom = -630.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ofomb")
+item = ExtResource("2_4rkqs")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]
