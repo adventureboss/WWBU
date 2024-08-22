@@ -1,3 +1,4 @@
+@tool
 extends TextureRect
 
 @export var item: Item
@@ -9,7 +10,12 @@ extends TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	var state = PersistenceSystem.get_object_state(self, true) #True indicates the pickup is active in the world, false that it isn't
+	var state
+	if not Engine.is_editor_hint():
+		state = PersistenceSystem.get_object_state(self, true) #True indicates the pickup is active in the world, false that it isn't
+	else:
+		state = true
+	
 	if state:
 		self.texture = item.Sprite
 	else:
@@ -23,6 +29,7 @@ func pick_up():
 func _on_gui_input(event: InputEvent) -> void:
 	if event is InputEventMouseButton:
 		if event.pressed: # need to put a timer or something in here to prevent single click triggering
-			dialogue_bubble.start(dialogue_resource, dialogue_start)
+			if dialogue_resource != null:
+				dialogue_bubble.start(dialogue_resource, dialogue_start)
 		if event.double_click:
 			pick_up()

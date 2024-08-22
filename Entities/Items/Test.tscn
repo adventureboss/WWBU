@@ -1,0 +1,10 @@
+[gd_scene load_steps=4 format=3 uid="uid://j84a6uhugu62"]
+
+[ext_resource type="Script" path="res://Entities/Items/test.gd" id="1_gw3o5"]
+[ext_resource type="Resource" uid="uid://brjb6rhyl2c48" path="res://Entities/Items/Booze_Closed.tres" id="2_3dpfs"]
+[ext_resource type="Resource" uid="uid://dlecfy3r6pdft" path="res://Entities/Items/Screw.tres" id="3_7ow45"]
+
+[node name="Test" type="Node2D"]
+script = ExtResource("1_gw3o5")
+item = ExtResource("2_3dpfs")
+other = ExtResource("3_7ow45")

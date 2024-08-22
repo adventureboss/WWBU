@@ -53,8 +53,10 @@ layout_direction = 2
 layout_mode = 2
 columns = 3
 
-[node name="DirectionControls" parent="UIContainer/LeftUI" instance=ExtResource("2_tbafa")]
+[node name="DirectionControls" parent="UIContainer/LeftUI" node_paths=PackedStringArray("room_parent") instance=ExtResource("2_tbafa")]
 layout_mode = 2
+room_parent = NodePath("../../RightUI/ViewUI")
+active_room_background = Color(0.940371, 0.88069, 0, 1)
 
 [node name="RightUI" type="VBoxContainer" parent="UIContainer"]
 custom_minimum_size = Vector2(960, 0)
