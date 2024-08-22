@@ -1,0 +1,28 @@
+[gd_scene load_steps=4 format=3 uid="uid://ciqat6rc8dvml"]
+
+[ext_resource type="PackedScene" uid="uid://1lo83hf88q04" path="res://Entities/UI/Pickup/pickup.tscn" id="1_c0bs8"]
+[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="2_ngekn"]
+[ext_resource type="Resource" uid="uid://dsipjvb2kqgii" path="res://Entities/Items/Knife.tres" id="2_nx2ra"]
+
+[node name="Kitchen" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+custom_minimum_size = Vector2(960, 520)
+offset_right = 960.0
+offset_bottom = 520.0
+color = Color(0.402054, 0.00186189, 0.68746, 1)
+
+[node name="Pickup" parent="ColorRect" instance=ExtResource("1_c0bs8")]
+layout_mode = 1
+offset_left = 832.0
+offset_top = 391.0
+offset_right = 0.0
+offset_bottom = -1.0
+texture = ExtResource("2_ngekn")
+item = ExtResource("2_nx2ra")
