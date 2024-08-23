@@ -20,6 +20,7 @@ config/icon="res://icon.svg"
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 InventorySystem="*res://Entities/Items/inventory_system.gd"
 PersistenceSystem="*res://Entities/persistence_system.gd"
+SceneManager="*res://Utilities/World/SceneManager/SceneManager.gd"
 
 [dialogue_manager]
 

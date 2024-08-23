@@ -187,6 +187,7 @@ offset_right = 494.0
 offset_bottom = -154.0
 grow_horizontal = 2
 grow_vertical = 0
+mouse_filter = 2
 
 [node name="ResponsesMenu" type="VBoxContainer" parent="UIContainer/RightUI/Balloon/Responses" node_paths=PackedStringArray("response_template")]
 unique_name_in_owner = true
