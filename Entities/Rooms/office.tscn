@@ -1,7 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://c3ev2lg66syva"]
+[gd_scene load_steps=5 format=3 uid="uid://c3ev2lg66syva"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_rnopy"]
 [ext_resource type="Texture2D" uid="uid://ve8w8spirqjo" path="res://Scenes/office.png" id="2_15vch"]
+[ext_resource type="Script" path="res://Entities/Items/interact.gd" id="3_2cctv"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0xpe"]
+bg_color = Color(0.356863, 0.65098, 0.72549, 0.482353)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
 
 [node name="Office" type="Control"]
 layout_mode = 3
@@ -14,10 +22,19 @@ script = ExtResource("1_rnopy")
 dialogue_start = "office"
 
 [node name="TextureRect" type="TextureRect" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+layout_mode = 0
+offset_right = 962.0
+offset_bottom = 520.0
 texture = ExtResource("2_15vch")
+
+[node name="OpenSafe" type="Button" parent="TextureRect" groups=["highlight_item"]]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 598.0
+offset_top = 417.0
+offset_right = 675.0
+offset_bottom = 490.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_q0xpe")
+script = ExtResource("3_2cctv")
+
+[connection signal="pressed" from="TextureRect/OpenSafe" to="TextureRect/OpenSafe" method="_on_pressed"]
