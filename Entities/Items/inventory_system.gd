@@ -7,6 +7,24 @@ signal item_removed(item: Item)
 
 var items = {} #Idiomatic set
 
+# Named item fields so that items can be referenced from dialogues
+var BOOZE_CLOSED: Item = preload("res://Entities/Items/Booze_Closed.tres")
+var BOOZE_OPEN: Item = preload("res://Entities/Items/Booze_Open.tres")
+var BOOZE_SCREWED: Item = preload("res://Entities/Items/Booze_ScrewInCork.tres")
+var CANDLES: Item = preload("res://Entities/Items/Candles.tres")
+var FLASHLIGHT: Item = preload("res://Entities/Items/Flashlight.tres")
+var HAMMER: Item = preload("res://Entities/Items/Hammer.tres")
+var KAZOO: Item = preload("res://Entities/Items/Kazoo.tres")
+var KNIFE: Item = preload("res://Entities/Items/Knife.tres")
+var LIGHTER: Item = preload("res://Entities/Items/Lighter.tres")
+var CANDLES_LIT: Item = preload("res://Entities/Items/LitCandles.tres")
+var PORKRINDS: Item = preload("res://Entities/Items/PorkRinds.tres")
+var RITUAL_TAPE: Item = preload("res://Entities/Items/RitualTape.tres")
+var ROAD_FLARE: Item = preload("res://Entities/Items/RoadFlare.tres")
+var SAFE_NOTE: Item = preload("res://Entities/Items/SafeNote.tres")
+var SAFE_NOTE_TRANSLATED: Item = preload("res://Entities/Items/SafeNote_Translated.tres")
+var SCREW: Item = preload("res://Entities/Items/Screw.tres")
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	_load_recipes("res://Entities/Items/Recipes/")
