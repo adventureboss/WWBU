@@ -23,7 +23,7 @@ PersistenceSystem="*res://Entities/persistence_system.gd"
 
 [dialogue_manager]
 
-general/balloon_path="res://Entities/UI/feedback_ui.tscn"
+general/balloon_path="res://Utilities/Debug/balloon.tscn"
 
 [display]
 
@@ -45,4 +45,4 @@ dialogue_bubble="group to make this easier to find"
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Utilities/Debug/example_dialogue_test.dialogue", "res://Entities/Dialogues/flashlight.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Utilities/Debug/example_dialogue_test.dialogue", "res://Entities/Dialogues/flashlight.dialogue", "res://Entities/Dialogues/candles.dialogue")

@@ -1,4 +1,4 @@
-extends Node2D
+extends Control
 
 ## The action to use for advancing the dialogue
 @export var next_action: StringName = &"ui_accept"
@@ -62,7 +62,10 @@ var dialogue_line: DialogueLine:
 
 		# Wait for input
 		if dialogue_line.responses.size() > 0:
+			print("responses to show")
 			balloon.focus_mode = Control.FOCUS_NONE
+			dialogue_label.hide()
+			character_label.hide()
 			responses_menu.show()
 		elif dialogue_line.time != "":
 			var time = dialogue_line.text.length() * 0.02 if dialogue_line.time == "auto" else dialogue_line.time.to_float()
@@ -133,6 +136,7 @@ func _on_balloon_gui_input(event: InputEvent) -> void:
 		var mouse_was_clicked: bool = event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT and event.is_pressed()
 		var skip_button_was_pressed: bool = event.is_action_pressed(skip_action)
 		if mouse_was_clicked or skip_button_was_pressed:
+			print("clicked")
 			get_viewport().set_input_as_handled()
 			dialogue_label.skip_typing()
 			return
