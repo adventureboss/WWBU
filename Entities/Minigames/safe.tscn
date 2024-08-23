@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://cf2lw4corahn7"]
+[gd_scene load_steps=9 format=3 uid="uid://cf2lw4corahn7"]
 
 [ext_resource type="Script" path="res://Entities/Minigames/safe_game.gd" id="1_lythv"]
 [ext_resource type="Script" path="res://Entities/Minigames/safe.gd" id="1_sxs4w"]
@@ -13,6 +13,192 @@ border_width_bottom = 5
 border_color = Color(0.438818, 0.439005, 0.0553737, 1)
 shadow_color = Color(0, 0, 0, 0.905882)
 shadow_size = 16
+
+[sub_resource type="Animation" id="Animation_rubs5"]
+resource_name = "success"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SuccessFail:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["SUCCESS"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SuccessFail:theme_override_colors/default_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0.898039, 0, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SuccessFail:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(528, 288)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SuccessFail:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SuccessFail:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_2lgtt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SuccessFail:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["SUCCESS"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SuccessFail:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SuccessFail:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(586, 315)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SuccessFail:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+
+[sub_resource type="Animation" id="Animation_1pq2k"]
+resource_name = "fail"
+length = 1.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SuccessFail:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": ["FAIL"]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("SuccessFail:theme_override_colors/default_color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0.694118, 0.109804, 0.133333, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("SuccessFail:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(586, 315)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("SuccessFail:rotation")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("SuccessFail:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1, 1.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_hf74f"]
+_data = {
+"RESET": SubResource("Animation_2lgtt"),
+"fail": SubResource("Animation_1pq2k"),
+"success": SubResource("Animation_rubs5")
+}
 
 [node name="Safe" type="CanvasLayer"]
 script = ExtResource("1_lythv")
@@ -147,6 +333,21 @@ offset_right = 446.0
 offset_bottom = 603.0
 text = "Close"
 
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_hf74f")
+}
+
+[node name="SuccessFail" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 586.0
+offset_top = 315.0
+offset_right = 799.0
+offset_bottom = 402.0
+theme_override_colors/default_color = Color(0.694118, 0.109804, 0.133333, 1)
+theme_override_font_sizes/normal_font_size = 49
+text = "SUCCESS"
+
 [connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button" to="KeypadContainer/MarginContainer/GridContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button2" to="KeypadContainer/MarginContainer/GridContainer/Button2" method="_on_pressed"]
 [connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button3" to="KeypadContainer/MarginContainer/GridContainer/Button3" method="_on_pressed"]
@@ -160,3 +361,4 @@ text = "Close"
 [connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button11" to="KeypadContainer/MarginContainer/GridContainer/Button11" method="_on_pressed"]
 [connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button12" to="KeypadContainer/MarginContainer/GridContainer/Button12" method="_on_pressed"]
 [connection signal="button_up" from="Control/Button" to="." method="_on_button_button_up"]
+[connection signal="animation_finished" from="AnimationPlayer" to="KeypadContainer" method="_on_animation_player_animation_finished"]
