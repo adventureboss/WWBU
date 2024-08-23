@@ -1,0 +1,30 @@
+~ foyer
+You're standing in the Foyer.
+	Lisa and Mark are not on good terms and David is ... not well.
+=> END
+
+~ kitchen
+You're standing in the Kitchen.
+	Linoleum floor. Classy.
+=> END
+
+~ bedroom_1
+You're in the first bedroom.
+	Nice decor choices.
+=> END
+
+~ bedroom_2
+You're in the second bedroom.
+	There's a desk, clock, and a safe in the corner.
+	I wonder what's in there
+=> END!
+
+~ garage
+You're in the garage.
+	There are some tools, our car, and an odd musty smell.
+=> END!
+
+~ car
+You're in the car.
+	Finally got in. If I had the key's I'd just go home.
+=> END

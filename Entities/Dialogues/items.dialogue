@@ -1,0 +1,27 @@
+import "res://Entities/Dialogues/rooms.dialogue" as rooms
+
+~ room_translator
+if active_room_name == "foyer":
+	=> rooms/foyer
+if active_room_name == "kitchen":
+	=> rooms/kitchen
+if active_room_name == "bedroom 1":
+	=> rooms/bedroom_1
+if active_room_name == "bedroom 2":
+	=> rooms/bedroom_2
+if active_room_name == "garage":
+	=> rooms/garage
+if active_room_name == "car":
+	=> rooms/car
+=> END
+
+~ candles
+A set of birthday candles
+	It's a one and a two. Or a two and a one.
+	Happy Birthday, David ... I guess
+=> room_translator
+
+~ flashlight
+It's a flashlight
+	It lights things up
+=> room_translator

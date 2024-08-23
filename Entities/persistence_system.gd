@@ -2,6 +2,10 @@ extends Node
 
 var rooms = {}
 var active_room
+var active_room_name
+var dialogue_bubble
+
+signal dialogue_bubble_ready
 
 func get_object_state(node: Node, default: Variant) -> Variant:
 	if not rooms.has(active_room):
@@ -26,5 +30,6 @@ func set_object_state(node: Node, value: Variant):
 	print("State for object at path %s set to %s" % [path, value])
 	state[path] = value
 
-func set_active_room(id: String):
+func set_active_room(id: String, name: String):
 	active_room = id
+	active_room_name = name.to_lower()
