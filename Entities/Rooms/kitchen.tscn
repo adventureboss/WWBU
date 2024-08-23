@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://ciqat6rc8dvml"]
+[gd_scene load_steps=6 format=3 uid="uid://ciqat6rc8dvml"]
 
 [ext_resource type="PackedScene" uid="uid://1lo83hf88q04" path="res://Entities/UI/Pickup/pickup.tscn" id="1_c0bs8"]
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_pg65l"]
 [ext_resource type="Texture2D" uid="uid://dd05b2eum836s" path="res://Scenes/kitchen.png" id="1_veo13"]
 [ext_resource type="Resource" uid="uid://dsipjvb2kqgii" path="res://Entities/Items/Knife.tres" id="2_nx2ra"]
+[ext_resource type="Resource" uid="uid://brjb6rhyl2c48" path="res://Entities/Items/Booze_Closed.tres" id="6_j34ok"]
 
 [node name="Kitchen" type="Control"]
 layout_mode = 3
@@ -21,11 +22,28 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_veo13")
 
-[node name="Pickup" parent="TextureRect" instance=ExtResource("1_c0bs8")]
+[node name="Knife" parent="TextureRect" instance=ExtResource("1_c0bs8")]
 layout_mode = 1
-offset_left = 832.0
-offset_top = 391.0
-offset_right = 920.0
-offset_bottom = 479.0
-stretch_mode = 2
+offset_left = 651.0
+offset_top = 321.0
+offset_right = -239.0
+offset_bottom = -124.0
 item = ExtResource("2_nx2ra")
+dialogue_start = "knife"
+
+[node name="Booze" parent="TextureRect" instance=ExtResource("1_c0bs8")]
+layout_mode = 1
+offset_left = 147.0
+offset_top = 298.0
+offset_right = -756.0
+offset_bottom = -165.0
+item = ExtResource("6_j34ok")
+dialogue_start = "booze"
+
+[node name="Candles" parent="TextureRect" instance=ExtResource("1_c0bs8")]
+layout_mode = 1
+offset_left = 71.0
+offset_top = 450.0
+offset_right = -805.0
+offset_bottom = -11.0
+dialogue_start = "candles"
