@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://6rnieq0sfws5"]
+[gd_scene load_steps=9 format=3 uid="uid://6rnieq0sfws5"]
 
 [ext_resource type="Script" path="res://Entities/UI/room_controls.gd" id="1_bjx2i"]
 [ext_resource type="Texture2D" uid="uid://cnm0qdd783ixb" path="res://Entities/UI/inventory_background.png" id="1_yyqa6"]
 [ext_resource type="Script" path="res://Entities/UI/room_button.gd" id="3_ctdyi"]
 [ext_resource type="PackedScene" uid="uid://b2kllhl8485ma" path="res://Entities/Rooms/foyer.tscn" id="4_g1inf"]
 [ext_resource type="PackedScene" uid="uid://ciqat6rc8dvml" path="res://Entities/Rooms/kitchen.tscn" id="5_8030a"]
+[ext_resource type="PackedScene" uid="uid://c3ev2lg66syva" path="res://Entities/Rooms/office.tscn" id="6_x6cad"]
+[ext_resource type="PackedScene" uid="uid://dlg51g3e2hb8a" path="res://Entities/Rooms/bedroom.tscn" id="7_n6r6r"]
+[ext_resource type="PackedScene" uid="uid://b0lkfmr68vflr" path="res://Entities/Rooms/car.tscn" id="8_v4p0i"]
 
 [node name="DirectionControls" type="Control" node_paths=PackedStringArray("starting_room")]
 custom_minimum_size = Vector2(0, 200)
@@ -13,7 +16,7 @@ anchors_preset = 0
 size_flags_vertical = 3
 script = ExtResource("1_bjx2i")
 active_room_background = Color(0.941176, 0.882353, 0, 1)
-starting_room = NodePath("Foyer")
+starting_room = NodePath("GridContainer/Foyer")
 
 [node name="NinePatchRect" type="NinePatchRect" parent="."]
 layout_mode = 0
@@ -21,28 +24,7 @@ offset_right = 320.0
 offset_bottom = 200.0
 texture = ExtResource("1_yyqa6")
 
-[node name="Foyer" type="Button" parent="."]
-layout_mode = 2
-offset_left = 124.0
-offset_top = 135.0
-offset_right = 175.0
-offset_bottom = 166.0
-text = "Foyer"
-script = ExtResource("3_ctdyi")
-room_scene = ExtResource("4_g1inf")
-
-[node name="Kitchen" type="Button" parent="."]
-layout_mode = 2
-offset_left = 117.0
-offset_top = 86.0
-offset_right = 184.0
-offset_bottom = 117.0
-text = "Kitchen"
-script = ExtResource("3_ctdyi")
-room_scene = ExtResource("5_8030a")
-
 [node name="GridContainer" type="GridContainer" parent="."]
-visible = false
 layout_mode = 0
 offset_left = 95.0
 offset_top = 54.0
@@ -50,21 +32,38 @@ offset_right = 216.0
 offset_bottom = 126.0
 columns = 2
 
-[node name="Button" type="Button" parent="GridContainer"]
+[node name="Foyer" type="Button" parent="GridContainer"]
 layout_mode = 2
-text = "NORTH"
+text = "Foyer"
+script = ExtResource("3_ctdyi")
+room_scene = ExtResource("4_g1inf")
 
-[node name="Button2" type="Button" parent="GridContainer"]
+[node name="Kitchen" type="Button" parent="GridContainer"]
 layout_mode = 2
-text = "EAST"
+text = "Kitchen"
+script = ExtResource("3_ctdyi")
+room_scene = ExtResource("5_8030a")
 
-[node name="Button3" type="Button" parent="GridContainer"]
+[node name="Office" type="Button" parent="GridContainer"]
 layout_mode = 2
-text = "SOUTH"
+text = "Office"
+script = ExtResource("3_ctdyi")
+room_scene = ExtResource("6_x6cad")
 
-[node name="Button4" type="Button" parent="GridContainer"]
+[node name="Bedroom" type="Button" parent="GridContainer"]
 layout_mode = 2
-text = "WEST"
+text = "Bedroom"
+script = ExtResource("3_ctdyi")
+room_scene = ExtResource("7_n6r6r")
 
-[connection signal="room_change_requested" from="Foyer" to="." method="change_room"]
-[connection signal="room_change_requested" from="Kitchen" to="." method="change_room"]
+[node name="Car" type="Button" parent="GridContainer"]
+layout_mode = 2
+text = "Car"
+script = ExtResource("3_ctdyi")
+room_scene = ExtResource("8_v4p0i")
+
+[connection signal="room_change_requested" from="GridContainer/Foyer" to="." method="change_room"]
+[connection signal="room_change_requested" from="GridContainer/Kitchen" to="." method="change_room"]
+[connection signal="room_change_requested" from="GridContainer/Office" to="." method="change_room"]
+[connection signal="room_change_requested" from="GridContainer/Bedroom" to="." method="change_room"]
+[connection signal="room_change_requested" from="GridContainer/Car" to="." method="change_room"]
