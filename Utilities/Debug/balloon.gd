@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 ## The action to use for advancing the dialogue
 @export var next_action: StringName = &"ui_accept"
@@ -34,6 +34,7 @@ var dialogue_line: DialogueLine:
 
 		# The dialogue has finished so close the balloon
 		if not next_dialogue_line:
+			queue_free()
 			return
 
 		# If the node isn't ready yet then none of the labels will be ready yet either
@@ -77,7 +78,7 @@ var dialogue_line: DialogueLine:
 
 
 func _ready() -> void:
-	balloon.show()
+	balloon.hide()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
 
 	# If the responses menu doesn't have a next action set, use this one

@@ -1,18 +1,70 @@
-[gd_scene load_steps=8 format=3 uid="uid://dlnnfto6a8v3l"]
+[gd_scene load_steps=12 format=3 uid="uid://dlnnfto6a8v3l"]
 
 [ext_resource type="Script" path="res://Entities/UI/inventory_ui.gd" id="1_ofw8k"]
 [ext_resource type="Texture2D" uid="uid://cnm0qdd783ixb" path="res://Entities/UI/inventory_background.png" id="2_gdyel"]
 [ext_resource type="PackedScene" uid="uid://6rnieq0sfws5" path="res://Entities/UI/direction_controls.tscn" id="2_tbafa"]
-[ext_resource type="Script" path="res://Entities/Dialogues/dialogue_bubble.gd" id="4_2xt7w"]
-[ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_label.gd" id="5_lgtok"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="6_t8cb0"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="7_i6mw8"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="8_q02wu"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_8kxio"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
 border_width_left = 3
 border_width_top = 3
 border_width_right = 3
 border_width_bottom = 3
+border_color = Color(0.329412, 0.329412, 0.329412, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ri4m3"]
+bg_color = Color(0.121569, 0.121569, 0.121569, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(1, 1, 1, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e0njw"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_color = Color(0.6, 0.6, 0.6, 1)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uy0d5"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
+[sub_resource type="Theme" id="Theme_qq3yp"]
+default_font_size = 20
+Button/styles/disabled = SubResource("StyleBoxFlat_spyqn")
+Button/styles/focus = SubResource("StyleBoxFlat_ri4m3")
+Button/styles/hover = SubResource("StyleBoxFlat_e0njw")
+Button/styles/normal = SubResource("StyleBoxFlat_e0njw")
+MarginContainer/constants/margin_bottom = 15
+MarginContainer/constants/margin_left = 30
+MarginContainer/constants/margin_right = 30
+MarginContainer/constants/margin_top = 15
+Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
 [node name="Interface" type="Node2D"]
 
@@ -77,80 +129,77 @@ offset_bottom = 520.0
 mouse_filter = 2
 color = Color(1.20327e-07, 0.350592, 0.350785, 1)
 
-[node name="FeedbackUI" type="Node2D" parent="UIContainer/RightUI" groups=["dialogue_bubble"]]
-position = Vector2(0, 520)
-script = ExtResource("4_2xt7w")
-
-[node name="Balloon" type="Control" parent="UIContainer/RightUI/FeedbackUI"]
-unique_name_in_owner = true
-custom_minimum_size = Vector2(960, 200)
-layout_mode = 3
-anchors_preset = 0
-
-[node name="ColorRect" type="ColorRect" parent="UIContainer/RightUI/FeedbackUI/Balloon"]
-visible = false
-custom_minimum_size = Vector2(960, 200)
-layout_mode = 0
-offset_right = 960.0
-offset_bottom = 200.0
-color = Color(0, 0, 0, 1)
-
-[node name="Panel" type="Panel" parent="UIContainer/RightUI/FeedbackUI/Balloon"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_8kxio")
-
-[node name="DialogueContainer" type="MarginContainer" parent="UIContainer/RightUI/FeedbackUI/Balloon"]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 10
-theme_override_constants/margin_right = 10
-theme_override_constants/margin_bottom = 10
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UIContainer/RightUI/FeedbackUI/Balloon/DialogueContainer"]
-layout_mode = 2
-
-[node name="CharacterLabel" type="RichTextLabel" parent="UIContainer/RightUI/FeedbackUI/Balloon/DialogueContainer/VBoxContainer"]
-unique_name_in_owner = true
-modulate = Color(1, 1, 1, 0.537255)
-custom_minimum_size = Vector2(0, 30)
-layout_mode = 2
-theme_override_font_sizes/normal_font_size = 20
-text = "Character"
-
-[node name="DialogueLabel" type="RichTextLabel" parent="UIContainer/RightUI/FeedbackUI/Balloon/DialogueContainer/VBoxContainer"]
+[node name="Balloon" type="Control" parent="UIContainer/RightUI" groups=["dialogue_bubble"]]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
-text = "Test Dialogue"
-script = ExtResource("5_lgtok")
-skip_pause_at_abbreviations = PackedStringArray("Mr", "Mrs", "Ms", "Dr", "etc", "eg", "ex")
+mouse_filter = 1
+theme = SubResource("Theme_qq3yp")
+script = ExtResource("7_i6mw8")
 
-[node name="ResponsesContainer" type="MarginContainer" parent="UIContainer/RightUI/FeedbackUI/Balloon"]
-visible = false
+[node name="Panel" type="Panel" parent="UIContainer/RightUI/Balloon"]
+clip_children = 2
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/margin_left = 20
-theme_override_constants/margin_top = 10
+mouse_filter = 1
 
-[node name="ResponsesMenu" type="Container" parent="UIContainer/RightUI/FeedbackUI/Balloon/ResponsesContainer"]
+[node name="Dialogue" type="MarginContainer" parent="UIContainer/RightUI/Balloon/Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="UIContainer/RightUI/Balloon/Panel/Dialogue"]
+layout_mode = 2
+
+[node name="CharacterLabel" type="RichTextLabel" parent="UIContainer/RightUI/Balloon/Panel/Dialogue/VBoxContainer"]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.501961)
+layout_mode = 2
+mouse_filter = 1
+bbcode_enabled = true
+text = "Character"
+fit_content = true
+scroll_active = false
+
+[node name="DialogueLabel" parent="UIContainer/RightUI/Balloon/Panel/Dialogue/VBoxContainer" instance=ExtResource("8_q02wu")]
 unique_name_in_owner = true
 layout_mode = 2
-script = ExtResource("6_t8cb0")
+size_flags_vertical = 3
+text = "Dialogue..."
 
-[node name="Button" type="Button" parent="UIContainer/RightUI/FeedbackUI/Balloon/ResponsesContainer/ResponsesMenu"]
+[node name="Responses" type="MarginContainer" parent="UIContainer/RightUI/Balloon"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -147.0
+offset_top = -558.0
+offset_right = 494.0
+offset_bottom = -154.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+
+[node name="ResponsesMenu" type="VBoxContainer" parent="UIContainer/RightUI/Balloon/Responses" node_paths=PackedStringArray("response_template")]
+unique_name_in_owner = true
 layout_mode = 2
-text = "Response Button"
+size_flags_vertical = 8
+theme_override_constants/separation = 2
+script = ExtResource("6_t8cb0")
+response_template = NodePath("ResponseExample")
+
+[node name="ResponseExample" type="Button" parent="UIContainer/RightUI/Balloon/Responses/ResponsesMenu"]
+layout_mode = 2
+text = "Response example"
+
+[connection signal="gui_input" from="UIContainer/RightUI/Balloon" to="UIContainer/RightUI/Balloon" method="_on_balloon_gui_input"]
+[connection signal="response_selected" from="UIContainer/RightUI/Balloon/Responses/ResponsesMenu" to="UIContainer/RightUI/Balloon" method="_on_responses_menu_response_selected"]

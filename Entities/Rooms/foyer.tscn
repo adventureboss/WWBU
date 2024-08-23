@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://b2kllhl8485ma"]
+[gd_scene load_steps=4 format=3 uid="uid://b2kllhl8485ma"]
 
 [ext_resource type="PackedScene" uid="uid://1lo83hf88q04" path="res://Entities/UI/Pickup/pickup.tscn" id="1_30hve"]
-[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="2_4xcue"]
+[ext_resource type="Texture2D" uid="uid://gr1cxq8rc5fl" path="res://Scenes/main_room.png" id="1_rv80l"]
+[ext_resource type="Resource" uid="uid://saffq1v5dge8" path="res://Entities/Dialogues/candles.dialogue" id="2_t2670"]
 
 [node name="Foyer" type="Control"]
 layout_mode = 3
@@ -11,16 +12,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="ColorRect" type="ColorRect" parent="."]
-custom_minimum_size = Vector2(960, 520)
+[node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
-offset_right = 960.0
-offset_bottom = 520.0
-color = Color(0.402054, 0.00186189, 0.68746, 1)
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_rv80l")
 
-[node name="Pickup" parent="ColorRect" instance=ExtResource("1_30hve")]
+[node name="Pickup" parent="TextureRect" instance=ExtResource("1_30hve")]
 layout_mode = 1
 offset_left = -1.0
 offset_right = -833.0
 offset_bottom = -392.0
-texture = ExtResource("2_4xcue")
+dialogue_resource = ExtResource("2_t2670")
