@@ -23,9 +23,9 @@ texture = ExtResource("1_veo13")
 
 [node name="Pickup" parent="TextureRect" instance=ExtResource("1_c0bs8")]
 layout_mode = 1
-offset_left = 832.0
-offset_top = 391.0
-offset_right = 920.0
-offset_bottom = 479.0
-stretch_mode = 2
+offset_left = 771.0
+offset_top = 354.0
+offset_right = -63.0
+offset_bottom = -38.0
 item = ExtResource("2_nx2ra")
+dialogue_start = "knife"

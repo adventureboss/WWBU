@@ -3,7 +3,7 @@ extends TextureRect
 
 @export var item: Item
 
-@export var dialogue_resource: DialogueResource
+@export var dialogue_resource: DialogueResource = load("res://Entities/Dialogues/items.dialogue")
 @export var dialogue_start: String = "start"
 
 @onready var dialogue_bubble = get_tree().get_first_node_in_group("dialogue_bubble")
