@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3ev2lg66syva"]
+[gd_scene load_steps=7 format=3 uid="uid://c3ev2lg66syva"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_rnopy"]
 [ext_resource type="Texture2D" uid="uid://ve8w8spirqjo" path="res://Scenes/office.png" id="2_15vch"]
 [ext_resource type="Script" path="res://Entities/Items/interact.gd" id="3_2cctv"]
 [ext_resource type="PackedScene" uid="uid://1lo83hf88q04" path="res://Entities/UI/Pickup/pickup.tscn" id="3_aaw48"]
 [ext_resource type="Resource" uid="uid://dlecfy3r6pdft" path="res://Entities/Items/Screw.tres" id="4_6ruf8"]
-[ext_resource type="Resource" uid="uid://cea6fwhue3qs5" path="res://Entities/Dialogues/items.dialogue" id="5_kturg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0xpe"]
 bg_color = Color(0.356863, 0.65098, 0.72549, 0.482353)
@@ -37,7 +36,6 @@ offset_top = 442.0
 offset_right = -753.0
 offset_bottom = -45.0
 item = ExtResource("4_6ruf8")
-dialogue_resource = ExtResource("5_kturg")
 dialogue_start = "screw"
 
 [node name="OpenSafe" type="Button" parent="TextureRect" groups=["highlight_item"]]

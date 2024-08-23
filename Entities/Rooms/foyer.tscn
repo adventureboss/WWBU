@@ -1,9 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://b2kllhl8485ma"]
+[gd_scene load_steps=9 format=3 uid="uid://b2kllhl8485ma"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_8f0w4"]
 [ext_resource type="PackedScene" uid="uid://1lo83hf88q04" path="res://Entities/UI/Pickup/pickup.tscn" id="1_30hve"]
 [ext_resource type="Texture2D" uid="uid://gr1cxq8rc5fl" path="res://Scenes/main_room.png" id="1_rv80l"]
-[ext_resource type="Resource" uid="uid://cea6fwhue3qs5" path="res://Entities/Dialogues/items.dialogue" id="3_q5dbv"]
 [ext_resource type="Script" path="res://Entities/npc.gd" id="5_cbahj"]
 [ext_resource type="Resource" uid="uid://cga7mmef6xi77" path="res://Entities/Dialogues/lisa.dialogue" id="6_t5qpw"]
 [ext_resource type="Resource" uid="uid://n0mu2mq6o75i" path="res://Entities/Items/Candles.tres" id="7_do1n4"]
@@ -32,7 +31,6 @@ offset_left = 1.0
 offset_top = 2.0
 offset_right = -831.0
 offset_bottom = -390.0
-dialogue_resource = ExtResource("3_q5dbv")
 dialogue_start = "candles"
 
 [node name="Mark" type="Control" parent="Background"]

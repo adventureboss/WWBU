@@ -1,12 +1,20 @@
+import "res://Entities/Dialogues/items.dialogue" as items
+
 ~ start
 Lisa paces the living room arms crossed a look of worry over her face as you approach
-Lisa: "Hey, how goes the search?"
-
+Lisa: Hey, how goes the search?
 - Good
+	Lisa: Good enough to be done with this, I hope. 
 - Bad
+	Lisa: At least your not having to share oxygen with this idiot
 - I give up
+	Lisa: I guess we're all just gonna die now? Get back to it!
+=> items/room_translator
+
 
 ~ german_note
 # Add an interaction here for when you are holding the note
-Lisa: "Hey! Is that note in german?? I spent a semester in Munich, gimme that"
-=> END
+Lisa: Hey! Is that note in german?? I spent a semester in Munich, gimme that
+do add_item(SAFE_NOTE_TRANSLATED)
+Lisa: I translated it for you. It should make more sense now.
+=> items/room_translator
