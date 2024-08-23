@@ -79,6 +79,8 @@ var dialogue_line: DialogueLine:
 func _ready() -> void:
 	balloon.show()
 	Engine.get_singleton("DialogueManager").mutated.connect(_on_mutated)
+	PersistenceSystem.dialogue_bubble = get_tree().get_first_node_in_group("dialogue_bubble")
+	PersistenceSystem.emit_signal("dialogue_bubble_ready")
 
 	# If the responses menu doesn't have a next action set, use this one
 	if responses_menu.next_action.is_empty():

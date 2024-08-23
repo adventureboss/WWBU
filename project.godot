@@ -26,6 +26,7 @@ SceneManager="*res://Utilities/World/SceneManager/SceneManager.gd"
 [dialogue_manager]
 
 general/balloon_path="res://Utilities/Debug/balloon.tscn"
+general/states=["PersistenceSystem"]
 
 [display]
 
