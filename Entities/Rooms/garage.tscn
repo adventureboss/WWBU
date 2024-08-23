@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://cvrufgoyvkeqh"]
+[gd_scene load_steps=4 format=3 uid="uid://cvrufgoyvkeqh"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_3055q"]
 [ext_resource type="Texture2D" uid="uid://bsvbi71x4h1k0" path="res://Scenes/garage.png" id="2_bf6ip"]
+[ext_resource type="Script" path="res://Entities/Rooms/button-test.gd" id="3_6y3r4"]
 
 [node name="Garage" type="Control"]
 layout_mode = 3
@@ -21,3 +22,20 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("2_bf6ip")
+
+[node name="Button" type="Button" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -44.0
+offset_top = -31.0
+offset_right = 44.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "OPEN CAR"
+script = ExtResource("3_6y3r4")
+
+[connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]
