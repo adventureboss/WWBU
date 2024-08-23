@@ -1,9 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://b2kllhl8485ma"]
+[gd_scene load_steps=10 format=3 uid="uid://b2kllhl8485ma"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_8f0w4"]
 [ext_resource type="PackedScene" uid="uid://1lo83hf88q04" path="res://Entities/UI/Pickup/pickup.tscn" id="1_30hve"]
 [ext_resource type="Texture2D" uid="uid://gr1cxq8rc5fl" path="res://Scenes/main_room.png" id="1_rv80l"]
 [ext_resource type="Resource" uid="uid://cea6fwhue3qs5" path="res://Entities/Dialogues/items.dialogue" id="3_q5dbv"]
+[ext_resource type="Script" path="res://Entities/npc.gd" id="5_cbahj"]
+[ext_resource type="Resource" uid="uid://cga7mmef6xi77" path="res://Entities/Dialogues/lisa.dialogue" id="6_t5qpw"]
+[ext_resource type="Resource" uid="uid://n0mu2mq6o75i" path="res://Entities/Items/Candles.tres" id="7_do1n4"]
+[ext_resource type="Resource" uid="uid://bvqfce8qh2w7f" path="res://Entities/Items/SafeNote.tres" id="7_npgyr"]
+[ext_resource type="Resource" uid="uid://dt44wpd33umol" path="res://Entities/Dialogues/mark.dialogue" id="8_j1c3a"]
 
 [node name="Foyer" type="Control"]
 layout_mode = 3
@@ -15,16 +20,43 @@ grow_vertical = 2
 script = ExtResource("1_8f0w4")
 dialogue_start = "foyer"
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Background" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_rv80l")
 
-[node name="Pickup" parent="TextureRect" instance=ExtResource("1_30hve")]
+[node name="Candles" parent="Background" instance=ExtResource("1_30hve")]
 layout_mode = 1
 offset_left = -1.0
 offset_right = -833.0
 offset_bottom = -392.0
 dialogue_resource = ExtResource("3_q5dbv")
 dialogue_start = "candles"
+
+[node name="Mark" type="Control" parent="Background"]
+anchors_preset = 0
+offset_left = 429.0
+offset_top = 113.0
+offset_right = 560.0
+offset_bottom = 462.0
+script = ExtResource("5_cbahj")
+dialogue_resource = ExtResource("8_j1c3a")
+item_titles = {
+ExtResource("7_do1n4"): "candles"
+}
+
+[node name="Lisa" type="Control" parent="Background"]
+anchors_preset = 0
+offset_left = 282.0
+offset_top = 140.0
+offset_right = 379.0
+offset_bottom = 462.0
+script = ExtResource("5_cbahj")
+dialogue_resource = ExtResource("6_t5qpw")
+item_titles = {
+ExtResource("7_npgyr"): "german_note"
+}
+
+[connection signal="gui_input" from="Background/Mark" to="Background/Mark" method="_on_gui_input"]
+[connection signal="gui_input" from="Background/Lisa" to="Background/Lisa" method="_on_gui_input"]

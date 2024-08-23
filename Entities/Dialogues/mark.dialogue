@@ -6,6 +6,8 @@ Mark: "I'm freaking out man... I'M FREAKING OUT!"
 # Add an interaction here for when you are holding the candles
 Mark: "Hey man are those candles? You need a light?"
 - YES
+	Mark: "Here, take this."
+	do add_item(LIGHTER)
 - Of Course!
 - YESTERDAY!!
 => END
