@@ -1,5 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://cf2lw4corahn7"]
+[gd_scene load_steps=5 format=3 uid="uid://cf2lw4corahn7"]
 
+[ext_resource type="Script" path="res://Entities/Minigames/safe_game.gd" id="1_lythv"]
 [ext_resource type="Script" path="res://Entities/Minigames/safe.gd" id="1_sxs4w"]
 [ext_resource type="Script" path="res://Entities/Minigames/safe_button.gd" id="2_ixrfm"]
 
@@ -14,6 +15,7 @@ shadow_color = Color(0, 0, 0, 0.905882)
 shadow_size = 16
 
 [node name="Safe" type="CanvasLayer"]
+script = ExtResource("1_lythv")
 
 [node name="KeypadContainer" type="Control" parent="."]
 unique_name_in_owner = true
@@ -131,6 +133,20 @@ layout_mode = 2
 text = "*"
 script = ExtResource("2_ixrfm")
 
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 396.0
+offset_top = 572.0
+offset_right = 446.0
+offset_bottom = 603.0
+text = "Close"
+
 [connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button" to="KeypadContainer/MarginContainer/GridContainer/Button" method="_on_pressed"]
 [connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button2" to="KeypadContainer/MarginContainer/GridContainer/Button2" method="_on_pressed"]
 [connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button3" to="KeypadContainer/MarginContainer/GridContainer/Button3" method="_on_pressed"]
@@ -143,3 +159,4 @@ script = ExtResource("2_ixrfm")
 [connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button10" to="KeypadContainer/MarginContainer/GridContainer/Button10" method="_on_pressed"]
 [connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button11" to="KeypadContainer/MarginContainer/GridContainer/Button11" method="_on_pressed"]
 [connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button12" to="KeypadContainer/MarginContainer/GridContainer/Button12" method="_on_pressed"]
+[connection signal="button_up" from="Control/Button" to="." method="_on_button_button_up"]
