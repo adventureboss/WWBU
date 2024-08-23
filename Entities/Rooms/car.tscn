@@ -1,10 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://b0lkfmr68vflr"]
+[gd_scene load_steps=6 format=3 uid="uid://b0lkfmr68vflr"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_cef15"]
 [ext_resource type="Texture2D" uid="uid://cqhntwybqucrg" path="res://Scenes/car.png" id="2_5yldc"]
 [ext_resource type="PackedScene" uid="uid://1lo83hf88q04" path="res://Entities/UI/Pickup/pickup.tscn" id="3_fle31"]
 [ext_resource type="Resource" uid="uid://cubghtmvbnoql" path="res://Entities/Items/PorkRinds.tres" id="4_3ntgf"]
-[ext_resource type="Resource" uid="uid://cea6fwhue3qs5" path="res://Entities/Dialogues/items.dialogue" id="5_fd6sk"]
 [ext_resource type="Resource" uid="uid://d2bghjtmq1ald" path="res://Entities/Items/RoadFlare.tres" id="6_tj18c"]
 
 [node name="Car" type="Control"]
@@ -32,7 +31,6 @@ offset_top = 307.0
 offset_right = -618.0
 offset_bottom = -139.0
 item = ExtResource("4_3ntgf")
-dialogue_resource = ExtResource("5_fd6sk")
 dialogue_start = "pork_rinds"
 
 [node name="RoadFlare" parent="TextureRect" instance=ExtResource("3_fle31")]
@@ -42,5 +40,4 @@ offset_top = 448.0
 offset_right = -365.0
 offset_bottom = -11.0
 item = ExtResource("6_tj18c")
-dialogue_resource = ExtResource("5_fd6sk")
 dialogue_start = "road_flare"
