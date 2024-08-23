@@ -62,7 +62,6 @@ var dialogue_line: DialogueLine:
 
 		# Wait for input
 		if dialogue_line.responses.size() > 0:
-			print("responses to show")
 			balloon.focus_mode = Control.FOCUS_NONE
 			dialogue_label.hide()
 			character_label.hide()
