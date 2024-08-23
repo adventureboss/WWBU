@@ -13,6 +13,7 @@ offset_bottom = -630.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_docqi")
+expand_mode = 1
 script = ExtResource("1_ofomb")
 item = ExtResource("2_4rkqs")
 
