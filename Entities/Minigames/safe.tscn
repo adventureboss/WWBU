@@ -1,0 +1,145 @@
+[gd_scene load_steps=4 format=3 uid="uid://cf2lw4corahn7"]
+
+[ext_resource type="Script" path="res://Entities/Minigames/safe.gd" id="1_sxs4w"]
+[ext_resource type="Script" path="res://Entities/Minigames/safe_button.gd" id="2_ixrfm"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2sk57"]
+bg_color = Color(0.140447, 0.140447, 0.140447, 1)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0.438818, 0.439005, 0.0553737, 1)
+shadow_color = Color(0, 0, 0, 0.905882)
+shadow_size = 16
+
+[node name="Safe" type="CanvasLayer"]
+
+[node name="KeypadContainer" type="Control" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_sxs4w")
+
+[node name="Panel" type="Panel" parent="KeypadContainer"]
+custom_minimum_size = Vector2(500, 500)
+layout_mode = 2
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -250.0
+offset_top = -250.0
+offset_right = 250.0
+offset_bottom = 250.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2sk57")
+
+[node name="MarginContainer" type="MarginContainer" parent="KeypadContainer"]
+layout_mode = 0
+offset_right = 100.0
+theme_override_constants/margin_left = 100
+theme_override_constants/margin_top = 40
+theme_override_constants/margin_right = 100
+theme_override_constants/margin_bottom = 50
+
+[node name="GridContainer" type="GridContainer" parent="KeypadContainer/MarginContainer"]
+layout_mode = 2
+columns = 3
+
+[node name="Button" type="Button" parent="KeypadContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "1"
+script = ExtResource("2_ixrfm")
+
+[node name="Button2" type="Button" parent="KeypadContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "2"
+script = ExtResource("2_ixrfm")
+
+[node name="Button3" type="Button" parent="KeypadContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "3"
+script = ExtResource("2_ixrfm")
+
+[node name="Button4" type="Button" parent="KeypadContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "4"
+script = ExtResource("2_ixrfm")
+
+[node name="Button5" type="Button" parent="KeypadContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "5"
+script = ExtResource("2_ixrfm")
+
+[node name="Button6" type="Button" parent="KeypadContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "6"
+script = ExtResource("2_ixrfm")
+
+[node name="Button7" type="Button" parent="KeypadContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "7"
+script = ExtResource("2_ixrfm")
+
+[node name="Button8" type="Button" parent="KeypadContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "8"
+script = ExtResource("2_ixrfm")
+
+[node name="Button9" type="Button" parent="KeypadContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "9"
+script = ExtResource("2_ixrfm")
+
+[node name="Button10" type="Button" parent="KeypadContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "#"
+script = ExtResource("2_ixrfm")
+
+[node name="Button11" type="Button" parent="KeypadContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "0"
+script = ExtResource("2_ixrfm")
+
+[node name="Button12" type="Button" parent="KeypadContainer/MarginContainer/GridContainer"]
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 2
+text = "*"
+script = ExtResource("2_ixrfm")
+
+[connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button" to="KeypadContainer/MarginContainer/GridContainer/Button" method="_on_pressed"]
+[connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button2" to="KeypadContainer/MarginContainer/GridContainer/Button2" method="_on_pressed"]
+[connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button3" to="KeypadContainer/MarginContainer/GridContainer/Button3" method="_on_pressed"]
+[connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button4" to="KeypadContainer/MarginContainer/GridContainer/Button4" method="_on_pressed"]
+[connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button5" to="KeypadContainer/MarginContainer/GridContainer/Button5" method="_on_pressed"]
+[connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button6" to="KeypadContainer/MarginContainer/GridContainer/Button6" method="_on_pressed"]
+[connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button7" to="KeypadContainer/MarginContainer/GridContainer/Button7" method="_on_pressed"]
+[connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button8" to="KeypadContainer/MarginContainer/GridContainer/Button8" method="_on_pressed"]
+[connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button9" to="KeypadContainer/MarginContainer/GridContainer/Button9" method="_on_pressed"]
+[connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button10" to="KeypadContainer/MarginContainer/GridContainer/Button10" method="_on_pressed"]
+[connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button11" to="KeypadContainer/MarginContainer/GridContainer/Button11" method="_on_pressed"]
+[connection signal="pressed" from="KeypadContainer/MarginContainer/GridContainer/Button12" to="KeypadContainer/MarginContainer/GridContainer/Button12" method="_on_pressed"]
