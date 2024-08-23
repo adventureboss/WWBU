@@ -2,8 +2,9 @@ import "res://Entities/Dialogues/items.dialogue" as items
 
 
 ~ start
-Mark's hands are shaking as he puffs smoke from a nearly spent cigarett
-Mark: "I'm freaking out man... I'M FREAKING OUT!"
+Mark's hands are shaking as he puffs smoke from a nearly spent cigarette
+Mark: "I'm freaking out man... [b]I'M FREAKING OUT![b]"
+=> items/room_translator
 
 ~ candles
 # Add an interaction here for when you are holding the candles
