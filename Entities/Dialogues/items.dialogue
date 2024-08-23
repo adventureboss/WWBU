@@ -31,6 +31,16 @@ A bottle of wine
 	It's currently corked
 => room_translator
 
+~ booze_with_screw
+A bottle of wine with a screw jammed in the cork
+	Grandpa would be so proud
+=> room_translator
+
+~ booze_open
+An open bottle of wine
+	Maybe I should just drink it for myself?
+=> room_translator
+
 ~ hammer
 A hammer
 	When all your problems look like nails
@@ -65,6 +75,14 @@ An unused road flare
 A sturdy looking safe
 	There must be a way to open it
 => room_translator
+
+~ safe_note
+It's some kind of note
+	I have no idea what it says. It's all in German?
+	
+~ safe_note_translated
+It's a translated note
+	There's a very poorly written poem on it.
 
 ~ screw
 A loose screw
