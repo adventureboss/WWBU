@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://1lo83hf88q04"]
+[gd_scene load_steps=5 format=3 uid="uid://1lo83hf88q04"]
 
 [ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_docqi"]
 [ext_resource type="Script" path="res://Entities/UI/Pickup/pickup.gd" id="1_ofomb"]
 [ext_resource type="Resource" uid="uid://n0mu2mq6o75i" path="res://Entities/Items/Candles.tres" id="2_4rkqs"]
+[ext_resource type="Resource" uid="uid://cea6fwhue3qs5" path="res://Entities/Dialogues/items.dialogue" id="4_fsj0u"]
 
 [node name="Pickup" type="TextureRect"]
 anchors_preset = 15
@@ -16,5 +17,6 @@ texture = ExtResource("1_docqi")
 expand_mode = 1
 script = ExtResource("1_ofomb")
 item = ExtResource("2_4rkqs")
+dialogue_resource = ExtResource("4_fsj0u")
 
 [connection signal="gui_input" from="." to="." method="_on_gui_input"]
