@@ -48,4 +48,4 @@ dialogue_bubble="group to make this easier to find"
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://Utilities/Debug/example_dialogue_test.dialogue", "res://Entities/Dialogues/flashlight.dialogue", "res://Entities/Dialogues/candles.dialogue", "res://Entities/Dialogues/items.dialogue", "res://Entities/Dialogues/rooms.dialogue")
+locale/translations_pot_files=PackedStringArray("res://Utilities/Debug/example_dialogue_test.dialogue", "res://Entities/Dialogues/flashlight.dialogue", "res://Entities/Dialogues/candles.dialogue", "res://Entities/Dialogues/cold_open.dialogue", "res://Entities/Dialogues/mark_lisa_opening.dialogue", "res://Entities/Dialogues/ritual_tape.dialogue", "res://Entities/Dialogues/booze.dialogue", "res://Entities/Dialogues/road_flare.dialogue", "res://Entities/Dialogues/knife.dialogue", "res://Entities/Dialogues/pork_rinds.dialogue", "res://Entities/Dialogues/screw.dialogue", "res://Entities/Dialogues/hammer.dialogue", "res://Entities/Dialogues/kazoo.dialogue", "res://Entities/Dialogues/safe.dialogue", "res://Entities/Dialogues/mark.dialogue", "res://Entities/Dialogues/lisa.dialogue")

@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://d0rwbgopxf6dy"
+path="res://.godot/imported/knife.dialogue-2de5eea6c4922ef6f46231bf12d9dfe3.tres"
+
+[deps]
+
+source_file="res://Entities/Dialogues/knife.dialogue"
+dest_files=["res://.godot/imported/knife.dialogue-2de5eea6c4922ef6f46231bf12d9dfe3.tres"]
+
+[params]
+
+defaults=true

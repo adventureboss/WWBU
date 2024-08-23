@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://bcywyfesdios8"
+path="res://.godot/imported/cold_open.dialogue-0b0b37c7d5cf68e464f3322982a21f49.tres"
+
+[deps]
+
+source_file="res://Entities/Dialogues/cold_open.dialogue"
+dest_files=["res://.godot/imported/cold_open.dialogue-0b0b37c7d5cf68e464f3322982a21f49.tres"]
+
+[params]
+
+defaults=true
