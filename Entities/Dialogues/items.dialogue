@@ -25,3 +25,48 @@ A set of birthday candles
 It's a flashlight
 	It lights things up
 => room_translator
+
+~ booze
+A bottle of wine
+	It's currently corked
+=> room_translator
+
+~ hammer
+A hammer
+	When all your problems look like nails
+=> room_translator
+
+~ kazoo
+A Kazoo?
+	doot doot doot
+=> room_translator
+
+~ knife
+A large kitchen knife
+	It's sharper than it looks
+=> room_translator
+
+~ pork_rinds
+A bag of porkrinds
+	These would have probably been delicious if I could stomach the thought of food right now.
+=> room_translator
+
+~ ritual_tape
+A cassette tape marked on the front with "Ritual Music"
+	... a little on the nose don't you think?
+=> room_translator
+
+~ road_flare
+An unused road flare
+	Usually these things are used to call for help... I don't think help is coming this time
+=> room_translator
+
+~ safe
+A sturdy looking safe
+	There must be a way to open it
+=> room_translator
+
+~ screw
+A loose screw
+	Seems useful enough
+=> room_translator

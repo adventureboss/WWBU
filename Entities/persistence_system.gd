@@ -6,6 +6,7 @@ var active_room_name
 var dialogue_bubble
 
 signal dialogue_bubble_ready
+signal car_opened
 
 func get_object_state(node: Node, default: Variant) -> Variant:
 	if not rooms.has(active_room):

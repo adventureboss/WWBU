@@ -5,12 +5,14 @@ class_name DirectionControls
 @export var active_room_background: Color
 @export var starting_room: RoomButton
 
+@onready var car: Button = %Car
+
 var active_room: RoomButton
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	change_room(starting_room)
-	
+	PersistenceSystem.connect("car_opened", _on_car_opened)
 
 # May want to deactivate current (with some traveling placeholder behind it), do other stuff, then activate new with an animation
 func change_room(button: RoomButton):
@@ -29,3 +31,7 @@ func change_room(button: RoomButton):
 	
 	active_room = button
 	active_room.show_active()
+
+
+func _on_car_opened():
+	car.visible = true
