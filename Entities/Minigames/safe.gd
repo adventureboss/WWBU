@@ -3,6 +3,10 @@ extends Control
 var combination: String = "4783"
 var keypresses: Array[String]
 
+@onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
+@onready var success_fail: RichTextLabel = $"../SuccessFail"
+@onready var button: Button = $"../Control/Button"
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -14,7 +18,6 @@ func _process(delta: float) -> void:
 
 
 func press_button(button) -> void:
-	print(button)
 	if len(keypresses) < 4:
 		keypresses.append(button)
 	if len(keypresses) == 4:
@@ -23,6 +26,17 @@ func press_button(button) -> void:
 func check_solution():
 	if "".join(keypresses) == combination:
 		print("opened it!") #add a sound and success state
+		PersistenceSystem.safe_opened = true
+		success_fail.visible = true
+		animation_player.play("success")
 	else:
 		print("failed")
+		success_fail.visible = true
+		animation_player.play("fail")
 		keypresses = []
+
+
+func _on_animation_player_animation_finished(anim_name: StringName) -> void:
+	success_fail.visible = false
+	if PersistenceSystem.safe_opened:
+		button.emit_signal("button_up")

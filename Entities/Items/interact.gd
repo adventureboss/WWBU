@@ -15,5 +15,8 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	var safe_minigame: Node = preload("res://Entities/Minigames/safe.tscn").instantiate()
-	interface.add_child(safe_minigame)
+	if PersistenceSystem.safe_opened:
+		print("safe already open") #FIX: need some dialogue
+	else:
+		var safe_minigame: Node = preload("res://Entities/Minigames/safe.tscn").instantiate()
+		interface.add_child(safe_minigame)
