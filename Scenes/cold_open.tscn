@@ -1,0 +1,105 @@
+[gd_scene load_steps=7 format=3 uid="uid://dnxo1bwvp5kke"]
+
+[ext_resource type="Script" path="res://Scenes/cold_open.gd" id="1_vxj0h"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_76dsy"]
+bg_color = Color(0, 0, 0, 1)
+
+[sub_resource type="Animation" id="Animation_nmb47"]
+resource_name = "fade_in_date"
+length = 3.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Date:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_j0ssw"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Date:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColdOpenText:visible_characters")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_1214q"]
+resource_name = "write_cold_open"
+length = 4.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColdOpenText:visible_characters")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0, 29]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3142h"]
+_data = {
+"RESET": SubResource("Animation_j0ssw"),
+"fade_in_date": SubResource("Animation_nmb47"),
+"write_cold_open": SubResource("Animation_1214q")
+}
+
+[node name="ColdOpen" type="Node2D"]
+script = ExtResource("1_vxj0h")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(1280, 720)
+offset_right = 1280.0
+offset_bottom = 720.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_76dsy")
+
+[node name="Date" type="RichTextLabel" parent="."]
+offset_left = 524.0
+offset_top = 284.0
+offset_right = 786.0
+offset_bottom = 360.0
+theme_override_font_sizes/normal_font_size = 50
+text = "July, 1989"
+
+[node name="ColdOpenText" type="RichTextLabel" parent="."]
+offset_left = 449.0
+offset_top = 222.0
+offset_right = 913.0
+offset_bottom = 474.0
+text = "This is some cold open text"
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="TextAnimations" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_3142h")
+}
+autoplay = "fade_in_date"
