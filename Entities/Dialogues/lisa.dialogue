@@ -1,0 +1,12 @@
+~ start
+Lisa paces the living room arms crossed a look of worry over her face as you approach
+Lisa: "Hey, how goes the search?"
+
+- Good
+- Bad
+- I give up
+
+~ german_note
+# Add an interaction here for when you are holding the note
+Lisa: "Hey! Is that note in german?? I spent a semester in Munich, gimme that"
+=> END

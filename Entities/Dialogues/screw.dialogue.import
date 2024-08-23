@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://plwkeei7br3l"
+path="res://.godot/imported/screw.dialogue-3b92082cd6b410456f6bf5de3d0a2810.tres"
+
+[deps]
+
+source_file="res://Entities/Dialogues/screw.dialogue"
+dest_files=["res://.godot/imported/screw.dialogue-3b92082cd6b410456f6bf5de3d0a2810.tres"]
+
+[params]
+
+defaults=true

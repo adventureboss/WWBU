@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://ds5rqvip4k24s"
+path="res://.godot/imported/ritual_tape.dialogue-04ea8bb01fea086e4fc244e94eaf1d46.tres"
+
+[deps]
+
+source_file="res://Entities/Dialogues/ritual_tape.dialogue"
+dest_files=["res://.godot/imported/ritual_tape.dialogue-04ea8bb01fea086e4fc244e94eaf1d46.tres"]
+
+[params]
+
+defaults=true
