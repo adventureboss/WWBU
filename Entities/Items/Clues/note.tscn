@@ -71,3 +71,19 @@ Leuchtet ein einzelner Mond, und das macht es drei.
 
 Nun hast du den Code, so klar wie der Tag,
 Drei, zwei, zwei, drei ist der Weg.[/center]"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 629.0
+offset_right = 390.0
+offset_bottom = 660.0
+text = "Close"
+
+[connection signal="button_up" from="Control/Button" to="." method="_on_button_button_up"]

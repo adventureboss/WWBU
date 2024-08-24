@@ -1,0 +1,37 @@
+import "res://Entities/Dialogues/items.dialogue" as items
+
+~ start
+% =>< soul
+% =>< mask
+%2 =>< murgle
+if car_door_unlocked == false:
+	- I need your car keys, David
+		David: [color=red][shake rate=20.0 level=5 connected=1]I need you face down in your own blood, you &#$@(*![/shake][/color]
+		I guess I'm not getting his keys.
+	- I think I have everything we need. Let's do the ritual.
+		placeholder for action
+	- I'll get back to work
+	=> items/room_translator
+else
+	- I think I have everything we need. Let's do the ritual.
+		placeholder for action
+	- I'll get back to work
+	=> items/room_translator
+
+~ soul
+David: [color=red][shake rate=20.0 level=5 connected=1]I'll swallow your soul!![/shake][/color]
+Don't worry, David. We'll figure this out
+=> END
+
+~ mask
+David: [color=red][shake rate=20.0 level=5 connected=1]I'm going to carve off your face and wear it like a mask![/shake][/color]
+Mark: That would be an improvement.
+Lisa: MARK!
+Mark: What? I joke when I'm stressed!
+Mark takes a long drag from his cigarette
+=> END
+
+~ murgle
+David: [color=red][shake rate=20.0 level=5 connected=1]MRUGLELRLGILRL[/shake][/color]
+I better solve this quickly
+=> END

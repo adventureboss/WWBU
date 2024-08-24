@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://bww6fvhg1rymp"
+path="res://.godot/imported/david.dialogue-e7873187908e8ab63bcb4fde03e80d13.tres"
+
+[deps]
+
+source_file="res://Entities/Dialogues/david.dialogue"
+dest_files=["res://.godot/imported/david.dialogue-e7873187908e8ab63bcb4fde03e80d13.tres"]
+
+[params]
+
+defaults=true

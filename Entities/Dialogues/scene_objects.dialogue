@@ -1,12 +1,12 @@
 import "res://Entities/Dialogues/items.dialogue" as items
 
 ~ start
-if PersistenceSystem.found_keys
+if PersistenceSystem.found_keys == true
 	The door is locked and the keys are on the very dangerous birthday boy
 	=> items/room_translator
-The door is locked and I don't know where the keys are
-=> items/room_translator
-
+else
+	The door is locked and I don't know where the keys are
+	=> items/room_translator
 
 ~ coat_hanger
 if PersistenceSystem.car_door_unlocked
