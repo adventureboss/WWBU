@@ -88,3 +88,20 @@ It's a translated note
 A loose screw
 	Seems useful enough
 => room_translator
+
+~ combo_candles_lighter
+You light the candles
+	Good thing these are fireproof pockets
+=> room_translator
+
+~ combo_booze_screw
+You struggle, but you drive the screw into the cork on the bottle
+	These are desperate times
+=> room_translator
+
+~ combo_booze_hammer
+You ram the claw of the hammer into the screw, wedging it tightly.
+	You tuck the bottle in the crook of your arm and start prying.
+	After a decent struggle it finally comes loose.
+Aha! Spilled some on the floor, but we're not getting our deposit back anyway
+=> room_translator

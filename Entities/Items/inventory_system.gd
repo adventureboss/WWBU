@@ -2,6 +2,7 @@ extends Node
 
 signal item_added(item: Item)
 signal item_removed(item: Item)
+signal items_combined(item: Item)
 
 @export var recipes: Array[Recipe] = []
 
@@ -65,6 +66,7 @@ func combine_items(first: Item, other: Item) -> bool:
 	for item in recipe.produces:
 		if item != first and item != other:
 			add_item(item)
+			emit_signal("items_combined", item)
 	return true
 
 func _load_recipes(path: String):
