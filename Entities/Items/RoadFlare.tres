@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://d2bghjtmq1ald"]
 
-[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_uahr8"]
+[ext_resource type="Texture2D" uid="uid://8gsykbuf2g4j" path="res://Entities/Items/Art/road_flare.png" id="1_d6nvy"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_x7iib"]
 
 [resource]
 script = ExtResource("1_x7iib")
-Sprite = ExtResource("1_uahr8")
+Sprite = ExtResource("1_d6nvy")
 DisplayName = "Road Flare"
 DialogueStart = "road_flare"

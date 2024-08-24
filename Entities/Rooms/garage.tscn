@@ -45,6 +45,7 @@ text = "OPEN CAR"
 script = ExtResource("3_6y3r4")
 
 [node name="Flashlight" parent="TextureRect" instance=ExtResource("4_flxu5")]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 offset_left = 874.0
 offset_top = 258.0
@@ -54,6 +55,7 @@ item = ExtResource("5_2il78")
 dialogue_start = "flashlight"
 
 [node name="Hammer" parent="TextureRect" instance=ExtResource("4_flxu5")]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 offset_left = 617.0
 offset_top = 69.0

@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=3 uid="uid://c3ev2lg66syva"]
+[gd_scene load_steps=9 format=3 uid="uid://c3ev2lg66syva"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_rnopy"]
 [ext_resource type="Texture2D" uid="uid://ve8w8spirqjo" path="res://Scenes/office.png" id="2_15vch"]
 [ext_resource type="Script" path="res://Entities/Items/interact.gd" id="3_2cctv"]
 [ext_resource type="PackedScene" uid="uid://1lo83hf88q04" path="res://Entities/UI/Pickup/pickup.tscn" id="3_aaw48"]
 [ext_resource type="Resource" uid="uid://dlecfy3r6pdft" path="res://Entities/Items/Screw.tres" id="4_6ruf8"]
+[ext_resource type="Texture2D" uid="uid://e4j8dbshw1a0" path="res://Entities/Items/Art/screw.png" id="4_ca4qd"]
 [ext_resource type="Resource" uid="uid://b5dcvxjoelf8x" path="res://Entities/Dialogues/scene_objects.dialogue" id="6_knkgg"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0xpe"]
@@ -36,6 +37,7 @@ offset_left = 171.0
 offset_top = 442.0
 offset_right = -753.0
 offset_bottom = -45.0
+texture = ExtResource("4_ca4qd")
 item = ExtResource("4_6ruf8")
 dialogue_start = "screw"
 

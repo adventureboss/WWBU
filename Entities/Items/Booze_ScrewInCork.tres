@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cibx4clraql1k"]
 
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_0vye1"]
-[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_tagga"]
+[ext_resource type="Texture2D" uid="uid://dxdk1hu6can5n" path="res://Entities/Items/Art/wine_bottle_with_screw.png" id="1_c7squ"]
 
 [resource]
 script = ExtResource("1_0vye1")
-Sprite = ExtResource("1_tagga")
+Sprite = ExtResource("1_c7squ")
 DisplayName = "Wine Bottle (A Screw in the Cork)"
 DialogueStart = "booze_with_screw"

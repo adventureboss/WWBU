@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://ciqat6rc8dvml"]
+[gd_scene load_steps=9 format=3 uid="uid://ciqat6rc8dvml"]
 
 [ext_resource type="PackedScene" uid="uid://1lo83hf88q04" path="res://Entities/UI/Pickup/pickup.tscn" id="1_c0bs8"]
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_pg65l"]
 [ext_resource type="Texture2D" uid="uid://dd05b2eum836s" path="res://Scenes/kitchen.png" id="1_veo13"]
 [ext_resource type="Resource" uid="uid://dsipjvb2kqgii" path="res://Entities/Items/Knife.tres" id="2_nx2ra"]
+[ext_resource type="Texture2D" uid="uid://biyct6evq0bc5" path="res://Entities/Items/Art/knife.png" id="4_c5pha"]
 [ext_resource type="Resource" uid="uid://brjb6rhyl2c48" path="res://Entities/Items/Booze_Closed.tres" id="6_j34ok"]
+[ext_resource type="Texture2D" uid="uid://ddr2eivekfgxy" path="res://Entities/Items/Art/wine_bottle.png" id="6_n6wjj"]
+[ext_resource type="Texture2D" uid="uid://cs37q0kfglwmi" path="res://Entities/Items/Art/birthday_candle.png" id="8_2le1s"]
 
 [node name="Kitchen" type="Control"]
 layout_mode = 3
@@ -28,6 +31,7 @@ offset_left = 651.0
 offset_top = 321.0
 offset_right = -239.0
 offset_bottom = -124.0
+texture = ExtResource("4_c5pha")
 item = ExtResource("2_nx2ra")
 dialogue_start = "knife"
 
@@ -37,6 +41,7 @@ offset_left = 147.0
 offset_top = 298.0
 offset_right = -756.0
 offset_bottom = -165.0
+texture = ExtResource("6_n6wjj")
 item = ExtResource("6_j34ok")
 dialogue_start = "booze"
 
@@ -46,4 +51,5 @@ offset_left = 71.0
 offset_top = 450.0
 offset_right = -805.0
 offset_bottom = -11.0
+texture = ExtResource("8_2le1s")
 dialogue_start = "candles"

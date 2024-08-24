@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dlecfy3r6pdft"]
 
-[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_7fac3"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_dgt4h"]
+[ext_resource type="Texture2D" uid="uid://e4j8dbshw1a0" path="res://Entities/Items/Art/screw.png" id="1_q07vo"]
 
 [resource]
 script = ExtResource("1_dgt4h")
-Sprite = ExtResource("1_7fac3")
+Sprite = ExtResource("1_q07vo")
 DisplayName = "Screw"
 DialogueStart = "screw"
