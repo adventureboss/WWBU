@@ -26,3 +26,12 @@ do PersistenceSystem.car_opened.emit()
 % I've already opened the car. I don't want to do that again
 % As much as I enjoyed that, the clock is ticking
 => items/room_translator
+
+~ safe_opened
+I aleady opened the safe and got the tape out. I don't need to do it again
+=> items/room_translator
+
+~ collected_tape
+Hey, a tape! It looks old and says "Ritual" in brown-ish ... ink? Yeah. That's ink.
+	Cassette Tape added to inventory
+=> items/room_translator

@@ -1,12 +1,14 @@
 extends Control
 
-var combination: String = "4783"
+var combination: String = "3223"
 var keypresses: Array[String]
 
 @onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
 @onready var success_fail: RichTextLabel = $"../SuccessFail"
 @onready var button: Button = $"../Control/Button"
 
+@onready var dialogue_bubble = get_tree().get_first_node_in_group("dialogue_bubble")
+@onready var dialogue_resource: DialogueResource = load("res://Entities/Dialogues/scene_objects.dialogue")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -29,6 +31,8 @@ func check_solution():
 		PersistenceSystem.safe_opened = true
 		success_fail.visible = true
 		animation_player.play("success")
+		InventorySystem.add_item(load("res://Entities/Items/RitualTape.tres"))
+		dialogue_bubble.start(dialogue_resource, "collected_tape")
 	else:
 		print("failed")
 		success_fail.visible = true
