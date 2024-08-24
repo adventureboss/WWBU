@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dwtb0gkur7a8w"]
 
-[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_jhqkv"]
+[ext_resource type="Texture2D" uid="uid://n7pxdo05afi0" path="res://Entities/Items/Art/coat_hanger.png" id="1_tvfx2"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="2_qs2ew"]
 
 [resource]
 script = ExtResource("2_qs2ew")
-Sprite = ExtResource("1_jhqkv")
+Sprite = ExtResource("1_tvfx2")
 DisplayName = "Coat Hanger"
 DialogueStart = "coat_hanger"

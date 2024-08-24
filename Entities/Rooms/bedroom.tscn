@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://dlg51g3e2hb8a"]
+[gd_scene load_steps=9 format=3 uid="uid://dlg51g3e2hb8a"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_gmkw2"]
 [ext_resource type="Texture2D" uid="uid://lh5vkkxi4hc1" path="res://Scenes/bedroom.png" id="2_jdage"]
@@ -6,6 +6,8 @@
 [ext_resource type="Resource" uid="uid://cvkka6hrkyvbw" path="res://Entities/Items/Kazoo.tres" id="4_da7in"]
 [ext_resource type="Texture2D" uid="uid://bmfc8dhqbxrxv" path="res://Entities/Items/Art/kazoo.png" id="4_o8ibg"]
 [ext_resource type="Resource" uid="uid://bvqfce8qh2w7f" path="res://Entities/Items/SafeNote.tres" id="5_i7l23"]
+[ext_resource type="Texture2D" uid="uid://n7pxdo05afi0" path="res://Entities/Items/Art/coat_hanger.png" id="7_t6cyf"]
+[ext_resource type="Resource" uid="uid://dwtb0gkur7a8w" path="res://Entities/Items/CoatHanger.tres" id="8_e3cjx"]
 
 [node name="Bedroom" type="Control"]
 layout_mode = 3
@@ -43,3 +45,14 @@ offset_right = -509.0
 offset_bottom = -337.0
 item = ExtResource("5_i7l23")
 dialogue_start = "safe_note"
+
+[node name="CoatHanger" parent="TextureRect" instance=ExtResource("3_ybldb")]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+offset_left = 164.0
+offset_top = 128.0
+offset_right = -659.0
+offset_bottom = -73.0
+texture = ExtResource("7_t6cyf")
+item = ExtResource("8_e3cjx")
+dialogue_start = "coat_hanger"

@@ -16,6 +16,17 @@ You jam the coat hanger into car door, trying to find the lock
 do PersistenceSystem.car_opened.emit()
 => items/room_translator
 
+~ oven
+It's a gas stove
+	Maybe we can make a last meal.
+=> items/room_translator
+
+~ oven_candles
+You light the stove and hold the candles over the flames. They light!
+do InventorySystem.add_item(CANDLES_LIT)
+do InventorySystem.remove_item(CANDLES)
+=> items/room_translator
+
 ~ unhandled_item
 %2 I can't unlock the car with that
 % I need something really thin to jam in between the window and door

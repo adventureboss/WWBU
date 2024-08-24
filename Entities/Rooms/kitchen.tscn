@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ciqat6rc8dvml"]
+[gd_scene load_steps=12 format=3 uid="uid://ciqat6rc8dvml"]
 
 [ext_resource type="PackedScene" uid="uid://1lo83hf88q04" path="res://Entities/UI/Pickup/pickup.tscn" id="1_c0bs8"]
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_pg65l"]
@@ -8,6 +8,9 @@
 [ext_resource type="Resource" uid="uid://brjb6rhyl2c48" path="res://Entities/Items/Booze_Closed.tres" id="6_j34ok"]
 [ext_resource type="Texture2D" uid="uid://ddr2eivekfgxy" path="res://Entities/Items/Art/wine_bottle.png" id="6_n6wjj"]
 [ext_resource type="Texture2D" uid="uid://cs37q0kfglwmi" path="res://Entities/Items/Art/birthday_candle.png" id="8_2le1s"]
+[ext_resource type="Script" path="res://Entities/npc.gd" id="9_2n46x"]
+[ext_resource type="Resource" uid="uid://b5dcvxjoelf8x" path="res://Entities/Dialogues/scene_objects.dialogue" id="10_p28pc"]
+[ext_resource type="Resource" uid="uid://n0mu2mq6o75i" path="res://Entities/Items/Candles.tres" id="11_bx5ho"]
 
 [node name="Kitchen" type="Control"]
 layout_mode = 3
@@ -53,3 +56,18 @@ offset_right = -805.0
 offset_bottom = -11.0
 texture = ExtResource("8_2le1s")
 dialogue_start = "candles"
+
+[node name="NPC" type="Control" parent="TextureRect"]
+anchors_preset = 0
+offset_left = 230.0
+offset_top = 268.0
+offset_right = 360.0
+offset_bottom = 299.0
+script = ExtResource("9_2n46x")
+dialogue_resource = ExtResource("10_p28pc")
+item_titles = {
+ExtResource("11_bx5ho"): "oven_candles"
+}
+dialogue_start = "oven"
+
+[connection signal="gui_input" from="TextureRect/NPC" to="TextureRect/NPC" method="_on_gui_input"]
