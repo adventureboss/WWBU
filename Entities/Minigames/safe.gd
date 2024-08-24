@@ -1,6 +1,6 @@
 extends Control
 
-var combination: String = "4783"
+var combination: String = "3223"
 var keypresses: Array[String]
 
 @onready var animation_player: AnimationPlayer = $"../AnimationPlayer"
