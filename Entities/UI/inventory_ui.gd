@@ -33,24 +33,29 @@ func _can_drop_data(at_position, data):
 
 func _drop_data(at_position, dragSlotNode):
 	var targetSlotNode: InventorySlot = get_slot_node_at_position(at_position)
-	var targetTexture = targetSlotNode.texture
 	
-	targetSlotNode.texture = dragSlotNode.texture
-	targetSlotNode.tooltip_text = dragSlotNode.tooltip_text
-	targetSlotNode.item = dragSlotNode.item
+	var dragItem = dragSlotNode.item
+	var targetItem = targetSlotNode.item
 	
-	# this is for when we swap items
-	# this should be fine except where we want a combo to happen
-	if targetTexture == load("res://Entities/UI/Item_types.png"):
-		dragSlotNode.texture = load("res://Entities/UI/Item_types.png")
-		dragSlotNode.tooltip_text = ""
-		dragSlotNode.item = null
-	#elif InventorySystem.can_combine_items(dragSlotNode):
-		#print("combined %s and %s", dragSlotNode, targetSlotNode)
-	else:
-		dragSlotNode.texture = targetTexture
-		dragSlotNode.tooltip_text = targetSlotNode.tooltip_text
-		dragSlotNode.item = targetSlotNode.item
+	if targetItem != null: # Drop node has an item in it
+		if InventorySystem.can_combine_items(dragItem, targetItem): # Combine if possible
+			InventorySystem.combine_items(dragItem, targetItem)
+		else: # Swap them
+			set_item_in_slot(dragSlotNode, targetItem)
+			set_item_in_slot(targetSlotNode, dragItem)
+	else: # Move					
+		set_item_in_slot(targetSlotNode, dragItem)
+		clear_item_in_slot(dragSlotNode)
+
+func set_item_in_slot(slot: InventorySlot, item: Item):
+	slot.item = item
+	slot.texture = item.Sprite
+	slot.tooltip_text = item.DisplayName
+	
+func clear_item_in_slot(slot: InventorySlot):
+	slot.texture = load("res://Entities/UI/Item_types.png")
+	slot.tooltip_text = ""
+	slot.item = null
 	
 func get_slot_node_at_position(position):
 	var allInventorySlots = inventory_grid.get_children()
@@ -73,4 +78,7 @@ func add_item(item: Item):
 		
 
 func remove_item(item):
-	pass
+	for slot in inventory_grid.get_children():
+		if slot.item == item:
+			clear_item_in_slot(slot)
+			return
