@@ -1,0 +1,28 @@
+import "res://Entities/Dialogues/items.dialogue" as items
+
+~ start
+if PersistenceSystem.found_keys
+	The door is locked and the keys are on the very dangerous birthday boy
+	=> items/room_translator
+The door is locked and I don't know where the keys are
+=> items/room_translator
+
+
+~ coat_hanger
+if PersistenceSystem.car_door_unlocked
+	=> car_opened
+You jam the coat hanger into car door, trying to find the lock
+	After some fiddling, you get it to pop open.
+do PersistenceSystem.car_opened.emit()
+=> items/room_translator
+
+~ unhandled_item
+%2 I can't unlock the car with that
+% I need something really thin to jam in between the window and door
+% That won't do
+=> items/room_translator
+
+~ car_opened
+% I've already opened the car. I don't want to do that again
+% As much as I enjoyed that, the clock is ticking
+=> items/room_translator

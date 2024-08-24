@@ -6,6 +6,8 @@ var active_room_name
 var dialogue_bubble
 var safe_opened: bool = false
 var note_translated: bool = false
+var car_door_unlocked: bool = false
+var found_keys: bool = false
 
 signal dialogue_bubble_ready
 signal car_opened
