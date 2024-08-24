@@ -1,0 +1,73 @@
+[gd_scene load_steps=3 format=3 uid="uid://drhjgjenedarg"]
+
+[ext_resource type="Script" path="res://Entities/Items/Clues/note.gd" id="1_urwog"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_u8wxx"]
+bg_color = Color(0.912203, 0.897178, 0.489407, 1)
+shadow_color = Color(0, 0, 0, 0.0980392)
+shadow_size = 20
+shadow_offset = Vector2(20, 20)
+
+[node name="Note" type="CanvasLayer"]
+script = ExtResource("1_urwog")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(600, 600)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -300.0
+offset_right = 300.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_u8wxx")
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 50
+
+[node name="English" type="RichTextLabel" parent="Panel/MarginContainer"]
+visible = false
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]In the morning light, when you rise and see,
+The number of sunbeams is just three.
+Next, think of a pair, a bond so tight,
+Their number is two, shining bright.
+
+As the day turns to dusk, the sky's a hue,
+Count the stars, and you'll find they're two.
+Finally, as the night brings calm, so free,
+A single moon glows, making it three.
+
+So now you have the code, clear as day,
+Three, two, two, three is the way.[/center]"
+
+[node name="German" type="RichTextLabel" parent="Panel/MarginContainer"]
+layout_mode = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]Im Morgenlicht, wenn du erwachst und siehst,
+Die Anzahl der Sonnenstrahlen ist nur drei.
+Dann denke an ein Paar, ein Bund so fest,
+Ihre Zahl ist zwei, so hell und klar.
+
+Wenn der Tag zum Abend wird, der Himmel so blau,
+Zähle die Sterne, und du findest zwei.
+Schließlich, wenn die Nacht Ruhe bringt, so frei,
+Leuchtet ein einzelner Mond, und das macht es drei.
+
+Nun hast du den Code, so klar wie der Tag,
+Drei, zwei, zwei, drei ist der Weg.[/center]"
