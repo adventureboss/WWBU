@@ -35,3 +35,8 @@ Mark takes a long drag from his cigarette
 David: [color=red][shake rate=20.0 level=5 connected=1]MRUGLELRLGILRL[/shake][/color]
 I better solve this quickly
 => END
+
+~ unhandled_item
+David: [color=red][shake rate=20.0 level=5 connected=1]I'll show you where you can shove that![/shake][/color]
+David doesn't want that
+=> items/room_translator
