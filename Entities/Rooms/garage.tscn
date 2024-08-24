@@ -1,11 +1,13 @@
-[gd_scene load_steps=7 format=3 uid="uid://cvrufgoyvkeqh"]
+[gd_scene load_steps=9 format=3 uid="uid://cvrufgoyvkeqh"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_3055q"]
 [ext_resource type="Texture2D" uid="uid://bsvbi71x4h1k0" path="res://Scenes/garage.png" id="2_bf6ip"]
 [ext_resource type="Script" path="res://Entities/Rooms/button-test.gd" id="3_6y3r4"]
 [ext_resource type="PackedScene" uid="uid://1lo83hf88q04" path="res://Entities/UI/Pickup/pickup.tscn" id="4_flxu5"]
 [ext_resource type="Resource" uid="uid://bun11tkgi5hwf" path="res://Entities/Items/Flashlight.tres" id="5_2il78"]
+[ext_resource type="Script" path="res://Entities/npc.gd" id="7_2qlv2"]
 [ext_resource type="Resource" uid="uid://dsujiens4qpr1" path="res://Entities/Items/Hammer.tres" id="7_ogke3"]
+[ext_resource type="Resource" uid="uid://dwtb0gkur7a8w" path="res://Entities/Items/CoatHanger.tres" id="8_jdavp"]
 
 [node name="Garage" type="Control"]
 layout_mode = 3
@@ -58,5 +60,16 @@ offset_right = -315.0
 offset_bottom = -402.0
 item = ExtResource("7_ogke3")
 dialogue_start = "hammer"
+
+[node name="CarDoor" type="Control" parent="TextureRect"]
+anchors_preset = 0
+offset_left = 93.0
+offset_top = 421.0
+offset_right = 345.0
+offset_bottom = 482.0
+script = ExtResource("7_2qlv2")
+item_titles = {
+ExtResource("8_jdavp"): "coat_hanger"
+}
 
 [connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]
