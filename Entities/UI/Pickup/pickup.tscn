@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://1lo83hf88q04"]
 
-[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_docqi"]
 [ext_resource type="Script" path="res://Entities/UI/Pickup/pickup.gd" id="1_ofomb"]
+[ext_resource type="Texture2D" uid="uid://cs37q0kfglwmi" path="res://Entities/Items/Art/birthday_candle.png" id="1_yq1ts"]
 [ext_resource type="Resource" uid="uid://n0mu2mq6o75i" path="res://Entities/Items/Candles.tres" id="2_4rkqs"]
 [ext_resource type="Resource" uid="uid://cea6fwhue3qs5" path="res://Entities/Dialogues/items.dialogue" id="4_fsj0u"]
 
@@ -13,7 +13,7 @@ offset_right = -1190.0
 offset_bottom = -630.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_docqi")
+texture = ExtResource("1_yq1ts")
 expand_mode = 1
 script = ExtResource("1_ofomb")
 item = ExtResource("2_4rkqs")

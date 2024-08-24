@@ -7,6 +7,9 @@ class_name NPC
 @export var unhandled_item_title: String = "unhandled_item"
 @onready var dialogue_bubble = get_tree().get_first_node_in_group("dialogue_bubble")
 
+func _ready() -> void:
+	self.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
+
 func _can_drop_data(at_position: Vector2, data: Variant) -> bool:
 	return data.item is Item
 
