@@ -90,3 +90,10 @@ func _find_recipe(first: Item, other: Item) -> Recipe:
 		if recipe.matches(first, other):
 			return recipe
 	return null
+
+
+func open_note() -> void:
+	var note = preload("res://Entities/Items/Clues/note.tscn").instantiate()
+	var interface = get_tree().get_first_node_in_group("interface")
+	interface.add_child(note)
+	
