@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://n0mu2mq6o75i"]
 
-[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_jpry7"]
+[ext_resource type="Texture2D" uid="uid://cs37q0kfglwmi" path="res://Entities/Items/Art/birthday_candle.png" id="1_rk7cr"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_vsnlu"]
 
 [resource]
 script = ExtResource("1_vsnlu")
-Sprite = ExtResource("1_jpry7")
+Sprite = ExtResource("1_rk7cr")
 DisplayName = "Pack of Birthday Candles"
 DialogueStart = "candles"

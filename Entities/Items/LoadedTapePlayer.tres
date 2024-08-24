@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bkyqqlymm73re"]
 
-[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_tgtkp"]
+[ext_resource type="Texture2D" uid="uid://paageb6ur011" path="res://Entities/Items/Art/tape_player.png" id="1_jhgpj"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="2_uyi0k"]
 
 [resource]
 script = ExtResource("2_uyi0k")
-Sprite = ExtResource("1_tgtkp")
+Sprite = ExtResource("1_jhgpj")
 DisplayName = "A Cassette Player with a Cassette"
 DialogueStart = "loaded_tape_player"

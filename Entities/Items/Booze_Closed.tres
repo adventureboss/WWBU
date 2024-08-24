@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://brjb6rhyl2c48"]
 
-[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_3dmq3"]
+[ext_resource type="Texture2D" uid="uid://ddr2eivekfgxy" path="res://Entities/Items/Art/wine_bottle.png" id="1_kph6g"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="2_8pcun"]
 
 [resource]
 script = ExtResource("2_8pcun")
-Sprite = ExtResource("1_3dmq3")
+Sprite = ExtResource("1_kph6g")
 DisplayName = "Wine Bottle (Stoppered)"
 DialogueStart = "booze"

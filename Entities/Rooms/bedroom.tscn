@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://dlg51g3e2hb8a"]
+[gd_scene load_steps=7 format=3 uid="uid://dlg51g3e2hb8a"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_gmkw2"]
 [ext_resource type="Texture2D" uid="uid://lh5vkkxi4hc1" path="res://Scenes/bedroom.png" id="2_jdage"]
 [ext_resource type="PackedScene" uid="uid://1lo83hf88q04" path="res://Entities/UI/Pickup/pickup.tscn" id="3_ybldb"]
 [ext_resource type="Resource" uid="uid://cvkka6hrkyvbw" path="res://Entities/Items/Kazoo.tres" id="4_da7in"]
+[ext_resource type="Texture2D" uid="uid://bmfc8dhqbxrxv" path="res://Entities/Items/Art/kazoo.png" id="4_o8ibg"]
 [ext_resource type="Resource" uid="uid://bvqfce8qh2w7f" path="res://Entities/Items/SafeNote.tres" id="5_i7l23"]
 
 [node name="Bedroom" type="Control"]
@@ -23,16 +24,18 @@ offset_bottom = 40.0
 texture = ExtResource("2_jdage")
 
 [node name="Kazoo" parent="TextureRect" instance=ExtResource("3_ybldb")]
+visible = false
 layout_mode = 1
 offset_left = 684.0
 offset_top = 275.0
 offset_right = -236.0
 offset_bottom = -204.0
-texture = null
+texture = ExtResource("4_o8ibg")
 item = ExtResource("4_da7in")
 dialogue_start = "kazoo"
 
 [node name="SafeNote" parent="TextureRect" instance=ExtResource("3_ybldb")]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 offset_left = 411.0
 offset_top = 143.0

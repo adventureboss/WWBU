@@ -1,8 +1,10 @@
-[gd_resource type="Resource" script_class="Item" load_steps=2 format=3 uid="uid://cvkka6hrkyvbw"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cvkka6hrkyvbw"]
 
+[ext_resource type="Texture2D" uid="uid://bmfc8dhqbxrxv" path="res://Entities/Items/Art/kazoo.png" id="1_oolv0"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_ynyix"]
 
 [resource]
 script = ExtResource("1_ynyix")
+Sprite = ExtResource("1_oolv0")
 DisplayName = "Kazoo"
 DialogueStart = "kazoo"

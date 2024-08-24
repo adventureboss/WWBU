@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://cubghtmvbnoql"]
 
-[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_hxko1"]
+[ext_resource type="Texture2D" uid="uid://c8rh3pcr40gms" path="res://Entities/Items/Art/pork_rinds.png" id="1_ncj2b"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_plfbp"]
 
 [resource]
 script = ExtResource("1_plfbp")
-Sprite = ExtResource("1_hxko1")
+Sprite = ExtResource("1_ncj2b")
 DisplayName = "Bag of Pork Rinds"
 DialogueStart = "pork_rinds"
