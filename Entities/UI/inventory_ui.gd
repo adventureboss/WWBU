@@ -35,6 +35,9 @@ func _drop_data(at_position, dragSlotNode):
 	var targetSlotNode: InventorySlot = get_slot_node_at_position(at_position)
 	var targetTexture = targetSlotNode.texture
 	
+	if InventorySystem.combine_items(dragSlotNode.item, targetSlotNode.item):
+		return
+	
 	targetSlotNode.texture = dragSlotNode.texture
 	targetSlotNode.tooltip_text = dragSlotNode.tooltip_text
 	targetSlotNode.item = dragSlotNode.item
@@ -45,8 +48,6 @@ func _drop_data(at_position, dragSlotNode):
 		dragSlotNode.texture = load("res://Entities/UI/Item_types.png")
 		dragSlotNode.tooltip_text = ""
 		dragSlotNode.item = null
-	#elif InventorySystem.can_combine_items(dragSlotNode):
-		#print("combined %s and %s", dragSlotNode, targetSlotNode)
 	else:
 		dragSlotNode.texture = targetTexture
 		dragSlotNode.tooltip_text = targetSlotNode.tooltip_text
@@ -72,5 +73,13 @@ func add_item(item: Item):
 			return
 		
 
-func remove_item(item):
-	pass
+func remove_item(item: Item):
+	print("removing item")
+	var slots = inventory_grid.get_children()
+	
+	for slot in slots:
+		if slot.item == item:
+			slot.item = null
+			slot.texture = load("res://Entities/UI/Item_types.png")
+			slot.tooltip_text = ""
+			return
