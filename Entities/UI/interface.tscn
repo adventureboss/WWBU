@@ -1,11 +1,36 @@
-[gd_scene load_steps=12 format=3 uid="uid://dlnnfto6a8v3l"]
+[gd_scene load_steps=14 format=3 uid="uid://dlnnfto6a8v3l"]
 
 [ext_resource type="Script" path="res://Entities/UI/inventory_ui.gd" id="1_ofw8k"]
 [ext_resource type="Texture2D" uid="uid://cnm0qdd783ixb" path="res://Entities/UI/inventory_background.png" id="2_gdyel"]
 [ext_resource type="PackedScene" uid="uid://6rnieq0sfws5" path="res://Entities/UI/direction_controls.tscn" id="2_tbafa"]
+[ext_resource type="Shader" path="res://Entities/UI/VHS.gdshader" id="4_q3p0e"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="6_t8cb0"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="7_i6mw8"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="8_q02wu"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_6rnje"]
+shader = ExtResource("4_q3p0e")
+shader_parameter/overlay = true
+shader_parameter/scanlines_opacity = 0.11
+shader_parameter/scanlines_width = 0.081
+shader_parameter/grille_opacity = 0.1
+shader_parameter/resolution = Vector2(640, 480)
+shader_parameter/pixelate = false
+shader_parameter/roll = true
+shader_parameter/roll_speed = 2.0
+shader_parameter/roll_size = 15.0
+shader_parameter/roll_variation = 1.8
+shader_parameter/distort_intensity = 0.0
+shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_speed = 5.0
+shader_parameter/static_noise_intensity = 0.01
+shader_parameter/aberration = 4.75e-08
+shader_parameter/brightness = 1.0
+shader_parameter/discolor = false
+shader_parameter/warp_amount = 0.0
+shader_parameter/clip_warp = false
+shader_parameter/vignette_intensity = 0.4
+shader_parameter/vignette_opacity = 0.5
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_spyqn"]
 bg_color = Color(0, 0, 0, 1)
@@ -107,7 +132,7 @@ columns = 3
 
 [node name="DirectionControls" parent="UIContainer/LeftUI" node_paths=PackedStringArray("room_parent") instance=ExtResource("2_tbafa")]
 layout_mode = 2
-room_parent = NodePath("../../RightUI/ViewUI")
+room_parent = NodePath("../../RightUI/ViewUI/Room")
 active_room_background = Color(0.940371, 0.88069, 0, 1)
 
 [node name="RightUI" type="VBoxContainer" parent="UIContainer"]
@@ -121,7 +146,13 @@ custom_minimum_size = Vector2(0, 520)
 layout_mode = 2
 mouse_filter = 2
 
-[node name="ColorRect" type="ColorRect" parent="UIContainer/RightUI/ViewUI"]
+[node name="Room" type="Control" parent="UIContainer/RightUI/ViewUI"]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CRT Effect" type="ColorRect" parent="UIContainer/RightUI/ViewUI"]
+material = SubResource("ShaderMaterial_6rnje")
 custom_minimum_size = Vector2(960, 520)
 layout_mode = 2
 offset_right = 960.0
