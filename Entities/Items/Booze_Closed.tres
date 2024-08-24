@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="2_8pcun"]
 
 [resource]
+resource_name = "booze_closed"
 script = ExtResource("2_8pcun")
 Sprite = ExtResource("1_3dmq3")
 DisplayName = "Wine Bottle (Stoppered)"

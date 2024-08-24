@@ -7,6 +7,7 @@ var inventory_slot_count = 15
 func _ready():
 	InventorySystem.connect("item_added", add_item)
 	InventorySystem.connect("item_removed", remove_item)
+	InventorySystem.connect("items_combined", _on_items_combined)
 	
 	for slot in inventory_slot_count:
 		inventory_grid.add_child(InventorySlot.new())
@@ -23,7 +24,7 @@ func _get_drag_data(at_position):
 	control.add_child(dragPreviewNode)
 	dragPreviewNode.position = -0.5 * dragPreviewNode.custom_minimum_size
 	set_drag_preview(control)
-	
+
 	return dragSlotNode
 	
 func _can_drop_data(at_position, data):
@@ -37,7 +38,7 @@ func _drop_data(at_position, dragSlotNode):
 	
 	if InventorySystem.combine_items(dragSlotNode.item, targetSlotNode.item):
 		return
-	
+
 	targetSlotNode.texture = dragSlotNode.texture
 	targetSlotNode.tooltip_text = dragSlotNode.tooltip_text
 	targetSlotNode.item = dragSlotNode.item
@@ -83,3 +84,15 @@ func remove_item(item: Item):
 			slot.texture = load("res://Entities/UI/Item_types.png")
 			slot.tooltip_text = ""
 			return
+
+func _on_items_combined(item: Item):
+	var dialogue_bubble = get_tree().get_first_node_in_group("dialogue_bubble")
+	if item.DisplayName == "Lit Birthday Candles":
+		dialogue_bubble.start(load("res://Entities/Dialogues/items.dialogue"), "combo_candles_lighter")
+		return
+	if item.DisplayName == "Wine Bottle (A Screw in the Cork)":
+		dialogue_bubble.start(load("res://Entities/Dialogues/items.dialogue"), "combo_booze_screw")
+		return
+	if item.DisplayName == "Wine Bottle (Open)":
+		dialogue_bubble.start(load("res://Entities/Dialogues/items.dialogue"), "combo_booze_hammer")
+		return

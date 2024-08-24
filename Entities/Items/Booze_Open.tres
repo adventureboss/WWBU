@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_xm5aa"]
 
 [resource]
+resource_name = "booze_open"
 script = ExtResource("1_401xv")
 Sprite = ExtResource("1_xm5aa")
 DisplayName = "Wine Bottle (Open)"

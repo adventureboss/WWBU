@@ -4,6 +4,7 @@
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_vsnlu"]
 
 [resource]
+resource_name = "candles"
 script = ExtResource("1_vsnlu")
 Sprite = ExtResource("1_jpry7")
 DisplayName = "Pack of Birthday Candles"

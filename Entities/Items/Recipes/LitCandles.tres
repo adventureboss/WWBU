@@ -7,6 +7,7 @@
 [ext_resource type="Resource" uid="uid://n5ro0wiiigjw" path="res://Entities/Items/LitCandles.tres" id="4_rpqg5"]
 
 [resource]
+resource_name = "lit_candles"
 script = ExtResource("2_l8dl7")
 item = ExtResource("1_6cavx")
 other = ExtResource("2_qsugt")
