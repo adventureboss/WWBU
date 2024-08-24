@@ -10,6 +10,7 @@ extends TextureRect
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	self.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	var state
 	if not Engine.is_editor_hint():
 		state = PersistenceSystem.get_object_state(self, true) #True indicates the pickup is active in the world, false that it isn't

@@ -1,11 +1,13 @@
-[gd_scene load_steps=10 format=3 uid="uid://cvrufgoyvkeqh"]
+[gd_scene load_steps=12 format=3 uid="uid://cvrufgoyvkeqh"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_3055q"]
 [ext_resource type="Texture2D" uid="uid://bsvbi71x4h1k0" path="res://Scenes/garage.png" id="2_bf6ip"]
 [ext_resource type="Script" path="res://Entities/Rooms/button-test.gd" id="3_6y3r4"]
 [ext_resource type="PackedScene" uid="uid://1lo83hf88q04" path="res://Entities/UI/Pickup/pickup.tscn" id="4_flxu5"]
 [ext_resource type="Resource" uid="uid://bun11tkgi5hwf" path="res://Entities/Items/Flashlight.tres" id="5_2il78"]
+[ext_resource type="Texture2D" uid="uid://dr8h2wy571a3j" path="res://Entities/Items/Art/flashlight.png" id="5_8juqc"]
 [ext_resource type="Script" path="res://Entities/npc.gd" id="7_aq7lm"]
+[ext_resource type="Texture2D" uid="uid://dnh73gh1ulgdt" path="res://Entities/Items/Art/hammer.png" id="7_nqre5"]
 [ext_resource type="Resource" uid="uid://dsujiens4qpr1" path="res://Entities/Items/Hammer.tres" id="7_ogke3"]
 [ext_resource type="Resource" uid="uid://b5dcvxjoelf8x" path="res://Entities/Dialogues/scene_objects.dialogue" id="8_5v7rf"]
 [ext_resource type="Resource" uid="uid://dwtb0gkur7a8w" path="res://Entities/Items/CoatHanger.tres" id="9_7ayy0"]
@@ -51,6 +53,7 @@ offset_left = 874.0
 offset_top = 258.0
 offset_right = -46.0
 offset_bottom = -202.0
+texture = ExtResource("5_8juqc")
 item = ExtResource("5_2il78")
 dialogue_start = "flashlight"
 
@@ -61,6 +64,7 @@ offset_left = 617.0
 offset_top = 69.0
 offset_right = -315.0
 offset_bottom = -402.0
+texture = ExtResource("7_nqre5")
 item = ExtResource("7_ogke3")
 dialogue_start = "hammer"
 
