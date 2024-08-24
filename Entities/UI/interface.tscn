@@ -148,8 +148,8 @@ mouse_filter = 2
 
 [node name="Room" type="Control" parent="UIContainer/RightUI/ViewUI"]
 anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_right = 960.0
+offset_bottom = 520.0
 
 [node name="CRT Effect" type="ColorRect" parent="UIContainer/RightUI/ViewUI"]
 material = SubResource("ShaderMaterial_6rnje")
