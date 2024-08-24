@@ -95,3 +95,6 @@ func _on_items_combined(item: Item):
 	if item.DisplayName == "Wine Bottle (Open)":
 		dialogue_bubble.start(load("res://Entities/Dialogues/items.dialogue"), "combo_booze_hammer")
 		return
+	if item.DisplayName == "A Cassette Player with a Cassette":
+		dialogue_bubble.start(load("res://Entities/Dialogues/items.dialogue"), "combo_tape_player")
+		return

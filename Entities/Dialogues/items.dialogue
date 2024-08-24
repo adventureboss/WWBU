@@ -105,3 +105,8 @@ You ram the claw of the hammer into the screw, wedging it tightly.
 	After a decent struggle it finally comes loose.
 Aha! Spilled some on the floor, but we're not getting our deposit back anyway
 => room_translator
+
+~ combo_tape_player
+You load the tape into the tape player.
+	I better not play it until I'm ready for the ritual. Who knows what could happen?
+=> room_translator
