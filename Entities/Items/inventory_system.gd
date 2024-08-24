@@ -19,6 +19,7 @@ var HAMMER: Item = preload("res://Entities/Items/Hammer.tres")
 var KAZOO: Item = preload("res://Entities/Items/Kazoo.tres")
 var KNIFE: Item = preload("res://Entities/Items/Knife.tres")
 var LIGHTER: Item = preload("res://Entities/Items/Lighter.tres")
+var LOADED_TAPE_PLAYER: Item = preload("res://Entities/Items/LoadedTapePlayer.tres")
 var CANDLES_LIT: Item = preload("res://Entities/Items/LitCandles.tres")
 var PORKRINDS: Item = preload("res://Entities/Items/PorkRinds.tres")
 var RITUAL_TAPE: Item = preload("res://Entities/Items/RitualTape.tres")
@@ -26,6 +27,7 @@ var ROAD_FLARE: Item = preload("res://Entities/Items/RoadFlare.tres")
 var SAFE_NOTE: Item = preload("res://Entities/Items/SafeNote.tres")
 var SAFE_NOTE_TRANSLATED: Item = preload("res://Entities/Items/SafeNote_Translated.tres")
 var SCREW: Item = preload("res://Entities/Items/Screw.tres")
+var TAPE_PLAYER: Item = preload("res://Entities/Items/TapePlayer.tres")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

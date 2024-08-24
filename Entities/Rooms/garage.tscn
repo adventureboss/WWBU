@@ -64,10 +64,10 @@ dialogue_start = "hammer"
 
 [node name="CarDoor" type="Control" parent="TextureRect"]
 anchors_preset = 0
-offset_left = 131.0
-offset_top = 431.0
-offset_right = 373.0
-offset_bottom = 500.0
+offset_left = 1.0
+offset_top = 249.0
+offset_right = 399.0
+offset_bottom = 519.0
 script = ExtResource("7_aq7lm")
 dialogue_resource = ExtResource("8_5v7rf")
 item_titles = {
@@ -75,3 +75,4 @@ ExtResource("9_7ayy0"): "coat_hanger"
 }
 
 [connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]
+[connection signal="gui_input" from="TextureRect/CarDoor" to="TextureRect/CarDoor" method="_on_gui_input"]

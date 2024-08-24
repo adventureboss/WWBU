@@ -11,17 +11,17 @@
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6rnje"]
 shader = ExtResource("4_q3p0e")
 shader_parameter/overlay = true
-shader_parameter/scanlines_opacity = 0.11
-shader_parameter/scanlines_width = 0.081
-shader_parameter/grille_opacity = 0.1
+shader_parameter/scanlines_opacity = 0.031
+shader_parameter/scanlines_width = 0.042
+shader_parameter/grille_opacity = 0.066
 shader_parameter/resolution = Vector2(640, 480)
 shader_parameter/pixelate = false
 shader_parameter/roll = true
-shader_parameter/roll_speed = 2.0
-shader_parameter/roll_size = 15.0
-shader_parameter/roll_variation = 1.8
+shader_parameter/roll_speed = 0.675
+shader_parameter/roll_size = 7.135
+shader_parameter/roll_variation = 1.36
 shader_parameter/distort_intensity = 0.0
-shader_parameter/noise_opacity = 0.4
+shader_parameter/noise_opacity = 0.198
 shader_parameter/noise_speed = 5.0
 shader_parameter/static_noise_intensity = 0.01
 shader_parameter/aberration = 4.75e-08
