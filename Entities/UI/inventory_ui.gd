@@ -106,9 +106,10 @@ func _on_gui_input(event: InputEvent) -> void:
 		if event is InputEventMouseButton:
 			if event.is_released():
 				var item_in_position = get_slot_node_at_position(self.get_local_mouse_position())
+				if item_in_position == null:
+					return
 				if item_in_position.texture == load("res://Entities/UI/Item_types.png"):
 					return
 				if item_in_position.item.Dialogue != null:
-					print("this fired")
 					dialogue_bubble.start(item_in_position.item.Dialogue, item_in_position.item.DialogueStart)
 			
