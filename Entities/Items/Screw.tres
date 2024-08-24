@@ -7,3 +7,4 @@
 script = ExtResource("1_dgt4h")
 Sprite = ExtResource("1_7fac3")
 DisplayName = "Screw"
+DialogueStart = "screw"

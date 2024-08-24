@@ -7,3 +7,4 @@
 script = ExtResource("1_x7iib")
 Sprite = ExtResource("1_uahr8")
 DisplayName = "Road Flare"
+DialogueStart = "road_flare"

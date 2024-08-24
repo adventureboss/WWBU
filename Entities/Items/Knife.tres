@@ -7,3 +7,4 @@
 script = ExtResource("1_63qv3")
 Sprite = ExtResource("1_v266e")
 DisplayName = "Knife"
+DialogueStart = "knife"

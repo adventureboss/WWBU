@@ -7,3 +7,4 @@
 script = ExtResource("1_q2t28")
 Sprite = ExtResource("1_xsnrs")
 DisplayName = "Cigarette Lighter"
+DialogueStart = "lighter"

@@ -21,6 +21,11 @@ A set of birthday candles
 	Happy Birthday, David ... I guess
 => room_translator
 
+~ coat_hanger
+It's a metal coat hanger.
+	Might make a good weapon agianst whatever David is becoming.
+=> room_translator
+
 ~ flashlight
 It's a flashlight
 	It lights things up
@@ -46,6 +51,21 @@ A hammer
 	When all your problems look like nails
 => room_translator
 
+~ lighter
+A lighter
+	It has a skull and crossbones on it. Mark is [italic]soooo[/italic] hardcore. Psshh
+=> room_translator
+
+~ lit_candles
+Lit up birthday candles
+	They're hot because they're on fire
+=> room_translator
+
+~ loaded_tape_player
+Loaded Tape Player
+	It has a tape in it now
+=> room_translator
+
 ~ kazoo
 A Kazoo?
 	doot doot doot
@@ -62,8 +82,8 @@ A bag of porkrinds
 => room_translator
 
 ~ ritual_tape
-A cassette tape marked on the front with "Ritual Music"
-	... a little on the nose don't you think?
+A cassette tape
+	It's a cassette tape with "Ritual" written on it in brown-ish ... ink. I think that's ink.
 => room_translator
 
 ~ road_flare
@@ -87,6 +107,13 @@ It's a translated note
 ~ screw
 A loose screw
 	Seems useful enough
+=> room_translator
+
+~ tape_player
+A tape player
+	It's a tape player with some modest settings. The reverse switch could be fun.
+	<You ramble some nonsense in reverse and sigh to yourself>
+	Oh what fun we could have with that if not for Demon David. 
 => room_translator
 
 ~ combo_candles_lighter
