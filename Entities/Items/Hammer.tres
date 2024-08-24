@@ -7,3 +7,4 @@
 script = ExtResource("1_boy3v")
 Sprite = ExtResource("1_xotyj")
 DisplayName = "Claw Tooth Hammer"
+DialogueStart = "hammer"

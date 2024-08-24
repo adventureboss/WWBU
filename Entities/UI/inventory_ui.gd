@@ -2,6 +2,9 @@ extends Control
 
 @onready var inventory_grid: GridContainer = $MarginContainer/InventoryGrid
 
+@onready var dialogue_bubble = get_tree().get_first_node_in_group("dialogue_bubble")
+
+
 var inventory_slot_count = 15
 
 func _ready():
@@ -85,7 +88,6 @@ func remove_item(item):
 			return
 
 func _on_items_combined(item: Item):
-	var dialogue_bubble = get_tree().get_first_node_in_group("dialogue_bubble")
 	if item.DisplayName == "Lit Birthday Candles":
 		dialogue_bubble.start(load("res://Entities/Dialogues/items.dialogue"), "combo_candles_lighter")
 		return
@@ -98,3 +100,15 @@ func _on_items_combined(item: Item):
 	if item.DisplayName == "A Cassette Player with a Cassette":
 		dialogue_bubble.start(load("res://Entities/Dialogues/items.dialogue"), "combo_tape_player")
 		return
+
+
+func _on_gui_input(event: InputEvent) -> void:
+		if event is InputEventMouseButton:
+			if event.is_released():
+				var item_in_position = get_slot_node_at_position(self.get_local_mouse_position())
+				if item_in_position.texture == load("res://Entities/UI/Item_types.png"):
+					return
+				if item_in_position.item.Dialogue != null:
+					print("this fired")
+					dialogue_bubble.start(item_in_position.item.Dialogue, item_in_position.item.DialogueStart)
+			

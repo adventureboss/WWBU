@@ -232,5 +232,6 @@ response_template = NodePath("ResponseExample")
 layout_mode = 2
 text = "Response example"
 
+[connection signal="gui_input" from="UIContainer/LeftUI/InventoryUI" to="UIContainer/LeftUI/InventoryUI" method="_on_gui_input"]
 [connection signal="gui_input" from="UIContainer/RightUI/Balloon" to="UIContainer/RightUI/Balloon" method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="UIContainer/RightUI/Balloon/Responses/ResponsesMenu" to="UIContainer/RightUI/Balloon" method="_on_responses_menu_response_selected"]

@@ -7,3 +7,4 @@
 script = ExtResource("2_8pcun")
 Sprite = ExtResource("1_3dmq3")
 DisplayName = "Wine Bottle (Stoppered)"
+DialogueStart = "booze"

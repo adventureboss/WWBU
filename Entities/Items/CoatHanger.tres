@@ -7,3 +7,4 @@
 script = ExtResource("2_qs2ew")
 Sprite = ExtResource("1_jhqkv")
 DisplayName = "Coat Hanger"
+DialogueStart = "coat_hanger"

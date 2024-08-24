@@ -7,3 +7,4 @@
 script = ExtResource("1_plfbp")
 Sprite = ExtResource("1_hxko1")
 DisplayName = "Bag of Pork Rinds"
+DialogueStart = "pork_rinds"

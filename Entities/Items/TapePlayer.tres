@@ -7,3 +7,4 @@
 script = ExtResource("2_8kxby")
 Sprite = ExtResource("1_8bbwe")
 DisplayName = "A Cassette Tape Player"
+DialogueStart = "tape_player"

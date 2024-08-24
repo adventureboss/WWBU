@@ -7,3 +7,4 @@
 script = ExtResource("1_244ji")
 Sprite = ExtResource("1_owkfu")
 DisplayName = "Safe Note (Translated)"
+DialogueStart = "safe_note_translated"

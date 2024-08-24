@@ -7,3 +7,4 @@
 script = ExtResource("1_emgwl")
 Sprite = ExtResource("1_pbqm3")
 DisplayName = "Flashlight"
+DialogueStart = "flashlight"

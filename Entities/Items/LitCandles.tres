@@ -7,3 +7,4 @@
 script = ExtResource("1_ywql2")
 Sprite = ExtResource("1_no7sv")
 DisplayName = "Lit Birthday Candles"
+DialogueStart = "lit_candles"
