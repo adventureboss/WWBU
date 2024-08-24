@@ -8,11 +8,19 @@ Mark: "I'm freaking out man... [b]I'M FREAKING OUT![b]"
 
 ~ candles
 # Add an interaction here for when you are holding the candles
-Mark: "Hey man are those candles? You need a light?"
+Mark: Hey man are those candles? You need a light?
 - YES
-	Mark: "Here, take this."
+	Mark: Here, take this.
 	do add_item(LIGHTER)
 	=> items/room_translator
 - Of Course!
+	Mark: Here, take this.
+	do add_item(LIGHTER)
 - YESTERDAY!!
-=> END
+	Mark: Dude, chill. Here, take mine.
+	do add_item(LIGHTER)
+=> items/room_translator
+
+~ unhandled_item
+I don't think he wants that
+=> items/room_translator
