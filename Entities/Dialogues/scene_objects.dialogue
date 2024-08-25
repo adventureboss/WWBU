@@ -1,12 +1,11 @@
 import "res://Entities/Dialogues/items.dialogue" as items
 
 ~ start
-if PersistenceSystem.found_keys == true
+if PersistenceSystem.found_keys == true:
 	The door is locked and the keys are on the very dangerous birthday boy
 	=> items/room_translator
-else
-	The door is locked and I don't know where the keys are
-	=> items/room_translator
+The door is locked and I don't know where the keys are
+=> items/room_translator
 
 ~ coat_hanger
 if PersistenceSystem.car_door_unlocked
@@ -38,6 +37,17 @@ do InventorySystem.remove_item(CANDLES)
 % As much as I enjoyed that, the clock is ticking
 => items/room_translator
 
+~ no_car
+if PersistenceSystem.keys_found == true:
+	if PersistenceSystem.keys_reach_attempted == true:
+		David has the keys in his pocket, but there's no way I'm getting close to them.
+		=> items/room_translator
+	David has the keys. I guess I could ask him for them.
+	=> items/room_translator
+I can't get in and I don't know where the keys are.
+Maybe Lisa or Mark knows.
+=> items/room_translator
+
 ~ safe_opened
 I aleady opened the safe and got the tape out. I don't need to do it again
 => items/room_translator
@@ -45,4 +55,20 @@ I aleady opened the safe and got the tape out. I don't need to do it again
 ~ collected_tape
 Hey, a tape! It looks old and says "Ritual" in brown-ish ... ink? Yeah. That's ink.
 	Cassette Tape added to inventory
+=> items/room_translator
+
+~ dante
+A copy of Dante's Inferno
+	I'm not picking that up. I have my own 9th level of Hell right here in this cabin.
+=> items/room_translator
+
+~ pillow
+It's a nice pillow on the bed
+	Now is not the time to take a nap. We're going to die in minutes.
+=> items/room_translator
+
+~ knife_pillow
+You cut the pillow with a knife because why not? 
+	Is that a kazoo?
+do PersistenceSystem.found_kazoo.emit()
 => items/room_translator

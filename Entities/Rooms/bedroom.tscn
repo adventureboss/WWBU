@@ -1,13 +1,19 @@
-[gd_scene load_steps=9 format=3 uid="uid://dlg51g3e2hb8a"]
+[gd_scene load_steps=15 format=3 uid="uid://dlg51g3e2hb8a"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_gmkw2"]
 [ext_resource type="Texture2D" uid="uid://lh5vkkxi4hc1" path="res://Scenes/bedroom.png" id="2_jdage"]
+[ext_resource type="Script" path="res://Entities/npc.gd" id="3_jjn8o"]
 [ext_resource type="PackedScene" uid="uid://1lo83hf88q04" path="res://Entities/UI/Pickup/pickup.tscn" id="3_ybldb"]
 [ext_resource type="Resource" uid="uid://cvkka6hrkyvbw" path="res://Entities/Items/Kazoo.tres" id="4_da7in"]
 [ext_resource type="Texture2D" uid="uid://bmfc8dhqbxrxv" path="res://Entities/Items/Art/kazoo.png" id="4_o8ibg"]
+[ext_resource type="Resource" uid="uid://b5dcvxjoelf8x" path="res://Entities/Dialogues/scene_objects.dialogue" id="4_yhdu7"]
 [ext_resource type="Resource" uid="uid://bvqfce8qh2w7f" path="res://Entities/Items/SafeNote.tres" id="5_i7l23"]
+[ext_resource type="Resource" uid="uid://dsipjvb2kqgii" path="res://Entities/Items/Knife.tres" id="5_ph5ne"]
+[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="6_er5sy"]
 [ext_resource type="Texture2D" uid="uid://n7pxdo05afi0" path="res://Entities/Items/Art/coat_hanger.png" id="7_t6cyf"]
 [ext_resource type="Resource" uid="uid://dwtb0gkur7a8w" path="res://Entities/Items/CoatHanger.tres" id="8_e3cjx"]
+[ext_resource type="Texture2D" uid="uid://paageb6ur011" path="res://Entities/Items/Art/tape_player.png" id="10_phj2t"]
+[ext_resource type="Resource" uid="uid://djr0fevbu11f" path="res://Entities/Items/TapePlayer.tres" id="11_w0g2d"]
 
 [node name="Bedroom" type="Control"]
 layout_mode = 3
@@ -19,11 +25,24 @@ grow_vertical = 2
 script = ExtResource("1_gmkw2")
 dialogue_start = "bedroom"
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="TextureRect" type="TextureRect" parent="." groups=["bedroom"]]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_jdage")
+
+[node name="Pillow" type="Control" parent="TextureRect"]
+anchors_preset = 0
+offset_left = 570.0
+offset_top = 273.0
+offset_right = 746.0
+offset_bottom = 308.0
+script = ExtResource("3_jjn8o")
+dialogue_resource = ExtResource("4_yhdu7")
+item_titles = {
+ExtResource("5_ph5ne"): "knife_pillow"
+}
+dialogue_start = "pillow"
 
 [node name="Kazoo" parent="TextureRect" instance=ExtResource("3_ybldb")]
 visible = false
@@ -43,6 +62,7 @@ offset_left = 411.0
 offset_top = 143.0
 offset_right = -509.0
 offset_bottom = -337.0
+texture = ExtResource("6_er5sy")
 item = ExtResource("5_i7l23")
 dialogue_start = "safe_note"
 
@@ -56,3 +76,16 @@ offset_bottom = -73.0
 texture = ExtResource("7_t6cyf")
 item = ExtResource("8_e3cjx")
 dialogue_start = "coat_hanger"
+
+[node name="TapePlayer" parent="TextureRect" instance=ExtResource("3_ybldb")]
+layout_mode = 1
+offset_left = 798.0
+offset_top = 304.0
+offset_right = -117.0
+offset_bottom = -165.0
+rotation = -0.675442
+texture = ExtResource("10_phj2t")
+item = ExtResource("11_w0g2d")
+dialogue_start = "tape_player"
+
+[connection signal="gui_input" from="TextureRect/Pillow" to="TextureRect/Pillow" method="_on_gui_input"]

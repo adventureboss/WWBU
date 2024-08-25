@@ -16,6 +16,10 @@ func _ready() -> void:
 
 # May want to deactivate current (with some traveling placeholder behind it), do other stuff, then activate new with an animation
 func change_room(button: RoomButton):
+	if button.text == "Car" and PersistenceSystem.car_door_unlocked != true:
+		var dialogue_bubble = get_tree().get_first_node_in_group("dialogue_bubble")
+		dialogue_bubble.start(load("res://Entities/Dialogues/scene_objects.dialogue"), "no_car")
+		return
 	if active_room != null:
 		active_room.show_inactive()
 	
@@ -34,4 +38,5 @@ func change_room(button: RoomButton):
 
 
 func _on_car_opened():
-	car.visible = true
+	car.modulate = Color(1.0, 1.0, 1.0, 1.0)
+	PersistenceSystem.car_door_unlocked = true

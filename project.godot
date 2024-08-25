@@ -48,6 +48,7 @@ enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
 dialogue_bubble="group to make this easier to find"
 highlight_item="Item that should be highlighted when a key is pressed"
 interface=""
+bedroom=""
 
 [internationalization]
 

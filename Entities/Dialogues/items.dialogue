@@ -100,7 +100,7 @@ A sturdy looking safe
 It's some kind of note
 	I have no idea what it says. It's all in German?
 Read the note?
-if note_in_inventory:
+if PersistenceSystem.note_in_inventory == true:
 	- Read
 		do InventorySystem.open_note()
 	- Put away
