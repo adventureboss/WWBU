@@ -59,7 +59,7 @@ room_scene = ExtResource("7_n6r6r")
 
 [node name="Car" type="Button" parent="GridContainer"]
 unique_name_in_owner = true
-visible = false
+modulate = Color(1, 0.12549, 0.0823529, 0.313726)
 layout_mode = 2
 text = "Car"
 script = ExtResource("3_ctdyi")

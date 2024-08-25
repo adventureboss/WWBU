@@ -2,13 +2,12 @@ import "res://Entities/Dialogues/items.dialogue" as items
 
 ~ start
 Lisa paces the living room arms crossed a look of worry over her face as you approach
-Lisa: Hey, how goes the search?
-- Good
-	Lisa: Good enough to be done with this, I hope. 
-- Bad
-	Lisa: At least your not having to share oxygen with this idiot
-- I give up
-	Lisa: I guess we're all just gonna die now? Get back to it!
+- Ask about keys
+	Do you know where the keys are?
+	Lisa: It's David's car. He probably still has them.
+	do PersistenceSystem.keys_found = true
+- Nevermind
+	=> items/room_translator
 => items/room_translator
 
 
