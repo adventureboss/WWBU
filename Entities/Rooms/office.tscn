@@ -32,7 +32,7 @@ offset_right = 962.0
 offset_bottom = 520.0
 texture = ExtResource("2_15vch")
 
-[node name="Screw" parent="TextureRect" instance=ExtResource("3_aaw48")]
+[node name="Screw" parent="TextureRect" groups=["highlight_item"] instance=ExtResource("3_aaw48")]
 layout_mode = 1
 offset_left = 171.0
 offset_top = 442.0
@@ -54,7 +54,7 @@ script = ExtResource("3_2cctv")
 dialogue_resource = ExtResource("6_knkgg")
 dialogue_start = "safe_opened"
 
-[node name="DantesInterno" type="Control" parent="TextureRect"]
+[node name="DantesInterno" type="Control" parent="TextureRect" groups=["highlight_item"]]
 anchors_preset = 0
 offset_left = 803.0
 offset_top = 229.0
