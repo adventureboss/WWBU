@@ -41,36 +41,29 @@ layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "[center]In the morning light, when you rise and see,
-The number of sunbeams is just three.
-Next, think of a pair, a bond so tight,
-Their number is two, shining bright.
+text = "[center]
+Inside a box of iron, a treasure you’ll find, 
+To unlock its secrets, four numbers you must bind.
 
-As the day turns to dusk, the sky's a hue,
-Count the stars, and you'll find they're two.
-Finally, as the night brings calm, so free,
-A single moon glows, making it three.
-
-So now you have the code, clear as day,
-Three, two, two, three is the way.[/center]"
+The first are the horsemen at the world’s end
+The second, the spider, where shadows extend. 
+The third is from Dante’s descent into night, 
+And the last is the balance of dark and light.
+[/center]"
 
 [node name="German" type="RichTextLabel" parent="Panel/MarginContainer"]
 layout_mode = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/normal_font_size = 20
 bbcode_enabled = true
-text = "[center]Im Morgenlicht, wenn du erwachst und siehst,
-Die Anzahl der Sonnenstrahlen ist nur drei.
-Dann denke an ein Paar, ein Bund so fest,
-Ihre Zahl ist zwei, so hell und klar.
+text = "[center]In einer Kiste aus Eisen liegt ein Schatz, den du findest,
+Um seine Geheimnisse zu lüften, musst du vier Zahlen binden.
 
-Wenn der Tag zum Abend wird, der Himmel so blau,
-Zähle die Sterne, und du findest zwei.
-Schließlich, wenn die Nacht Ruhe bringt, so frei,
-Leuchtet ein einzelner Mond, und das macht es drei.
-
-Nun hast du den Code, so klar wie der Tag,
-Drei, zwei, zwei, drei ist der Weg.[/center]"
+Die erste sind die Reiter am Ende der Welt,
+Die zweite, die Spinne, wo sich Schatten erhellt.
+Die dritte stammt aus Dantes Abstieg in die Nacht,
+Und die letzte ist das Gleichgewicht von Dunkel und Licht.
+[/center]"
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3
