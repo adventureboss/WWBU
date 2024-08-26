@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://c1wvyc5uovt7r"
+=======
+uid="uid://ij3yc8uqmpuq"
+>>>>>>> f9d17b8 (Update room dialogue with more descriptions)
 path="res://.godot/imported/hour_hand.png-c6901f749f8cc3806618545a3b0dc95d.ctex"
 metadata={
 "vram_texture": false

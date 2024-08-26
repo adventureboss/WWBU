@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://cewl7v8suw6v8"
+=======
+uid="uid://b4sulpgktkiql"
+>>>>>>> f9d17b8 (Update room dialogue with more descriptions)
 path="res://.godot/imported/cabin_map.png-782efd723586d5d822daceeccd83db9f.ctex"
 metadata={
 "vram_texture": false

@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< HEAD
 uid="uid://dyj343jq5bjr0"
+=======
+uid="uid://cn3u1i0lxcnak"
+>>>>>>> f9d17b8 (Update room dialogue with more descriptions)
 path="res://.godot/imported/open_book_with_background.png-beb0004588741e90e472d81722a9162c.ctex"
 metadata={
 "vram_texture": false
