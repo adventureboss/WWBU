@@ -31,7 +31,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("2_jdage")
 
-[node name="Pillow" type="Control" parent="TextureRect"]
+[node name="Pillow" type="Control" parent="TextureRect" groups=["highlight_item"]]
 anchors_preset = 0
 offset_left = 570.0
 offset_top = 273.0
@@ -55,7 +55,7 @@ texture = ExtResource("4_o8ibg")
 item = ExtResource("4_da7in")
 dialogue_start = "kazoo"
 
-[node name="SafeNote" parent="TextureRect" instance=ExtResource("3_ybldb")]
+[node name="SafeNote" parent="TextureRect" groups=["highlight_item"] instance=ExtResource("3_ybldb")]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 offset_left = 411.0
@@ -66,7 +66,7 @@ texture = ExtResource("6_er5sy")
 item = ExtResource("5_i7l23")
 dialogue_start = "safe_note"
 
-[node name="CoatHanger" parent="TextureRect" instance=ExtResource("3_ybldb")]
+[node name="CoatHanger" parent="TextureRect" groups=["highlight_item"] instance=ExtResource("3_ybldb")]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 offset_left = 164.0
@@ -77,7 +77,7 @@ texture = ExtResource("7_t6cyf")
 item = ExtResource("8_e3cjx")
 dialogue_start = "coat_hanger"
 
-[node name="TapePlayer" parent="TextureRect" instance=ExtResource("3_ybldb")]
+[node name="TapePlayer" parent="TextureRect" groups=["highlight_item"] instance=ExtResource("3_ybldb")]
 layout_mode = 1
 offset_left = 798.0
 offset_top = 304.0

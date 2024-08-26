@@ -29,7 +29,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_rv80l")
 
-[node name="Mark" type="Control" parent="Background"]
+[node name="Mark" type="Control" parent="Background" groups=["highlight_item"]]
 anchors_preset = 0
 offset_left = 429.0
 offset_top = 113.0
@@ -42,7 +42,7 @@ item_titles = {
 ExtResource("7_do1n4"): "candles"
 }
 
-[node name="Lisa" type="Control" parent="Background"]
+[node name="Lisa" type="Control" parent="Background" groups=["highlight_item"]]
 anchors_preset = 0
 offset_left = 282.0
 offset_top = 140.0
@@ -55,7 +55,7 @@ item_titles = {
 ExtResource("7_npgyr"): "german_note"
 }
 
-[node name="David" type="Control" parent="Background"]
+[node name="David" type="Control" parent="Background" groups=["highlight_item"]]
 anchors_preset = 0
 offset_left = 676.0
 offset_top = 265.0
