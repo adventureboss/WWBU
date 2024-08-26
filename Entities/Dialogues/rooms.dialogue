@@ -6,11 +6,18 @@ You're standing in the Foyer.
 ~ kitchen
 You're standing in the Kitchen.
 	Linoleum floor. Classy.
+	There's a bottle of wine on the counter
+	A sharp knife sits on the other side of the kitchen
+	The candles we bought for david sit on the counter
+	The stovetop sits there, not yet lit
 => END
 
 ~ bedroom
 You're in the bedroom.
 	Nice decor choices.
+	The armoir is open slightly... might be something in there
+	There's a tape recorder sitting on the bedside table
+	A note is stuck to the left wall, I can't read it from here
 => END
 
 ~ office
@@ -21,10 +28,13 @@ You're in the office.
 
 ~ garage
 You're in the garage.
-	There are some tools, our car, and an odd musty smell.
+	It's musty in here
+	There are tools on the workbench, one of them could be useful
+	Our car sits in the spot, I wish I had a way to get in!
 => END!
 
 ~ car
 You're in the car.
 	Finally got in. If I had the key's I'd just go home.
+	There is a bag of porkrinds on the seat and a roadflare on the floor.
 => END
