@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://c3ev2lg66syva"]
+[gd_scene load_steps=11 format=3 uid="uid://c3ev2lg66syva"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_rnopy"]
 [ext_resource type="Texture2D" uid="uid://ve8w8spirqjo" path="res://Scenes/office.png" id="2_15vch"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://e4j8dbshw1a0" path="res://Entities/Items/Art/screw.png" id="4_ca4qd"]
 [ext_resource type="Resource" uid="uid://b5dcvxjoelf8x" path="res://Entities/Dialogues/scene_objects.dialogue" id="6_knkgg"]
 [ext_resource type="Script" path="res://Entities/npc.gd" id="8_dw1pr"]
+[ext_resource type="PackedScene" uid="uid://dtt2tjhe633no" path="res://Entities/UI/clock_overlay.tscn" id="9_6sba8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0xpe"]
 bg_color = Color(0.356863, 0.65098, 0.72549, 0.482353)
@@ -64,5 +65,19 @@ script = ExtResource("8_dw1pr")
 dialogue_resource = ExtResource("6_knkgg")
 dialogue_start = "dante"
 
+[node name="LookAtClock" type="Button" parent="TextureRect" groups=["highlight_item"]]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 247.0
+offset_top = 85.0
+offset_right = 304.0
+offset_bottom = 185.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_q0xpe")
+script = ExtResource("3_2cctv")
+dialogue_resource = ExtResource("6_knkgg")
+dialogue_start = "safe_opened"
+clock_scene = ExtResource("9_6sba8")
+
 [connection signal="pressed" from="TextureRect/OpenSafe" to="TextureRect/OpenSafe" method="_on_pressed"]
 [connection signal="gui_input" from="TextureRect/DantesInterno" to="TextureRect/DantesInterno" method="_on_gui_input"]
+[connection signal="pressed" from="TextureRect/LookAtClock" to="TextureRect/LookAtClock" method="_on_clock_pressed"]
