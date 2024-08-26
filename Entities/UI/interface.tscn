@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dlnnfto6a8v3l"]
+[gd_scene load_steps=16 format=3 uid="uid://dlnnfto6a8v3l"]
 
 [ext_resource type="Script" path="res://Utilities/game_start.gd" id="1_l8uv4"]
 [ext_resource type="Script" path="res://Entities/UI/inventory_ui.gd" id="1_ofw8k"]
@@ -8,6 +8,8 @@
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="6_t8cb0"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="7_i6mw8"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="8_q02wu"]
+[ext_resource type="AudioStream" uid="uid://cy72cmo3jgsnr" path="res://Entities/Audio/main_backgroud_loop.mp3" id="8_qmtlt"]
+[ext_resource type="AudioStream" uid="uid://cxj7th0yp070x" path="res://Entities/Audio/rain_background.mp3" id="9_s7ai8"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6rnje"]
 shader = ExtResource("4_q3p0e")
@@ -233,6 +235,16 @@ response_template = NodePath("ResponseExample")
 [node name="ResponseExample" type="Button" parent="UIContainer/RightUI/Balloon/Responses/ResponsesMenu"]
 layout_mode = 2
 text = "Response example"
+
+[node name="AudioStream_main_background" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("8_qmtlt")
+autoplay = true
+parameters/looping = true
+
+[node name="AudioStream_rain_loop" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("9_s7ai8")
+autoplay = true
+parameters/looping = true
 
 [connection signal="gui_input" from="UIContainer/LeftUI/InventoryUI" to="UIContainer/LeftUI/InventoryUI" method="_on_gui_input"]
 [connection signal="gui_input" from="UIContainer/RightUI/Balloon" to="UIContainer/RightUI/Balloon" method="_on_balloon_gui_input"]
