@@ -13,10 +13,10 @@ Lisa paces the living room arms crossed a look of worry over her face as you app
 
 ~ german_note
 # Add an interaction here for when you are holding the note
-Lisa: Hey! Is that note in german?? I spent a semester in Munich, gimme that
 do remove_item(SAFE_NOTE)
 do PersistenceSystem.note_translated = true
 do add_item(SAFE_NOTE_TRANSLATED)
+Lisa: Hey! Is that note in german?? I spent a semester in Munich, gimme that
 Lisa: I translated it for you. It should make more sense now.
 => items/room_translator
 

@@ -10,9 +10,9 @@ The door is locked and I don't know where the keys are
 ~ coat_hanger
 if PersistenceSystem.car_door_unlocked
 	=> car_opened
+do PersistenceSystem.car_opened.emit()
 You jam the coat hanger into car door, trying to find the lock
 	After some fiddling, you get it to pop open.
-do PersistenceSystem.car_opened.emit()
 => items/room_translator
 
 ~ oven
@@ -21,9 +21,9 @@ It's a gas stove
 => items/room_translator
 
 ~ oven_candles
-You light the stove and hold the candles over the flames. They light!
 do InventorySystem.add_item(CANDLES_LIT)
 do InventorySystem.remove_item(CANDLES)
+You light the stove and hold the candles over the flames. They light!
 => items/room_translator
 
 ~ unhandled_item
@@ -68,7 +68,7 @@ It's a nice pillow on the bed
 => items/room_translator
 
 ~ knife_pillow
+do PersistenceSystem.found_kazoo.emit()
 You cut the pillow with a knife because why not? 
 	Is that a kazoo?
-do PersistenceSystem.found_kazoo.emit()
 => items/room_translator
