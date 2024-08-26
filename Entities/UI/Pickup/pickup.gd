@@ -24,8 +24,6 @@ func _ready() -> void:
 
 func pick_up():
 	InventorySystem.add_item(item)
-	if item.DisplayName == "Old Worn Note in a Foreign Language":
-		PersistenceSystem.note_in_inventory = true
 	PersistenceSystem.set_object_state(self, false)
 	self.queue_free()
 

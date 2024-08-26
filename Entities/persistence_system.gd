@@ -5,7 +5,6 @@ var active_room
 var active_room_name
 var dialogue_bubble
 var safe_opened: bool = false
-var note_translated: bool = false
 var car_door_unlocked: bool = false
 var found_keys: bool = false
 
@@ -45,7 +44,6 @@ func clear():
 	active_room_name = ""
 	#dialogue_bubble = null # Do not reset. It's not game state and will be overwritten anyway.
 	safe_opened = false
-	note_translated = false
 	car_door_unlocked = false
 	found_keys = false
 	

@@ -6,7 +6,7 @@ extends CanvasLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if PersistenceSystem.note_translated:
+	if InventorySystem.has_item(InventorySystem.SAFE_NOTE_TRANSLATED):
 		english.visible = true
 		german.visible = false
 	else:
