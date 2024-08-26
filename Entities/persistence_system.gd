@@ -38,3 +38,14 @@ func set_object_state(node: Node, value: Variant):
 func set_active_room(id: String, name: String):
 	active_room = id
 	active_room_name = name.to_lower()
+	
+func clear():
+	rooms.clear()
+	active_room = null
+	active_room_name = ""
+	dialogue_bubble = null
+	safe_opened = false
+	note_translated = false
+	car_door_unlocked = false
+	found_keys = false
+	
