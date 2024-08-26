@@ -41,9 +41,9 @@ func set_active_room(id: String, name: String):
 	
 func clear():
 	rooms.clear()
-	active_room = null
+	active_room = ""
 	active_room_name = ""
-	dialogue_bubble = null
+	#dialogue_bubble = null # Do not reset. It's not game state and will be overwritten anyway.
 	safe_opened = false
 	note_translated = false
 	car_door_unlocked = false

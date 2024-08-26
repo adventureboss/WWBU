@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://k62u8avb7j12"]
+[gd_scene load_steps=5 format=3 uid="uid://dtt2tjhe633no"]
 
 [ext_resource type="Texture2D" uid="uid://bms26s3qepqjn" path="res://Scenes/clock_scene.png" id="1_7kvy0"]
 [ext_resource type="Script" path="res://Entities/UI/clock_overlay.gd" id="1_acvlg"]

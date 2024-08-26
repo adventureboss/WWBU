@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://e4j8dbshw1a0" path="res://Entities/Items/Art/screw.png" id="4_ca4qd"]
 [ext_resource type="Resource" uid="uid://b5dcvxjoelf8x" path="res://Entities/Dialogues/scene_objects.dialogue" id="6_knkgg"]
 [ext_resource type="Script" path="res://Entities/npc.gd" id="8_dw1pr"]
-[ext_resource type="PackedScene" uid="uid://k62u8avb7j12" path="res://Entities/UI/clock_overlay.tscn" id="9_6sba8"]
+[ext_resource type="PackedScene" uid="uid://dtt2tjhe633no" path="res://Entities/UI/clock_overlay.tscn" id="9_6sba8"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q0xpe"]
 bg_color = Color(0.356863, 0.65098, 0.72549, 0.482353)
@@ -67,6 +67,7 @@ dialogue_start = "dante"
 
 [node name="LookAtClock" type="Button" parent="TextureRect" groups=["highlight_item"]]
 modulate = Color(1, 1, 1, 0)
+layout_mode = 0
 offset_left = 247.0
 offset_top = 85.0
 offset_right = 304.0
