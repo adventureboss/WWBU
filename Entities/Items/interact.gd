@@ -3,9 +3,11 @@ class_name Actionable
 
 @onready var interface: Node = get_tree().get_first_node_in_group("interface")
 @onready var dialogue_bubble = get_tree().get_first_node_in_group("dialogue_bubble")
+@onready var viewport = interface.get_node("UIContainer/RightUI/ViewUI/Room")
 
 @export var dialogue_resource: DialogueResource
 @export var dialogue_start: String = "start"
+@export var clock_scene: PackedScene
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,11 +18,13 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	pass
 
-
-
 func _on_pressed() -> void:
 	if PersistenceSystem.safe_opened:
 		dialogue_bubble.start(dialogue_resource, dialogue_start)
 	else:
 		var safe_minigame: Node = preload("res://Entities/Minigames/safe.tscn").instantiate()
 		interface.add_child(safe_minigame)
+
+func _on_clock_pressed() -> void:
+	var clock = clock_scene.instantiate()
+	viewport.add_child(clock)

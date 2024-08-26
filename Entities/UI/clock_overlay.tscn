@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://dtt2tjhe633no"]
+
+[ext_resource type="Texture2D" uid="uid://bms26s3qepqjn" path="res://Scenes/clock_scene.png" id="1_7kvy0"]
+[ext_resource type="Script" path="res://Entities/UI/clock_overlay.gd" id="1_acvlg"]
+[ext_resource type="Texture2D" uid="uid://sivvie54tv51" path="res://Entities/Items/Art/minute_hand.png" id="2_eoouj"]
+[ext_resource type="Texture2D" uid="uid://c1wvyc5uovt7r" path="res://Entities/Items/Art/hour_hand.png" id="3_1rcra"]
+
+[node name="ClockFace" type="TextureRect" node_paths=PackedStringArray("minute_hand", "hour_hand")]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_7kvy0")
+script = ExtResource("1_acvlg")
+minute_hand = NodePath("Hands/Minute")
+hour_hand = NodePath("Hands/Hour")
+
+[node name="Hands" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 465.0
+offset_top = 217.27
+offset_right = 502.0
+offset_bottom = 257.27
+
+[node name="Minute" type="TextureRect" parent="Hands"]
+layout_mode = 0
+offset_left = -68.0
+offset_top = -119.0
+offset_right = 106.0
+offset_bottom = 41.0
+pivot_offset = Vector2(87, 139.875)
+texture = ExtResource("2_eoouj")
+expand_mode = 1
+
+[node name="Hour" type="TextureRect" parent="Hands"]
+layout_mode = 0
+offset_left = -82.0
+offset_top = -133.0
+offset_right = 118.0
+offset_bottom = 67.0
+pivot_offset = Vector2(100, 154.985)
+texture = ExtResource("3_1rcra")
+expand_mode = 1
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 486.0
+offset_right = 51.0
+offset_bottom = 517.0
+text = "Close"
+
+[connection signal="pressed" from="Button" to="." method="queue_free"]

@@ -33,7 +33,6 @@ offset_left = 651.0
 offset_top = 321.0
 offset_right = -239.0
 offset_bottom = -124.0
-mouse_default_cursor_shape = 2
 texture = ExtResource("4_c5pha")
 item = ExtResource("2_nx2ra")
 dialogue_start = "knife"
@@ -44,7 +43,6 @@ offset_left = 147.0
 offset_top = 298.0
 offset_right = -756.0
 offset_bottom = -165.0
-mouse_default_cursor_shape = 2
 texture = ExtResource("6_n6wjj")
 item = ExtResource("6_j34ok")
 dialogue_start = "booze"
@@ -55,7 +53,6 @@ offset_left = 71.0
 offset_top = 450.0
 offset_right = -805.0
 offset_bottom = -11.0
-mouse_default_cursor_shape = 2
 dialogue_start = "candles"
 
 [node name="NPC" type="Control" parent="TextureRect"]

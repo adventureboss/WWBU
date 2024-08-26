@@ -1,5 +1,6 @@
 [gd_scene load_steps=16 format=3 uid="uid://dlnnfto6a8v3l"]
 
+[ext_resource type="Script" path="res://Utilities/game_start.gd" id="1_l8uv4"]
 [ext_resource type="Script" path="res://Entities/UI/inventory_ui.gd" id="1_ofw8k"]
 [ext_resource type="Texture2D" uid="uid://cnm0qdd783ixb" path="res://Entities/UI/inventory_background.png" id="2_gdyel"]
 [ext_resource type="PackedScene" uid="uid://6rnieq0sfws5" path="res://Entities/UI/direction_controls.tscn" id="2_tbafa"]
@@ -94,6 +95,7 @@ MarginContainer/constants/margin_top = 15
 Panel/styles/panel = SubResource("StyleBoxFlat_uy0d5")
 
 [node name="Interface" type="Node2D" groups=["interface"]]
+script = ExtResource("1_l8uv4")
 
 [node name="UIContainer" type="HBoxContainer" parent="."]
 offset_right = 1280.0
