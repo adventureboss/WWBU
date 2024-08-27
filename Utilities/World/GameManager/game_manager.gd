@@ -10,8 +10,8 @@ var last_known_tape_toggle: bool = false
 func ritual_start():
 	var interface: Node = get_tree().get_first_node_in_group("interface")
 	var viewport = interface.get_node("UIContainer/RightUI/ViewUI/Room")
-	var ritual_scene = preload("res://Entities/Rooms/ritual_scene.tscn").instantiate()
-	viewport.add_child(ritual_scene)
+	var ritual_scene = viewport.get_node("Foyer/Background/RitualScene")
+	ritual_scene.visible = true
 	
 func set_dialogue_state(dialogue_flag: String):
 	dialogue_states.append(dialogue_flag)

@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://d0wh0xrs7hkun"]
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bllk5e6qt6u8t"]
 
 [ext_resource type="Texture2D" uid="uid://cd2f7esnv46ga" path="res://Entities/Items/Art/evil_book.png" id="1_ctg1d"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="2_fpkw4"]
