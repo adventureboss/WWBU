@@ -1,0 +1,129 @@
+[gd_scene load_steps=10 format=3 uid="uid://wugs7h377qcf"]
+
+[ext_resource type="Texture2D" uid="uid://3dejev72lum4" path="res://Scenes/ritual_scene.png" id="1_4ubhq"]
+[ext_resource type="Script" path="res://RitualSlot.gd" id="2_i3dal"]
+[ext_resource type="Script" path="res://Entities/Rooms/ritual_slots.gd" id="2_tmi58"]
+[ext_resource type="Resource" uid="uid://bwit0sjp8dypm" path="res://Entities/Dialogues/ritual.dialogue" id="3_0x7ic"]
+[ext_resource type="Resource" uid="uid://djr0fevbu11f" path="res://Entities/Items/TapePlayer.tres" id="4_vr3f7"]
+[ext_resource type="Resource" uid="uid://2nluh4i06by7" path="res://Entities/Items/Booze_Open.tres" id="5_g0mv1"]
+[ext_resource type="Resource" uid="uid://cubghtmvbnoql" path="res://Entities/Items/PorkRinds.tres" id="6_0ahex"]
+[ext_resource type="Resource" uid="uid://n5ro0wiiigjw" path="res://Entities/Items/LitCandles.tres" id="7_j06wd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ovo1"]
+
+[node name="RitualScene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_4ubhq")
+
+[node name="PanelContainer" type="PanelContainer" parent="TextureRect"]
+layout_mode = 0
+offset_left = 120.0
+offset_top = 73.0
+offset_right = 245.0
+offset_bottom = 504.0
+theme_override_styles/panel = SubResource("StyleBoxEmpty_5ovo1")
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 17
+theme_override_constants/margin_top = 5
+
+[node name="RitualSlots" type="GridContainer" parent="TextureRect/PanelContainer/MarginContainer" groups=["ritualscene"]]
+layout_mode = 2
+theme_override_constants/h_separation = 20
+theme_override_constants/v_separation = 11
+script = ExtResource("2_tmi58")
+solution = Array[Object]([ExtResource("4_vr3f7"), ExtResource("5_g0mv1"), ExtResource("6_0ahex"), ExtResource("7_j06wd")])
+
+[node name="RitualSlot1" type="Control" parent="TextureRect/PanelContainer/MarginContainer/RitualSlots"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+script = ExtResource("2_i3dal")
+dialogue_resource = ExtResource("3_0x7ic")
+unhandled_item_title = "any_item"
+
+[node name="SlottedItem" type="TextureRect" parent="TextureRect/PanelContainer/MarginContainer/RitualSlots/RitualSlot1"]
+visible = false
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="RitualSlot2" type="Control" parent="TextureRect/PanelContainer/MarginContainer/RitualSlots"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+script = ExtResource("2_i3dal")
+dialogue_resource = ExtResource("3_0x7ic")
+unhandled_item_title = "any_item"
+
+[node name="SlottedItem" type="TextureRect" parent="TextureRect/PanelContainer/MarginContainer/RitualSlots/RitualSlot2"]
+visible = false
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="RitualSlot3" type="Control" parent="TextureRect/PanelContainer/MarginContainer/RitualSlots"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+script = ExtResource("2_i3dal")
+dialogue_resource = ExtResource("3_0x7ic")
+unhandled_item_title = "any_item"
+
+[node name="SlottedItem" type="TextureRect" parent="TextureRect/PanelContainer/MarginContainer/RitualSlots/RitualSlot3"]
+visible = false
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="RitualSlot4" type="Control" parent="TextureRect/PanelContainer/MarginContainer/RitualSlots"]
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 2
+script = ExtResource("2_i3dal")
+dialogue_resource = ExtResource("3_0x7ic")
+unhandled_item_title = "any_item"
+
+[node name="SlottedItem" type="TextureRect" parent="TextureRect/PanelContainer/MarginContainer/RitualSlots/RitualSlot4"]
+visible = false
+custom_minimum_size = Vector2(90, 90)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+expand_mode = 1
+
+[node name="BeginRitual" type="Button" parent="TextureRect"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 268.0
+offset_top = 448.0
+offset_right = 369.0
+offset_bottom = 479.0
+text = "Begin Ritual"
+
+[connection signal="button_up" from="TextureRect/BeginRitual" to="TextureRect/PanelContainer/MarginContainer/RitualSlots" method="_on_begin_ritual_button_up"]
