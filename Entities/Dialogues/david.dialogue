@@ -13,20 +13,22 @@ David is tied up and mumbling random things under his breath
 - Are you some kind of demon? [if not GameManager.get_dialogue_state("asked_about_demon")]
 	do set_dialogue_state("asked_about_demon")
 	David: [color=red][shake rate=20.0 level=5 connected=1]I'm am the harbinger of the end. The bringer of darkness. The first of the four horsemen![/shake][/color]
-- Reach for the car keys in David's pocket [if GameManager.get_dialogue_state("knows_about_keys") and GameManager.get_dialogue_state("reached_for_car_keys") == false]
+- Reach for the car keys in David's pocket [if GameManager.get_dialogue_state("knows_about_keys") and GameManager.get_dialogue_state("reached_for_car_keys") == false and not GameManager.get_dialogue_state("car_opened")]
 	do set_dialogue_state("reached_for_car_keys")
 	You reach forward to get the keys from David.
 		He screaches so loudly it hurts your ears and attempts to bite you when you get too close.
 	I need your car keys, man.
 	David: [color=red][shake rate=20.0 level=5 connected=1]and I need you face down in your own blood, you &#$@(*![/shake][/color]
 	I'm not going to be able to get those keys
-- Try to get the keys again [if GameManager.get_dialogue_state("reached_for_car_keys")]
+- Try to get the keys again [if GameManager.get_dialogue_state("reached_for_car_keys") and not GameManager.get_dialogue_state("car_opened")]
 	do set_dialogue_state("help_me_with_car")
 	You reach for the car keys again
 		David lets out an ear piercing howl
 	I don't think it's worth going for again. I'll need to find some other way to break into the car.
+- I got in your car and I didn't even [italic]need[/italic] your keys! [if GameManager.get_dialogue_state("knows_about_keys") and GameManager.get_dialogue_state("car_opened")]
+	David: [color=red][shake rate=20.0 level=5 connected=1]You'll be the first to die![/shake][/color]
 - I'm ready to try the ritual
-	Mark: I sure hope you know what you're doing
+	Mark: I sure hope you know what you're doing.
 	Lisa: We believe in you. Let's get this thing done.
 	You open the book to start the ritual
 	=> ritual_open
