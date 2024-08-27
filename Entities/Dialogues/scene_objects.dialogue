@@ -11,6 +11,7 @@ The door is locked and I don't know where the keys are
 if PersistenceSystem.car_door_unlocked
 	=> car_opened
 do PersistenceSystem.car_opened.emit()
+do play_sound("jimmy_door")
 You jam the coat hanger into car door, trying to find the lock
 	After some fiddling, you get it to pop open.
 => items/room_translator
@@ -23,6 +24,7 @@ It's a gas stove
 ~ oven_candles
 do InventorySystem.add_item(CANDLES_LIT)
 do InventorySystem.remove_item(CANDLES)
+do play_sound("light_candles")
 You light the stove and hold the candles over the flames. They light!
 => items/room_translator
 

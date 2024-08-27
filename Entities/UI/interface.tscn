@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://dlnnfto6a8v3l"]
+[gd_scene load_steps=19 format=3 uid="uid://dlnnfto6a8v3l"]
 
 [ext_resource type="Script" path="res://Utilities/game_start.gd" id="1_l8uv4"]
 [ext_resource type="Script" path="res://Entities/UI/inventory_ui.gd" id="1_ofw8k"]
@@ -8,6 +8,10 @@
 [ext_resource type="Script" path="res://addons/dialogue_manager/dialogue_reponses_menu.gd" id="6_t8cb0"]
 [ext_resource type="Script" path="res://addons/dialogue_manager/example_balloon/example_balloon.gd" id="7_i6mw8"]
 [ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://addons/dialogue_manager/dialogue_label.tscn" id="8_q02wu"]
+[ext_resource type="Script" path="res://Entities/Audio/named_sfx_player.gd" id="9_clay4"]
+[ext_resource type="AudioStream" uid="uid://co2u1plquphwn" path="res://Entities/Audio/open_note_or_book.mp3" id="10_3y4jf"]
+[ext_resource type="AudioStream" uid="uid://omtpaceahpi4" path="res://Entities/Audio/lighting_candle.mp3" id="11_3g4m4"]
+[ext_resource type="AudioStream" uid="uid://bfuybm8wtve8" path="res://Entities/Audio/hanger_opens_car_door.mp3" id="12_t3vfb"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6rnje"]
 shader = ExtResource("4_q3p0e")
@@ -162,13 +166,14 @@ offset_bottom = 520.0
 mouse_filter = 2
 color = Color(1.20327e-07, 0.350592, 0.350785, 1)
 
-[node name="Balloon" type="Control" parent="UIContainer/RightUI" groups=["dialogue_bubble"]]
+[node name="Balloon" type="Control" parent="UIContainer/RightUI" node_paths=PackedStringArray("dialogue_sfx_player") groups=["dialogue_bubble"]]
 unique_name_in_owner = true
 layout_mode = 2
 size_flags_vertical = 3
 mouse_filter = 1
 theme = SubResource("Theme_qq3yp")
 script = ExtResource("7_i6mw8")
+dialogue_sfx_player = NodePath("DialogueSFX")
 
 [node name="Panel" type="Panel" parent="UIContainer/RightUI/Balloon"]
 clip_children = 2
@@ -233,6 +238,14 @@ response_template = NodePath("ResponseExample")
 [node name="ResponseExample" type="Button" parent="UIContainer/RightUI/Balloon/Responses/ResponsesMenu"]
 layout_mode = 2
 text = "Response example"
+
+[node name="DialogueSFX" type="AudioStreamPlayer" parent="UIContainer/RightUI/Balloon"]
+script = ExtResource("9_clay4")
+named_sfx = {
+"jimmy_door": ExtResource("12_t3vfb"),
+"light_candles": ExtResource("11_3g4m4"),
+"note_rustle": ExtResource("10_3y4jf")
+}
 
 [connection signal="gui_input" from="UIContainer/LeftUI/InventoryUI" to="UIContainer/LeftUI/InventoryUI" method="_on_gui_input"]
 [connection signal="gui_input" from="UIContainer/RightUI/Balloon" to="UIContainer/RightUI/Balloon" method="_on_balloon_gui_input"]
