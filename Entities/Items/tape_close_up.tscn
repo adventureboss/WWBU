@@ -1,0 +1,91 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqknkegxe4k3o"]
+
+[ext_resource type="Script" path="res://Entities/Items/Recipes/tape_close_up.gd" id="1_syr2p"]
+[ext_resource type="Texture2D" uid="uid://dtgodohp3ot" path="res://Entities/Items/Art/tape_deck_closeup.png" id="2_evm0o"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_iidi0"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y5cqg"]
+
+[node name="TapeCloseUp" type="Panel"]
+custom_minimum_size = Vector2(960, 200)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -320.0
+offset_bottom = -200.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxEmpty_iidi0")
+script = ExtResource("1_syr2p")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.184375
+anchor_top = 0.00384615
+anchor_right = 0.184375
+anchor_bottom = 0.00384615
+offset_left = 81.0
+offset_top = -2.0
+offset_right = 1319.0
+offset_bottom = 1562.0
+scale = Vector2(0.399528, 0.331916)
+texture = ExtResource("2_evm0o")
+
+[node name="Panel" type="Panel" parent="TextureRect"]
+layout_mode = 0
+offset_left = 445.526
+offset_top = 400.703
+offset_right = 485.526
+offset_bottom = 440.703
+rotation = 0.454509
+scale = Vector2(16.146, 2.60523)
+theme_override_styles/panel = SubResource("StyleBoxFlat_y5cqg")
+
+[node name="ReverseSwitch" type="CheckButton" parent="TextureRect"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 635.751
+offset_top = 506.151
+offset_right = 679.751
+offset_bottom = 530.151
+rotation = 0.463739
+scale = Vector2(4.08513, 3.13785)
+
+[node name="REV" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 800.946
+offset_top = 590.51
+offset_right = 840.946
+offset_bottom = 613.51
+rotation = 0.47731
+scale = Vector2(2.97519, 2.82793)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "REV"
+
+[node name="FWD" type="Label" parent="TextureRect"]
+layout_mode = 0
+offset_left = 540.638
+offset_top = 460.959
+offset_right = 580.638
+offset_bottom = 483.959
+rotation = 0.437708
+scale = Vector2(2.97519, 2.82793)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+text = "FWD"
+
+[node name="Close" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = -97.6153
+offset_top = 1446.15
+offset_right = -47.6153
+offset_bottom = 1477.15
+rotation = 0.000369164
+scale = Vector2(2.98867, 2.91303)
+text = "Close"
+
+[connection signal="toggled" from="TextureRect/ReverseSwitch" to="." method="_on_check_button_toggled"]
+[connection signal="button_up" from="TextureRect/Close" to="." method="_on_close_button_up"]

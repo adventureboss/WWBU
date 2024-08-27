@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://c61u8edwnu1ji"]
+
+[ext_resource type="Texture2D" uid="uid://paageb6ur011" path="res://Entities/Items/Art/tape_player.png" id="1_hgebw"]
+[ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="2_c1h7x"]
+
+[resource]
+script = ExtResource("2_c1h7x")
+Sprite = ExtResource("1_hgebw")
+DisplayName = "A Reversed Cassette Player with a Cassette"
+DialogueStart = "loaded_reversed_tape_player"

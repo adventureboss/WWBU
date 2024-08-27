@@ -21,6 +21,8 @@ var KAZOO: Item = preload("res://Entities/Items/Kazoo.tres")
 var KNIFE: Item = preload("res://Entities/Items/Knife.tres")
 var LIGHTER: Item = preload("res://Entities/Items/Lighter.tres")
 var LOADED_TAPE_PLAYER: Item = preload("res://Entities/Items/LoadedTapePlayer.tres")
+var REVERSE_LOADED_TAPE_PLAYER: Item = preload("res://Entities/Items/ReverseLoadedTapePlayer.tres")
+var REVERSE_TAPE_PLAYER: Item = preload("res://Entities/Items/ReverseTapePlayer.tres")
 var CANDLES_LIT: Item = preload("res://Entities/Items/LitCandles.tres")
 var PORKRINDS: Item = preload("res://Entities/Items/PorkRinds.tres")
 var RITUAL_BOOK: Item = preload("res://Entities/Items/RitualBook.tres")
@@ -30,6 +32,13 @@ var SAFE_NOTE: Item = preload("res://Entities/Items/SafeNote.tres")
 var SAFE_NOTE_TRANSLATED: Item = preload("res://Entities/Items/SafeNote_Translated.tres")
 var SCREW: Item = preload("res://Entities/Items/Screw.tres")
 var TAPE_PLAYER: Item = preload("res://Entities/Items/TapePlayer.tres")
+
+var tape_player_varieties: Array[Item] = [
+	TAPE_PLAYER,
+	LOADED_TAPE_PLAYER,
+	REVERSE_TAPE_PLAYER,
+	REVERSE_LOADED_TAPE_PLAYER
+]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

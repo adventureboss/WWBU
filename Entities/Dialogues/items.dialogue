@@ -81,6 +81,16 @@ A bag of porkrinds
 	These would have probably been delicious if I could stomach the thought of food right now.
 => room_translator
 
+~ loaded_reversed_tape_player
+The tape player with a tape in it and set to reverse mode
+	This thing is going to sound wild
+=> room_translator
+
+~ reversed_tape_player
+The tape player with the reverse switch flip
+	If I had a tape, I bet this thing would sound crazy
+=> room_translator
+
 ~ ritual_book
 The ritual book
 	This thing got us into this mess... why is it still sweaty?!

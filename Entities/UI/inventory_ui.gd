@@ -1,9 +1,7 @@
 extends Control
 
 @onready var inventory_grid: GridContainer = $MarginContainer/InventoryGrid
-
 @onready var dialogue_bubble = get_tree().get_first_node_in_group("dialogue_bubble")
-
 
 var inventory_slot_count = 15
 
@@ -105,11 +103,20 @@ func _on_items_combined(item: Item):
 func _on_gui_input(event: InputEvent) -> void:
 		if event is InputEventMouseButton:
 			if event.is_released():
+				var tape_player_scene = preload("res://Entities/Items/tape_close_up.tscn")
 				var item_in_position = get_slot_node_at_position(self.get_local_mouse_position())
 				if item_in_position == null:
 					return
 				if item_in_position.texture == load("res://Entities/UI/Item_types.png"):
 					return
+				if InventorySystem.tape_player_varieties.has(item_in_position.item):
+					open_tape_player()
 				if item_in_position.item.Dialogue != null:
 					dialogue_bubble.start(item_in_position.item.Dialogue, item_in_position.item.DialogueStart)
-			
+
+func open_tape_player():
+	var interface: Node = get_tree().get_first_node_in_group("interface")
+	var viewport = interface.get_node("UIContainer/RightUI/ViewUI/Room")
+	var tape_player_scene = preload("res://Entities/Items/tape_close_up.tscn")
+	var tape_player = tape_player_scene.instantiate()
+	viewport.add_child(tape_player)
