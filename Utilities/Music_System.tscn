@@ -5,7 +5,7 @@
 [ext_resource type="AudioStream" uid="uid://bytau8s34fghq" path="res://Entities/Audio/rain_background.mp3" id="3_8w7ps"]
 [ext_resource type="AudioStream" uid="uid://1g0awnmp2vnk" path="res://Entities/Audio/game_over.mp3" id="3_hunaa"]
 [ext_resource type="AudioStream" uid="uid://ebqkqqe0n1wu" path="res://Entities/Audio/good_ending_loop.mp3" id="4_au3mq"]
-[ext_resource type="AudioStream" uid="uid://bouj1y75anfa4" path="res://Entities/Audio/old_clock_bell_12_chimes.mp3" id="6_qbhwh"]
+[ext_resource type="AudioStream" uid="uid://bx5gherxmueu5" path="res://Entities/Audio/old_clock_bell_12_chimes.mp3" id="6_qbhwh"]
 
 [node name="MusicSystem" type="Node2D" node_paths=PackedStringArray("dynamic_background_player", "chimes_player", "rain_player")]
 script = ExtResource("2_coawl")
