@@ -4,6 +4,8 @@ class_name Recipe
 @export var item: Item
 @export var other: Item
 @export var produces: Array[Item] = []
+@export var crafting_sfx: AudioStream
+@export var dialogue_start: String
 
 func matches(item: Item, other: Item) -> bool:
 	if item == other:
