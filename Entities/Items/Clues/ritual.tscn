@@ -1,0 +1,91 @@
+[gd_scene load_steps=3 format=3 uid="uid://des6orf03qima"]
+
+[ext_resource type="Script" path="res://Entities/Items/Clues/ritual.gd" id="1_ec2da"]
+[ext_resource type="Texture2D" uid="uid://bx6cirys6jems" path="res://Scenes/open_book.png" id="2_y6ndd"]
+
+[node name="Note" type="CanvasLayer"]
+script = ExtResource("1_ec2da")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(600, 600)
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -300.0
+offset_right = 300.0
+offset_bottom = 300.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_top = 1.0
+offset_right = 3.0
+offset_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_top = 50
+
+[node name="TextureRect" type="TextureRect" parent="Panel/MarginContainer"]
+layout_mode = 2
+texture = ExtResource("2_y6ndd")
+
+[node name="ritual1" type="RichTextLabel" parent="Panel/MarginContainer/TextureRect"]
+layout_mode = 2
+offset_left = 226.0
+offset_top = 112.0
+offset_right = 590.0
+offset_bottom = 628.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]The Ritual of ascention blessed be the beast that rises through flesh these are the steps to it's great ascention:
+
+
+First - An Offering of Flame
+
+
+Second - An Offering of Flesh
+"
+
+[node name="ritual2" type="RichTextLabel" parent="Panel/MarginContainer/TextureRect"]
+layout_mode = 2
+offset_left = 732.0
+offset_top = 285.0
+offset_right = 1096.0
+offset_bottom = 801.0
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 20
+bbcode_enabled = true
+text = "[center]Third - An Offering of Spirit
+
+
+Fourth - An Offering of Words
+
+
+
+
+With these offerings the dark one will rise blessed be the beast and the blood it will spill[/center]"
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 340.0
+offset_top = 629.0
+offset_right = 390.0
+offset_bottom = 660.0
+text = "Close"
+
+[connection signal="button_up" from="Control/Button" to="." method="_on_button_button_up"]

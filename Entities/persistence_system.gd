@@ -8,6 +8,7 @@ var safe_opened: bool = false
 var car_door_unlocked: bool = false
 var found_keys: bool = false
 var kazoo_found: bool = false
+var opening_dialogue_played: bool = false
 
 signal dialogue_bubble_ready
 signal car_opened

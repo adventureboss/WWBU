@@ -25,6 +25,7 @@ var REVERSE_LOADED_TAPE_PLAYER: Item = preload("res://Entities/Items/ReverseLoad
 var REVERSE_TAPE_PLAYER: Item = preload("res://Entities/Items/ReverseTapePlayer.tres")
 var CANDLES_LIT: Item = preload("res://Entities/Items/LitCandles.tres")
 var PORKRINDS: Item = preload("res://Entities/Items/PorkRinds.tres")
+var RITUAL_BOOK: Item = preload("res://Entities/Items/RitualBook.tres")
 var RITUAL_TAPE: Item = preload("res://Entities/Items/RitualTape.tres")
 var ROAD_FLARE: Item = preload("res://Entities/Items/RoadFlare.tres")
 var SAFE_NOTE: Item = preload("res://Entities/Items/SafeNote.tres")
@@ -112,3 +113,7 @@ func open_note() -> void:
 	var interface = get_tree().get_first_node_in_group("interface")
 	interface.add_child(note)
 	
+func open_ritual() -> void:
+	var ritual = preload("res://Entities/Items/Clues/ritual.tscn").instantiate()
+	var interface = get_tree().get_first_node_in_group("interface")
+	interface.add_child(ritual)

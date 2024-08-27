@@ -91,6 +91,16 @@ The tape player with the reverse switch flip
 	If I had a tape, I bet this thing would sound crazy
 => room_translator
 
+~ ritual_book
+The ritual book
+	This thing got us into this mess... why is it still sweaty?!
+Read the Book?
+- Read
+	do play_sound("note_rustle")
+	do InventorySystem.open_ritual()
+- Put Away
+	=> room_translator
+
 ~ ritual_tape
 A cassette tape
 	It's a cassette tape with "Ritual" written on it in brown-ish ... ink. I think that's ink.

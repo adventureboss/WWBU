@@ -1,4 +1,8 @@
+import "res://Entities/Dialogues/mark_lisa_opening.dialogue" as ml_opening
+
 ~ foyer
+if opening_dialogue_played == false:
+	=> ml_opening/start
 You're standing in the Foyer.
 	Lisa and Mark are not on good terms and David is ... not well.
 => END
