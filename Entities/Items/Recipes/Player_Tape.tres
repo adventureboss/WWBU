@@ -1,5 +1,6 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://bsqhcusoksua0"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://bsqhcusoksua0"]
 
+[ext_resource type="AudioStream" uid="uid://ka47feuhdamr" path="res://Entities/Audio/load_cassette.mp3" id="1_t6lid"]
 [ext_resource type="Resource" uid="uid://fy0qin26abvf" path="res://Entities/Items/RitualTape.tres" id="1_uxdel"]
 [ext_resource type="Resource" path="res://Entities/Items/TapePlayer.tres" id="2_rsohk"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="3_ivn72"]
@@ -11,4 +12,5 @@ script = ExtResource("5_it678")
 item = ExtResource("1_uxdel")
 other = ExtResource("2_rsohk")
 produces = Array[ExtResource("3_ivn72")]([ExtResource("4_s8mal")])
+crafting_sfx = ExtResource("1_t6lid")
 dialogue_start = ""
