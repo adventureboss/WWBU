@@ -2,35 +2,15 @@ import "res://Entities/Dialogues/items.dialogue" as items
 
 ~ start
 
-Birthdays are supposed to be happy times. A careless revelry celebrating another rotation of the earth, the flag in the dirt celebrating another year of life.
+David's birthday was supposed to be a happy occasion, that was before it all went wrong...
 
-That's why we went to the cabin, it was David's birthday. Lisa surprised us with the old rental a week before the trip promising a party we would never forget. David was over the moon.
+The four of us David, Lisa, Mark, and I rented a cabin for the weekend, someplace upstate in the middle of nowhere.
 
-The cabin looked perfect when we first saw it, sequestered at the end of a long gravel road hiding like a small child playing hide and seek beneath the boughs of tremendous pines. We barely had enough time to set our things down before Mark started tearing the place apart looking for things that didn't want to be found. That was always Mark's signature though, adventure before common sense. We were just getting settled when he threw the book between us. We should have known something was wrong with it, it was covered in dust and detritus the "leather" that bound it looked cracked and dry but to the touch revealed itself to be slightly moist, as if slick from sweat.
+Everything was going great until Mark found the book... the great nasty thing was covered in a sick tight leather that was always slick to the touch like the thing was always sweating a little
 
-"We're opening it!"
+He read the book aloud in the living room, and that was when David began to change... We covered his head with a bag and tied him to a chair
 
-Mark said flashing his stupid grin, fingers moving faster than his mouth could ever hope too.
-
-"This is stupid! Don't be an idiot! It looks forgotten for a reason"
-
-Chided Lisa, making futile attempts to grab at the book only to be warded off my Mark's left hand
-
-"It's my birthday"
-
-Interjected David, smile plastering to his face
-
-"I say we read it!"
-
-And it was settled, Mark threw the book open dust blanketing the table as he began to sound his way through words that to us bore no meaning. Was it Latin? Sanskrit? none of us had a clue. We looked around at each other, confused as it continued and eventually finished until our eyes met David's who had taken a position bracing his arms against the kitchen table.
-
-"David...?"
-
-Lisa's voice was soft and questioning, she moved slightly towards our friend reaching her hand out to touch his shoulder.
-
-That was when he started groaning, he locked eyes with us his left eye filling with a yellow color, overtaking the natural blue tone of his iris. His body started quaking, muscles spasming and flailing as he hit the floor all the while groaning and screaming in a voice that never belonged to him.
-
-The next few minutes became a blur, we tied him up to a chair in the center of the living room as his body lashed around in sporadic movements, I think Mark put one of our bags over his head to hide us from David's sight and cover the grotesque mutilations changing the shape of his face. Thunder began to rumble outside as David groaned from his impromptu prison. Something was changing our friend and we all knew without speaking that we didn't have long to stop it...
+Now he's just sitting there moaning in a voice that isn't his, it's almost 12:00 we need to find a way to stop the ritual before then or I think it'll be too late...
 
 do end_cold_open()
 => END!

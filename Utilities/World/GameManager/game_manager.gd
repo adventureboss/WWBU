@@ -4,7 +4,6 @@ var dialogue_states: Array[String] = [] # Set?
 
 func _ready() -> void:
 	TimeSystem.connect("out_of_time", out_of_time)
-
 func ritual_start():
 	var interface: Node = get_tree().get_first_node_in_group("interface")
 	var viewport = interface.get_node("UIContainer/RightUI/ViewUI/Room")
