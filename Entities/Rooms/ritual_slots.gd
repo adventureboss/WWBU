@@ -1,14 +1,10 @@
 extends GridContainer
 
 @export var solution: Array[Item]
+@export var bad_solution: Array[Item]
 
 var submitted_solution: Array[Item]
-var bad_solution: Array[Item]
 
-func _ready() -> void:
-	var solution_copy = solution.duplicate()
-	solution_copy.reverse()
-	var bad_solution = solution_copy
 
 func _on_begin_ritual_button_up() -> void:
 	for slot in self.get_children():
