@@ -55,12 +55,13 @@ offset_right = -805.0
 offset_bottom = -11.0
 dialogue_start = "candles"
 
-[node name="NPC" type="Control" parent="TextureRect"]
+[node name="Stove" type="Control" parent="TextureRect"]
 anchors_preset = 0
 offset_left = 230.0
 offset_top = 268.0
 offset_right = 360.0
 offset_bottom = 299.0
+mouse_default_cursor_shape = 2
 script = ExtResource("9_2n46x")
 dialogue_resource = ExtResource("10_p28pc")
 item_titles = {
@@ -68,4 +69,4 @@ ExtResource("11_bx5ho"): "oven_candles"
 }
 dialogue_start = "oven"
 
-[connection signal="gui_input" from="TextureRect/NPC" to="TextureRect/NPC" method="_on_gui_input"]
+[connection signal="gui_input" from="TextureRect/Stove" to="TextureRect/Stove" method="_on_gui_input"]

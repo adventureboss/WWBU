@@ -11,7 +11,7 @@
 [ext_resource type="Resource" uid="uid://hfmjyqri2jqs" path="res://Entities/Items/Recipes/Booze_Open.tres" id="9_ckrp5"]
 [ext_resource type="Resource" uid="uid://cubghtmvbnoql" path="res://Entities/Items/PorkRinds.tres" id="10_kbeqg"]
 [ext_resource type="Resource" uid="uid://b62u7quc5dgun" path="res://Entities/Items/Recipes/LitCandles.tres" id="11_kbm1u"]
-[ext_resource type="Resource" path="res://Entities/Items/LoadedTapePlayer.tres" id="12_k8xy6"]
+[ext_resource type="Resource" uid="uid://bkyqqlymm73re" path="res://Entities/Items/LoadedTapePlayer.tres" id="12_k8xy6"]
 
 [node name="Foyer" type="Control"]
 layout_mode = 3
