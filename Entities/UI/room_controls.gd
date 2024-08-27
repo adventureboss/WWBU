@@ -18,7 +18,7 @@ func _ready() -> void:
 func change_room(button: RoomButton):
 	if button.text == "Car" and PersistenceSystem.car_door_unlocked != true:
 		var dialogue_bubble = get_tree().get_first_node_in_group("dialogue_bubble")
-		dialogue_bubble.start(load("res://Entities/Dialogues/scene_objects.dialogue"), "no_car")
+		dialogue_bubble.start(load("res://Entities/Dialogues/scene_objects.dialogue"), "car")
 		return
 	if active_room != null:
 		active_room.show_inactive()
