@@ -7,9 +7,11 @@ var dialogue_bubble
 var safe_opened: bool = false
 var car_door_unlocked: bool = false
 var found_keys: bool = false
+var kazoo_found: bool = false
 
 signal dialogue_bubble_ready
 signal car_opened
+signal found_kazoo
 
 func get_object_state(node: Node, default: Variant) -> Variant:
 	if not rooms.has(active_room):
@@ -46,4 +48,4 @@ func clear():
 	safe_opened = false
 	car_door_unlocked = false
 	found_keys = false
-	
+	kazoo_found = false

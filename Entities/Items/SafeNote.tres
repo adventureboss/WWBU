@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://bvqfce8qh2w7f"]
 
-[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_bih2q"]
+[ext_resource type="Texture2D" uid="uid://b7usvyienbqor" path="res://Entities/Items/Art/note.png" id="1_xqrt0"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_yi8g8"]
 
 [resource]
 script = ExtResource("1_yi8g8")
-Sprite = ExtResource("1_bih2q")
+Sprite = ExtResource("1_xqrt0")
 DisplayName = "Old Worn Note in a Foreign Language"
 DialogueStart = "safe_note"
