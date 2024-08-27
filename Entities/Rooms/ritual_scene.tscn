@@ -6,7 +6,7 @@
 [ext_resource type="Script" path="res://Entities/Rooms/ritual_slots.gd" id="2_tmi58"]
 [ext_resource type="Resource" uid="uid://byl4p1bxdrgdv" path="res://Entities/Dialogues/ritual.dialogue" id="3_0x7ic"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="3_kehnd"]
-[ext_resource type="Resource" uid="uid://djr0fevbu11f" path="res://Entities/Items/TapePlayer.tres" id="4_vr3f7"]
+[ext_resource type="Resource" uid="uid://c61u8edwnu1ji" path="res://Entities/Items/ReverseLoadedTapePlayer.tres" id="5_e26rg"]
 [ext_resource type="Resource" uid="uid://2nluh4i06by7" path="res://Entities/Items/Booze_Open.tres" id="5_g0mv1"]
 [ext_resource type="Resource" uid="uid://cubghtmvbnoql" path="res://Entities/Items/PorkRinds.tres" id="6_0ahex"]
 [ext_resource type="Resource" uid="uid://n5ro0wiiigjw" path="res://Entities/Items/LitCandles.tres" id="7_j06wd"]
@@ -46,7 +46,7 @@ layout_mode = 2
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 11
 script = ExtResource("2_tmi58")
-solution = Array[ExtResource("3_kehnd")]([ExtResource("4_vr3f7"), ExtResource("5_g0mv1"), ExtResource("6_0ahex"), ExtResource("7_j06wd")])
+solution = Array[ExtResource("3_kehnd")]([ExtResource("5_e26rg"), ExtResource("5_g0mv1"), ExtResource("6_0ahex"), ExtResource("7_j06wd")])
 
 [node name="RitualSlot1" type="Control" parent="TextureRect/PanelContainer/MarginContainer/RitualSlots"]
 custom_minimum_size = Vector2(90, 90)
