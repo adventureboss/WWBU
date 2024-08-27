@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://b2kllhl8485ma"]
+[gd_scene load_steps=13 format=3 uid="uid://b2kllhl8485ma"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_8f0w4"]
 [ext_resource type="Texture2D" uid="uid://gr1cxq8rc5fl" path="res://Scenes/main_room.png" id="1_rv80l"]
@@ -10,6 +10,8 @@
 [ext_resource type="Resource" uid="uid://dt44wpd33umol" path="res://Entities/Dialogues/mark.dialogue" id="8_j1c3a"]
 [ext_resource type="Texture2D" uid="uid://ulp8lutmnbd7" path="res://Scenes/game_over.png" id="9_2phe1"]
 [ext_resource type="Script" path="res://Entities/Rooms/foyer.gd" id="9_b0gaw"]
+[ext_resource type="PackedScene" uid="uid://7mxthf0v0bda" path="res://Entities/Rooms/ritual_scene.tscn" id="10_f6wf2"]
+[ext_resource type="Texture2D" uid="uid://bn7qj2xix3fwf" path="res://Scenes/good_ending.png" id="11_mbg43"]
 
 [node name="Foyer" type="Control"]
 layout_mode = 3
@@ -70,6 +72,18 @@ offset_right = 40.0
 offset_bottom = 40.0
 mouse_filter = 0
 texture = ExtResource("9_2phe1")
+
+[node name="RitualScene" parent="Background" node_paths=PackedStringArray("good_end") instance=ExtResource("10_f6wf2")]
+visible = false
+layout_mode = 1
+good_end = NodePath("../Escape")
+
+[node name="Escape" type="TextureRect" parent="Background"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("11_mbg43")
 
 [node name="Foyer" type="Node" parent="." node_paths=PackedStringArray("monster")]
 script = ExtResource("9_b0gaw")

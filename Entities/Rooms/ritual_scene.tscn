@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://wugs7h377qcf"]
+[gd_scene load_steps=12 format=3 uid="uid://7mxthf0v0bda"]
 
 [ext_resource type="Texture2D" uid="uid://3dejev72lum4" path="res://Scenes/ritual_scene.png" id="1_4ubhq"]
 [ext_resource type="Script" path="res://Entities/Rooms/ritual_scene.gd" id="1_afbuj"]
@@ -6,14 +6,14 @@
 [ext_resource type="Script" path="res://Entities/Rooms/ritual_slots.gd" id="2_tmi58"]
 [ext_resource type="Resource" uid="uid://byl4p1bxdrgdv" path="res://Entities/Dialogues/ritual.dialogue" id="3_0x7ic"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="3_kehnd"]
-[ext_resource type="Resource" uid="uid://c61u8edwnu1ji" path="res://Entities/Items/ReverseLoadedTapePlayer.tres" id="5_e26rg"]
+[ext_resource type="Resource" path="res://Entities/Items/ReverseLoadedTapePlayer.tres" id="5_e26rg"]
 [ext_resource type="Resource" uid="uid://2nluh4i06by7" path="res://Entities/Items/Booze_Open.tres" id="5_g0mv1"]
 [ext_resource type="Resource" uid="uid://cubghtmvbnoql" path="res://Entities/Items/PorkRinds.tres" id="6_0ahex"]
 [ext_resource type="Resource" uid="uid://n5ro0wiiigjw" path="res://Entities/Items/LitCandles.tres" id="7_j06wd"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ovo1"]
 
-[node name="RitualScene" type="Control"]
+[node name="RitualScene" type="Control" node_paths=PackedStringArray("slots")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -21,6 +21,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_afbuj")
+slots = NodePath("TextureRect/PanelContainer/MarginContainer/RitualSlots")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0

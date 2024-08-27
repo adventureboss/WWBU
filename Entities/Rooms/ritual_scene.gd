@@ -1,14 +1,15 @@
 extends Control
 
+@export var good_end: Control
+@export var slots: Slots
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	slots.connect("solved", _on_solved)
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+func _on_solved():
+	visible = false
+	good_end.visible = true
 
 func _on_button_up():
-	queue_free()
+	visible = false
