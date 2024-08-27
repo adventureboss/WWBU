@@ -9,9 +9,9 @@
 [ext_resource type="Resource" uid="uid://b5dcvxjoelf8x" path="res://Entities/Dialogues/scene_objects.dialogue" id="4_yhdu7"]
 [ext_resource type="Resource" uid="uid://bvqfce8qh2w7f" path="res://Entities/Items/SafeNote.tres" id="5_i7l23"]
 [ext_resource type="Resource" uid="uid://dsipjvb2kqgii" path="res://Entities/Items/Knife.tres" id="5_ph5ne"]
-[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="6_er5sy"]
 [ext_resource type="Texture2D" uid="uid://n7pxdo05afi0" path="res://Entities/Items/Art/coat_hanger.png" id="7_t6cyf"]
 [ext_resource type="Resource" uid="uid://dwtb0gkur7a8w" path="res://Entities/Items/CoatHanger.tres" id="8_e3cjx"]
+[ext_resource type="Texture2D" uid="uid://b7usvyienbqor" path="res://Entities/Items/Art/note.png" id="9_a3dsg"]
 [ext_resource type="Texture2D" uid="uid://paageb6ur011" path="res://Entities/Items/Art/tape_player.png" id="10_phj2t"]
 [ext_resource type="Resource" uid="uid://djr0fevbu11f" path="res://Entities/Items/TapePlayer.tres" id="11_w0g2d"]
 
@@ -62,7 +62,7 @@ offset_left = 411.0
 offset_top = 143.0
 offset_right = -509.0
 offset_bottom = -337.0
-texture = ExtResource("6_er5sy")
+texture = ExtResource("9_a3dsg")
 item = ExtResource("5_i7l23")
 dialogue_start = "safe_note"
 
