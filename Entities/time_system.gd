@@ -31,6 +31,7 @@ func _handle_minute_passed():
 	
 	if elapsed_whole_minutes >= allowed_time_minutes:
 		emit_signal("out_of_time")
+		pause()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float): # Whether to call _process is toggled on and off by pause/resume

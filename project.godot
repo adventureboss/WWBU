@@ -20,10 +20,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
-InventorySystem="*res://Entities/Items/inventory_system.gd"
 PersistenceSystem="*res://Entities/persistence_system.gd"
 SceneManager="*res://Utilities/World/SceneManager/SceneManager.gd"
 TimeSystem="*res://Entities/time_system.tscn"
+MusicSystem="*res://Utilities/Music_System.tscn"
+InventorySystem="*res://Entities/Items/inventory_system.tscn"
 
 [dialogue_manager]
 

@@ -11,6 +11,8 @@ extends Control
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 
+@export var dialogue_sfx_player: AudioStreamPlayer
+
 ## The dialogue resource
 var resource: DialogueResource
 
@@ -104,7 +106,7 @@ func _notification(what: int) -> void:
 
 ## Start some dialogue
 func start(dialogue_resource: DialogueResource, title: String, extra_game_states: Array = []) -> void:
-	temporary_game_states =  [self] + extra_game_states
+	temporary_game_states =  [self, dialogue_sfx_player] + extra_game_states
 	is_waiting_for_input = false
 	resource = dialogue_resource
 	self.dialogue_line = await resource.get_next_dialogue_line(title, temporary_game_states)

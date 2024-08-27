@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cwy0w1xdt3v2b"]
+
+[ext_resource type="Script" path="res://Entities/Items/inventory_system.gd" id="1_rcv2i"]
+
+[node name="InventorySystem" type="Node2D" node_paths=PackedStringArray("crafting_sound")]
+script = ExtResource("1_rcv2i")
+crafting_sound = NodePath("crafting_sound")
+
+[node name="crafting_sound" type="AudioStreamPlayer" parent="."]

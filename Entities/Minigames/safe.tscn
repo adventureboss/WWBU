@@ -1,8 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://cf2lw4corahn7"]
+[gd_scene load_steps=12 format=3 uid="uid://cf2lw4corahn7"]
 
 [ext_resource type="Script" path="res://Entities/Minigames/safe_game.gd" id="1_lythv"]
 [ext_resource type="Script" path="res://Entities/Minigames/safe.gd" id="1_sxs4w"]
 [ext_resource type="Script" path="res://Entities/Minigames/safe_button.gd" id="2_ixrfm"]
+[ext_resource type="AudioStream" uid="uid://eiy3x2dc14hw" path="res://Entities/Audio/safe_button.mp3" id="4_rq4v0"]
+[ext_resource type="AudioStream" uid="uid://o2xp32ybu0mj" path="res://Entities/Audio/unlock_safe.mp3" id="5_j6ecx"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2sk57"]
 bg_color = Color(0.140447, 0.140447, 0.140447, 1)
@@ -13,6 +15,12 @@ border_width_bottom = 5
 border_color = Color(0.438818, 0.439005, 0.0553737, 1)
 shadow_color = Color(0, 0, 0, 0.905882)
 shadow_size = 16
+
+[sub_resource type="AudioStreamRandomizer" id="AudioStreamRandomizer_44g1i"]
+playback_mode = 2
+random_pitch = 1.2
+streams_count = 1
+stream_0/stream = ExtResource("4_rq4v0")
 
 [sub_resource type="Animation" id="Animation_2lgtt"]
 length = 0.001
@@ -203,7 +211,7 @@ _data = {
 [node name="Safe" type="CanvasLayer"]
 script = ExtResource("1_lythv")
 
-[node name="KeypadContainer" type="Control" parent="."]
+[node name="KeypadContainer" type="Control" parent="." node_paths=PackedStringArray("beep_player", "unlock_player")]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(500, 500)
 layout_mode = 3
@@ -219,6 +227,8 @@ offset_bottom = 250.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_sxs4w")
+beep_player = NodePath("beeper")
+unlock_player = NodePath("unlock")
 
 [node name="Panel" type="Panel" parent="KeypadContainer"]
 custom_minimum_size = Vector2(500, 500)
@@ -318,6 +328,12 @@ custom_minimum_size = Vector2(100, 100)
 layout_mode = 2
 text = "*"
 script = ExtResource("2_ixrfm")
+
+[node name="beeper" type="AudioStreamPlayer" parent="KeypadContainer"]
+stream = SubResource("AudioStreamRandomizer_44g1i")
+
+[node name="unlock" type="AudioStreamPlayer" parent="KeypadContainer"]
+stream = ExtResource("5_j6ecx")
 
 [node name="Control" type="Control" parent="."]
 layout_mode = 3

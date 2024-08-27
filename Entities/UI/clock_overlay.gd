@@ -14,8 +14,8 @@ func _ready() -> void:
 func update_clock():
 	var remaining: float = TimeSystem.remaining_time_minutes()
 	
-	var hour: float = 11 + (remaining / 60)
 	var minute: float = 60 - remaining
+	var hour: float = 11 + (minute / 60)
 	
 	hour_hand.rotation_degrees = hour * DEGREES_PER_HOUR
 	minute_hand.rotation_degrees = minute * DEGREES_PER_MINUTE

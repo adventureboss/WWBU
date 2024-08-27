@@ -1,6 +1,7 @@
-[gd_resource type="Resource" script_class="Recipe" load_steps=6 format=3 uid="uid://c855mc5tpbtxs"]
+[gd_resource type="Resource" script_class="Recipe" load_steps=7 format=3 uid="uid://c855mc5tpbtxs"]
 
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_7w52j"]
+[ext_resource type="AudioStream" uid="uid://dfj8twjwx6gjw" path="res://Entities/Audio/screw_into_wine_cork'.mp3" id="1_68sar"]
 [ext_resource type="Resource" uid="uid://brjb6rhyl2c48" path="res://Entities/Items/Booze_Closed.tres" id="1_a6gsy"]
 [ext_resource type="Resource" uid="uid://dlecfy3r6pdft" path="res://Entities/Items/Screw.tres" id="2_et5v5"]
 [ext_resource type="Script" path="res://Entities/Items/recipe.gd" id="2_nembg"]
@@ -11,3 +12,5 @@ script = ExtResource("2_nembg")
 item = ExtResource("1_a6gsy")
 other = ExtResource("2_et5v5")
 produces = Array[ExtResource("1_7w52j")]([ExtResource("4_yjx7b")])
+crafting_sfx = ExtResource("1_68sar")
+dialogue_start = ""

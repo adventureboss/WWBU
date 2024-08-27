@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dtt2tjhe633no"]
+[gd_scene load_steps=6 format=3 uid="uid://dtt2tjhe633no"]
 
 [ext_resource type="Texture2D" uid="uid://bms26s3qepqjn" path="res://Scenes/clock_scene.png" id="1_7kvy0"]
 [ext_resource type="Script" path="res://Entities/UI/clock_overlay.gd" id="1_acvlg"]
 [ext_resource type="Texture2D" uid="uid://sivvie54tv51" path="res://Entities/Items/Art/minute_hand.png" id="2_eoouj"]
 [ext_resource type="Texture2D" uid="uid://c1wvyc5uovt7r" path="res://Entities/Items/Art/hour_hand.png" id="3_1rcra"]
+[ext_resource type="AudioStream" uid="uid://bthv5exd8hu1u" path="res://Entities/Audio/clock_ticking.mp3" id="5_jlnpx"]
 
 [node name="ClockFace" type="TextureRect" node_paths=PackedStringArray("minute_hand", "hour_hand")]
 offset_right = 40.0
@@ -47,5 +48,10 @@ offset_top = 486.0
 offset_right = 51.0
 offset_bottom = 517.0
 text = "Close"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_jlnpx")
+autoplay = true
+parameters/looping = true
 
 [connection signal="pressed" from="Button" to="." method="queue_free"]
