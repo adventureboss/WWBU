@@ -6,7 +6,7 @@ var submitted_solution: Array[Item]
 var bad_solution: Array[Item]
 
 func _ready() -> void:
-	var solution_copy = solution.duplicate
+	var solution_copy = solution.duplicate()
 	solution_copy.reverse()
 	var bad_solution = solution_copy
 
