@@ -1,9 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://wugs7h377qcf"]
+[gd_scene load_steps=12 format=3 uid="uid://wugs7h377qcf"]
 
 [ext_resource type="Texture2D" uid="uid://3dejev72lum4" path="res://Scenes/ritual_scene.png" id="1_4ubhq"]
+[ext_resource type="Script" path="res://Entities/Rooms/ritual_scene.gd" id="1_afbuj"]
 [ext_resource type="Script" path="res://RitualSlot.gd" id="2_i3dal"]
 [ext_resource type="Script" path="res://Entities/Rooms/ritual_slots.gd" id="2_tmi58"]
-[ext_resource type="Resource" uid="uid://bwit0sjp8dypm" path="res://Entities/Dialogues/ritual.dialogue" id="3_0x7ic"]
+[ext_resource type="Resource" uid="uid://byl4p1bxdrgdv" path="res://Entities/Dialogues/ritual.dialogue" id="3_0x7ic"]
+[ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="3_kehnd"]
 [ext_resource type="Resource" uid="uid://djr0fevbu11f" path="res://Entities/Items/TapePlayer.tres" id="4_vr3f7"]
 [ext_resource type="Resource" uid="uid://2nluh4i06by7" path="res://Entities/Items/Booze_Open.tres" id="5_g0mv1"]
 [ext_resource type="Resource" uid="uid://cubghtmvbnoql" path="res://Entities/Items/PorkRinds.tres" id="6_0ahex"]
@@ -18,6 +20,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_afbuj")
 
 [node name="TextureRect" type="TextureRect" parent="."]
 layout_mode = 0
@@ -43,7 +46,7 @@ layout_mode = 2
 theme_override_constants/h_separation = 20
 theme_override_constants/v_separation = 11
 script = ExtResource("2_tmi58")
-solution = Array[Object]([ExtResource("4_vr3f7"), ExtResource("5_g0mv1"), ExtResource("6_0ahex"), ExtResource("7_j06wd")])
+solution = Array[ExtResource("3_kehnd")]([ExtResource("4_vr3f7"), ExtResource("5_g0mv1"), ExtResource("6_0ahex"), ExtResource("7_j06wd")])
 
 [node name="RitualSlot1" type="Control" parent="TextureRect/PanelContainer/MarginContainer/RitualSlots"]
 custom_minimum_size = Vector2(90, 90)
@@ -124,6 +127,15 @@ offset_left = 268.0
 offset_top = 448.0
 offset_right = 369.0
 offset_bottom = 479.0
-text = "Begin Ritual"
+text = "Confirm"
+
+[node name="Close" type="Button" parent="TextureRect"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 492.0
+offset_right = 55.0
+offset_bottom = 523.0
+text = "Close"
 
 [connection signal="button_up" from="TextureRect/BeginRitual" to="TextureRect/PanelContainer/MarginContainer/RitualSlots" method="_on_begin_ritual_button_up"]
+[connection signal="button_up" from="TextureRect/Close" to="." method="_on_button_up"]

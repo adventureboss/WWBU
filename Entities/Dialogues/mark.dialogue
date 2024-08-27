@@ -4,10 +4,10 @@ import "res://Entities/Dialogues/items.dialogue" as items
 ~ start
 Mark is biting his fingernails and staring at David earnestly.
 Mark: "I'm freaking out man... [b]I'M FREAKING OUT![b]"
-- Ask about keys
+- Ask about the car keys
+	do GameManager.set_dialogue_state("knows_about_keys")
 	Do you know where the keys are?
 	Mark: I think David has them.
-	do PersistenceSystem.keys_found = true
 - Nevermind
 	=> items/room_translator
 => items/room_translator

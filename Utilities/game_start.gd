@@ -6,3 +6,4 @@ func _ready() -> void:
 	TimeSystem.start()
 	InventorySystem.clear()
 	PersistenceSystem.clear()
+	GameManager.clear()

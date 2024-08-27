@@ -25,11 +25,12 @@ SceneManager="*res://Utilities/World/SceneManager/SceneManager.gd"
 TimeSystem="*res://Entities/time_system.tscn"
 MusicSystem="*res://Utilities/Music_System.tscn"
 InventorySystem="*res://Entities/Items/inventory_system.tscn"
+GameManager="*res://Utilities/World/GameManager/game_manager.gd"
 
 [dialogue_manager]
 
 general/balloon_path="res://Utilities/Debug/balloon.tscn"
-general/states=["PersistenceSystem", "InventorySystem"]
+general/states=["PersistenceSystem", "InventorySystem", "GameManager"]
 
 [display]
 
