@@ -7,15 +7,14 @@ extends Node2D
 @onready var has_played_date = false
 @onready var has_played_cold_open = false
 
-@onready var next_scene = "res://Entities/UI/interface.tscn"
-@onready var main_scene = get_parent()
-@onready var current_scene = get_node("/root/Main/ColdOpen")
+@export var dialogue_resource: DialogueResource = load("res://Entities/Dialogues/cold_open.dialogue")
+@export var dialogue_start: String = "start"
+
+@onready var dialogue_bubble = get_tree().get_first_node_in_group("dialogue_bubble")
 
 func _ready() -> void:
 	anim_player.play("fade_in_date")
 	await anim_player.animation_finished
 	anim_player.play_backwards("fade_in_date")
 	await anim_player.animation_finished
-	anim_player.play("write_cold_open")
-	await anim_player.animation_finished
-	SceneManager.swap_scenes(next_scene, main_scene, current_scene)
+	PersistenceSystem.dialogue_bubble.start(dialogue_resource, dialogue_start)

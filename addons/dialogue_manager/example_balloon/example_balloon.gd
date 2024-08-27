@@ -11,6 +11,10 @@ extends Control
 @onready var dialogue_label: DialogueLabel = %DialogueLabel
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
 
+@onready var next_scene = "res://Entities/UI/interface.tscn"
+@onready var main_scene = get_node("root/Main")
+@onready var current_scene = get_node("/root/Main/ColdOpen")
+
 @export var dialogue_sfx_player: AudioStreamPlayer
 
 ## The dialogue resource
@@ -77,6 +81,9 @@ var dialogue_line: DialogueLine:
 	get:
 		return dialogue_line
 
+func end_cold_open() -> void:
+	remove_from_group("dialogue_bubble")
+	SceneManager.swap_scenes(next_scene, main_scene, current_scene)
 
 func _ready() -> void:
 	balloon.show()
