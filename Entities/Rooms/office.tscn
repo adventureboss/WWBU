@@ -50,6 +50,7 @@ offset_left = 598.0
 offset_top = 417.0
 offset_right = 675.0
 offset_bottom = 490.0
+mouse_default_cursor_shape = 2
 theme_override_styles/normal = SubResource("StyleBoxFlat_q0xpe")
 script = ExtResource("3_2cctv")
 dialogue_resource = ExtResource("6_knkgg")
