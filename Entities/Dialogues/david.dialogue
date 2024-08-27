@@ -1,11 +1,77 @@
 import "res://Entities/Dialogues/items.dialogue" as items
 
 ~ start
+=> base_convo
+
+~ base_convo
+David is tied up and mumbling random things under his breath
+- You doing okay there, big guy?
+	=> basic_responses
+- What did you say you were again? [if GameManager.get_dialogue_state("asked_about_demon")]
+	David: [color=red][shake rate=20.0 level=5 connected=1]I'm am the harbinger of the end. The bringer of darkness. The first of the four horsemen![/shake][/color]
+	That's right. I almost forgot
+- Are you some kind of demon? [if not GameManager.get_dialogue_state("asked_about_demon")]
+	do set_dialogue_state("asked_about_demon")
+	David: [color=red][shake rate=20.0 level=5 connected=1]I'm am the harbinger of the end. The bringer of darkness. The first of the four horsemen![/shake][/color]
+- Reach for the car keys in David's pocket [if GameManager.get_dialogue_state("knows_about_keys") and GameManager.get_dialogue_state("reached_for_car_keys") == false]
+	do set_dialogue_state("reached_for_car_keys")
+	You reach forward to get the keys from David.
+		He screaches so loudly it hurts your ears and attempts to bite you when you get too close.
+	I need your car keys, man.
+	David: [color=red][shake rate=20.0 level=5 connected=1]and I need you face down in your own blood, you &#$@(*![/shake][/color]
+	I'm not going to be able to get those keys
+- Try to get the keys again [if GameManager.get_dialogue_state("reached_for_car_keys")]
+	do set_dialogue_state("help_me_with_car")
+	You reach for the car keys again
+		David lets out an ear piercing howl
+	I don't think it's worth going for again. I'll need to find some other way to break into the car.
+- I'm ready to try the ritual
+	Mark: I sure hope you know what you're doing
+	Lisa: We believe in you. Let's get this thing done.
+	You open the book to start the ritual
+	=> ritual_open
+- Nevermind
+	I'd better get back to solving this thing.
+	=> items/room_translator
+=> items/room_translator
+
+~ ritual_open
+do GameManager.ritual_start()
+David: [color=red][shake rate=20.0 level=5 connected=1]You'll never stop me! I am inevitable![/shake][/color]
+=> END
+
+~ basic_responses
 % => soul
 % => mask
 %2 => murgle
 
-~ base_convo
+~ car_locked
+if PersistenceSystem.keys_reach_attempted == true:
+	=> reach_for_keys
+
+=> items/room_translator
+
+~ reach_for_keys
+Hey David or whoever you are...
+- Can I please have the keys?
+	David: [color=red][shake rate=20.0 level=5 connected=1]Can I please rip you into a million tiny pieces and [/shake][/color]
+	Fine! Nevermind.
+	=> base_convo
+- Nevermind
+	I'll be going now
+	=> items/room_translator
+=> items/room_translator
+
+~ first_reach
+David 
+- Give me your car
+=> items/room_translator
+
+~ car_unlocked
+
+
+
+~ test_path
 if PersistenceSystem.car_door_unlocked == false:
 	if PersistenceSystem.keys_reach_attempted == true:
 		- Can I please have the keys?
@@ -21,6 +87,7 @@ if PersistenceSystem.car_door_unlocked == false:
 		=> base_convo
 	- Nevermind
 		=> items/room_translator
+	=> items/room_translator
 
 if PersistenceSystem.car_door_unlocked == true:
 	if PersistenceSystem.keys_reach_attempted == true:
@@ -28,7 +95,7 @@ if PersistenceSystem.car_door_unlocked == true:
 			David: [color=red][shake rate=20.0 level=5 connected=1]Guess who I'm going to devour first![/shake][/color]
 			=> base_convo
 		- I think I have everything we need. Let's do the ritual.
-			placeholder for action
+			do GameManager.start_ritual
 			=> base_convo
 		- I'll get back to work
 		=> items/room_translator
@@ -38,7 +105,7 @@ if PersistenceSystem.car_door_unlocked == true:
 			So, nothing. Got it.
 			=> items/room_translator
 		- I think I have everything we need. Let's do the ritual.
-			placeholder for action
+			do GameManager.start_ritual
 			=> base_convo
 		- I'll get back to work
 		=> items/room_translator
@@ -46,21 +113,26 @@ if PersistenceSystem.car_door_unlocked == true:
 ~ soul
 David: [color=red][shake rate=20.0 level=5 connected=1]I'll swallow your soul!![/shake][/color]
 Don't worry, David. We'll figure this out
-=> base_convo
+=> items/room_translator
 
 ~ mask
 David: [color=red][shake rate=20.0 level=5 connected=1]I'm going to carve off your face and wear it like a mask![/shake][/color]
 Mark: That would be an improvement.
 Lisa: MARK!
 Mark: What? I joke when I'm stressed!
-=> base_convo
+=> items/room_translator
 
 ~ murgle
 David: [color=red][shake rate=20.0 level=5 connected=1]MRUGLELRLGILRL[/shake][/color]
 I better solve this quickly
-=> base_convo
+=> items/room_translator
 
 ~ unhandled_item
-David: [color=red][shake rate=20.0 level=5 connected=1]I'll show you where you can shove that![/shake][/color]
-David doesn't want that
+% David: [color=red][shake rate=20.0 level=5 connected=1]I'll show you where you can shove that![/shake][/color]
+% David: [color=red][shake rate=20.0 level=5 connected=1]How cute! Did your mommy buy that for you!?[/shake][/color]
+% I'm not even going to try to hand that over
+=> items/room_translator
+
+~ kazoo
+David: [color=red][shake rate=20.0 level=5 connected=1]That's actually ... kind of neat.[/shake][/color]
 => items/room_translator

@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://b2kllhl8485ma"]
+[gd_scene load_steps=9 format=3 uid="uid://b2kllhl8485ma"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_8f0w4"]
 [ext_resource type="Texture2D" uid="uid://gr1cxq8rc5fl" path="res://Scenes/main_room.png" id="1_rv80l"]
@@ -8,10 +8,6 @@
 [ext_resource type="Resource" uid="uid://bvqfce8qh2w7f" path="res://Entities/Items/SafeNote.tres" id="7_npgyr"]
 [ext_resource type="Resource" uid="uid://bww6fvhg1rymp" path="res://Entities/Dialogues/david.dialogue" id="8_i8tm3"]
 [ext_resource type="Resource" uid="uid://dt44wpd33umol" path="res://Entities/Dialogues/mark.dialogue" id="8_j1c3a"]
-[ext_resource type="Resource" uid="uid://hfmjyqri2jqs" path="res://Entities/Items/Recipes/Booze_Open.tres" id="9_ckrp5"]
-[ext_resource type="Resource" uid="uid://cubghtmvbnoql" path="res://Entities/Items/PorkRinds.tres" id="10_kbeqg"]
-[ext_resource type="Resource" uid="uid://b62u7quc5dgun" path="res://Entities/Items/Recipes/LitCandles.tres" id="11_kbm1u"]
-[ext_resource type="Resource" uid="uid://bkyqqlymm73re" path="res://Entities/Items/LoadedTapePlayer.tres" id="12_k8xy6"]
 
 [node name="Foyer" type="Control"]
 layout_mode = 3
@@ -64,12 +60,6 @@ offset_bottom = 519.0
 mouse_default_cursor_shape = 2
 script = ExtResource("5_cbahj")
 dialogue_resource = ExtResource("8_i8tm3")
-item_titles = {
-ExtResource("9_ckrp5"): "submit_booze_open",
-ExtResource("10_kbeqg"): "submit_pork_rinds",
-ExtResource("11_kbm1u"): "submit_lit_candles",
-ExtResource("12_k8xy6"): "submit_loaded_tape_player"
-}
 
 [connection signal="gui_input" from="Background/Mark" to="Background/Mark" method="_on_gui_input"]
 [connection signal="gui_input" from="Background/Lisa" to="Background/Lisa" method="_on_gui_input"]
