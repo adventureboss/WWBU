@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://dcs0qoxjy8end"]
 
+[ext_resource type="Texture2D" uid="uid://b7usvyienbqor" path="res://Entities/Items/Art/note.png" id="1_7m5fw"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="1_244ji"]
-[ext_resource type="Texture2D" uid="uid://cyhmllast4ka3" path="res://icon.svg" id="1_owkfu"]
 
 [resource]
 script = ExtResource("1_244ji")
-Sprite = ExtResource("1_owkfu")
+Sprite = ExtResource("1_7m5fw")
 DisplayName = "Safe Note (Translated)"
 DialogueStart = "safe_note_translated"
