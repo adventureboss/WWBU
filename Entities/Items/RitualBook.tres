@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="Item" load_steps=3 format=3 uid="uid://d0wh0xrs7hkun"]
 
-[ext_resource type="Texture2D" uid="uid://bx6cirys6jems" path="res://Scenes/open_book.png" id="1_m0xf2"]
+[ext_resource type="Texture2D" uid="uid://cd2f7esnv46ga" path="res://Entities/Items/Art/evil_book.png" id="1_ctg1d"]
 [ext_resource type="Script" path="res://Entities/Items/item_resource.gd" id="2_fpkw4"]
 
 [resource]
 script = ExtResource("2_fpkw4")
-Sprite = ExtResource("1_m0xf2")
+Sprite = ExtResource("1_ctg1d")
 DisplayName = "Ritual Book"
 DialogueStart = "ritual_book"
