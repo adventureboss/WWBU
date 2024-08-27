@@ -1,0 +1,15 @@
+import "res://Entities/Dialogues/items.dialogue" as items
+
+~ start
+It's time to end this thing. Let's start dropping some items in here.
+	Looks like from the top down is step one through four. 
+	Good thing I have notes.
+=> items/room_translator
+
+~ any_item
+% Let's hope this is correct
+% I'm doing this for you, David
+% I should have made Mark do this
+% I'm reasonably confident that's correct
+% I hope I didn't forget anything
+=> items/room_translator

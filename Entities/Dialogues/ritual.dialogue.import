@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://byl4p1bxdrgdv"
+path="res://.godot/imported/ritual.dialogue-2628bfff8fd13bd27a96755f0215f077.tres"
+
+[deps]
+
+source_file="res://Entities/Dialogues/ritual.dialogue"
+dest_files=["res://.godot/imported/ritual.dialogue-2628bfff8fd13bd27a96755f0215f077.tres"]
+
+[params]
+
+defaults=true
