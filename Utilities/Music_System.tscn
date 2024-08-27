@@ -1,13 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://bykkdvr8mcnxw"]
+[gd_scene load_steps=7 format=3 uid="uid://bykkdvr8mcnxw"]
 
-[ext_resource type="AudioStream" uid="uid://cy72cmo3jgsnr" path="res://Entities/Audio/main_backgroud_loop.mp3" id="1_vqn8r"]
+[ext_resource type="AudioStream" uid="uid://kyxo0fneafsx" path="res://Entities/Audio/main_backgroud_loop.mp3" id="1_vqn8r"]
 [ext_resource type="Script" path="res://Utilities/music_system.gd" id="2_coawl"]
-[ext_resource type="AudioStream" uid="uid://cxj7th0yp070x" path="res://Entities/Audio/rain_background.mp3" id="3_8w7ps"]
+[ext_resource type="AudioStream" uid="uid://bytau8s34fghq" path="res://Entities/Audio/rain_background.mp3" id="3_8w7ps"]
+[ext_resource type="AudioStream" uid="uid://1g0awnmp2vnk" path="res://Entities/Audio/game_over.mp3" id="3_hunaa"]
+[ext_resource type="AudioStream" uid="uid://ebqkqqe0n1wu" path="res://Entities/Audio/good_ending_loop.mp3" id="4_au3mq"]
+[ext_resource type="AudioStream" uid="uid://cerjgd0rfkbnb" path="res://Entities/Audio/old_clock_bell.mp3" id="5_bxpb2"]
 
-[node name="MusicSystem" type="Node2D"]
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
-autoplay = true
+[node name="MusicSystem" type="Node2D" node_paths=PackedStringArray("dynamic_background_player", "chimes_player", "rain_player")]
 script = ExtResource("2_coawl")
 main_background_loop = ExtResource("1_vqn8r")
-rain_loop = ExtResource("3_8w7ps")
+bad_end_background_loop = ExtResource("3_hunaa")
+good_end_background_loop = ExtResource("4_au3mq")
+dynamic_background_player = NodePath("DynamicBackgroundPlayer")
+chimes_player = NodePath("ChimesPlayer")
+rain_player = NodePath("RainPlayer")
+
+[node name="DynamicBackgroundPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("1_vqn8r")
+parameters/looping = true
+
+[node name="RainPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_8w7ps")
+autoplay = true
+parameters/looping = true
+
+[node name="ChimesPlayer" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_bxpb2")
