@@ -1,7 +1,9 @@
 extends Node
 
-var dialogue_states: Array[String] = []
+var dialogue_states: Array[String] = [] # Set?
 
+func _ready() -> void:
+	TimeSystem.connect("out_of_time", out_of_time)
 func ritual_start():
 	var interface: Node = get_tree().get_first_node_in_group("interface")
 	var viewport = interface.get_node("UIContainer/RightUI/ViewUI/Room")
@@ -14,5 +16,8 @@ func set_dialogue_state(dialogue_flag: String):
 func get_dialogue_state(dialogue_flag: String):
 	return dialogue_states.has(dialogue_flag)
 
+func out_of_time():
+	dialogue_states.append("out_of_time")
+
 func clear():
-	pass
+	dialogue_states.clear()

@@ -24,6 +24,9 @@ func resume():
 func remaining_time_minutes() -> int:
 	return allowed_time_minutes - elapsed_whole_minutes
 
+func is_out_of_time() -> bool:
+	return remaining_time_minutes() <= 0
+
 func _handle_minute_passed():
 	elapsed_time_seconds = 0
 	elapsed_whole_minutes += 1

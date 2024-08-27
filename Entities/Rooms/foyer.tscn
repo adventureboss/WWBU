@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b2kllhl8485ma"]
+[gd_scene load_steps=11 format=3 uid="uid://b2kllhl8485ma"]
 
 [ext_resource type="Script" path="res://Entities/Rooms/rooms.gd" id="1_8f0w4"]
 [ext_resource type="Texture2D" uid="uid://gr1cxq8rc5fl" path="res://Scenes/main_room.png" id="1_rv80l"]
@@ -8,6 +8,8 @@
 [ext_resource type="Resource" uid="uid://bvqfce8qh2w7f" path="res://Entities/Items/SafeNote.tres" id="7_npgyr"]
 [ext_resource type="Resource" uid="uid://bww6fvhg1rymp" path="res://Entities/Dialogues/david.dialogue" id="8_i8tm3"]
 [ext_resource type="Resource" uid="uid://dt44wpd33umol" path="res://Entities/Dialogues/mark.dialogue" id="8_j1c3a"]
+[ext_resource type="Texture2D" uid="uid://ulp8lutmnbd7" path="res://Scenes/game_over.png" id="9_2phe1"]
+[ext_resource type="Script" path="res://Entities/Rooms/foyer.gd" id="9_b0gaw"]
 
 [node name="Foyer" type="Control"]
 layout_mode = 3
@@ -60,6 +62,18 @@ offset_bottom = 519.0
 mouse_default_cursor_shape = 2
 script = ExtResource("5_cbahj")
 dialogue_resource = ExtResource("8_i8tm3")
+
+[node name="Monster" type="TextureRect" parent="Background"]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+mouse_filter = 0
+texture = ExtResource("9_2phe1")
+
+[node name="Foyer" type="Node" parent="." node_paths=PackedStringArray("monster")]
+script = ExtResource("9_b0gaw")
+monster = NodePath("../Background/Monster")
 
 [connection signal="gui_input" from="Background/Mark" to="Background/Mark" method="_on_gui_input"]
 [connection signal="gui_input" from="Background/Lisa" to="Background/Lisa" method="_on_gui_input"]
