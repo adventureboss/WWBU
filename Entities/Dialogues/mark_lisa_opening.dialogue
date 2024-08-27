@@ -1,3 +1,5 @@
+import "res://Entities/Dialogues/items.dialogue" as items
+
 ~ start
 Lisa: "This is all your fault!! Scheiße! I told you opening that book was a stupid idea!!"
 Mark: "How could I have have known what was gonna happen??? It's not like it had 'dark rituals' plastered on the cover!"
@@ -9,7 +11,9 @@ Lisa looks away from Mark to glare at you eyes and face contorted by rage and fe
 
 Lisa: "Here!"
 
+do add_item(RITUAL_BOOK)
+
 She rifles through the book finding a loose page in the back that is surprisingly in english and shoves it into your hands
 
 Lisa: "This looks like the right ritual! Mark and I will stay here to look after David, Hurry!!"
-=> END
+=> items/room_translator

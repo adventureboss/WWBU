@@ -2,11 +2,9 @@ extends Node
 
 var dialogue_states: Array[String] = []
 
-@onready var interface: Node = get_tree().get_first_node_in_group("interface")
-@onready var viewport = interface.get_node("UIContainer/RightUI/ViewUI/Room")
-
-
 func ritual_start():
+	var interface: Node = get_tree().get_first_node_in_group("interface")
+	var viewport = interface.get_node("UIContainer/RightUI/ViewUI/Room")
 	var ritual_scene = preload("res://Entities/Rooms/ritual_scene.tscn").instantiate()
 	viewport.add_child(ritual_scene)
 	
