@@ -16,4 +16,5 @@ do add_item(RITUAL_BOOK)
 She rifles through the book finding a loose page in the back that is surprisingly in english and shoves it into your hands
 
 Lisa: "This looks like the right ritual! Mark and I will stay here to look after David, Hurry!!"
+set opening_dialogue_played = true
 => items/room_translator
