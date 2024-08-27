@@ -39,4 +39,6 @@ func change_room(button: RoomButton):
 
 func _on_car_opened():
 	car.modulate = Color(1.0, 1.0, 1.0, 1.0)
+	GameManager.set_dialogue_state("car_opened")
 	PersistenceSystem.car_door_unlocked = true
+	change_room(car)

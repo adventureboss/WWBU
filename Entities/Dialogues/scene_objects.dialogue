@@ -1,19 +1,16 @@
 import "res://Entities/Dialogues/items.dialogue" as items
 
-~ start
-if PersistenceSystem.found_keys == true:
-	The door is locked and the keys are on the very dangerous birthday boy
-	=> items/room_translator
-The door is locked and I don't know where the keys are
-=> items/room_translator
-
 ~ coat_hanger
-if PersistenceSystem.car_door_unlocked
-	=> car_opened
+if GameManager.get_dialogue_state("car_opened"):
+	% I've already opened the car. I don't need to do that again.
+	% As much as I enjoyed that, the clock is ticking.
+	=> items/room_translator
+do GameManager.set_dialogue_state("car_opened")
 do PersistenceSystem.car_opened.emit()
 do play_sound("jimmy_door")
 You jam the coat hanger into car door, trying to find the lock
 	After some fiddling, you get it to pop open.
+	
 => items/room_translator
 
 ~ oven
@@ -39,16 +36,26 @@ You light the stove and hold the candles over the flames. They light!
 % As much as I enjoyed that, the clock is ticking
 => items/room_translator
 
-~ no_car
-if PersistenceSystem.keys_found == true:
-	if PersistenceSystem.keys_reach_attempted == true:
-		David has the keys in his pocket, but there's no way I'm getting close to them.
-		=> items/room_translator
-	David has the keys. I guess I could ask him for them.
+
+~ car
+if GameManager.get_dialogue_state("car_opened") and not GameManager.get_dialogue_state("knows_about_keys"):
+	You opened the car without any help from anyone. Gold star!
 	=> items/room_translator
-I can't get in and I don't know where the keys are.
-Maybe Lisa or Mark knows.
-=> items/room_translator
+if GameManager.get_dialogue_state("car_opened") and not GameManager.get_dialogue_state("knows_about_keys"):
+	=> car_opened
+if GameManager.get_dialogue_state("knows_about_keys") and GameManager.get_dialogue_state("reached_for_keys"):
+	do GameManager.set_dialogue_state("car_ask_mark")
+	David has the keys in his pocket, but there's no way I'm getting close to them.
+	There must be some way to break in without forever wrecking the car.
+	Maybe Mark knows?
+	=> items/room_translator
+if GameManager.get_dialogue_state("knows_about_keys") and not GameManager.get_dialogue_state("reached_for_keys"):
+	David has the keys in his pocket. Maybe if I ask nicely he'll give them to me?
+	=> items/room_translator
+if not GameManager.get_dialogue_state("knows_about_keys"):
+	You pull the handle on the door, but the door doesn't open.
+		Locked! Maybe Lisa or Mark have the keys.
+	=> items/room_translator
 
 ~ safe_opened
 I aleady opened the safe and got the tape out. I don't need to do it again

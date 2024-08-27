@@ -79,6 +79,7 @@ dialogue_resource = ExtResource("8_5v7rf")
 item_titles = {
 ExtResource("9_7ayy0"): "coat_hanger"
 }
+dialogue_start = "car"
 
 [connection signal="pressed" from="TextureRect/Button" to="TextureRect/Button" method="_on_pressed"]
 [connection signal="gui_input" from="TextureRect/CarDoor" to="TextureRect/CarDoor" method="_on_gui_input"]

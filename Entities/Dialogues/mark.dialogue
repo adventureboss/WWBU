@@ -8,7 +8,12 @@ Mark: "I'm freaking out man... [b]I'M FREAKING OUT![b]"
 	do GameManager.set_dialogue_state("knows_about_keys")
 	Do you know where the keys are?
 	Mark: I think David has them.
+- Do you know how to get into the car? [if GameManager.get_dialogue_state("car_ask_mark")]
+	Mark: I've only ever watched my dad do it. He used a coat hanger.
+		You might be able to jimmy the lock with one of those, if you can find one.
+	=> items/room_translator
 - Nevermind
+	I gotta go figure this stuff out. You just relax.
 	=> items/room_translator
 => items/room_translator
 
