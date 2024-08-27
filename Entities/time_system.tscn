@@ -4,4 +4,4 @@
 
 [node name="TimeSystem" type="Node"]
 script = ExtResource("1_n0uof")
-allowed_time_minutes = 1
+allowed_time_minutes = 15
