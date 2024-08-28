@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://dtt2tjhe633no"]
+[gd_scene load_steps=9 format=3 uid="uid://c4hqenpdalbdv"]
 
 [ext_resource type="Texture2D" uid="uid://bms26s3qepqjn" path="res://Scenes/clock_scene.png" id="1_7kvy0"]
 [ext_resource type="Script" path="res://Entities/UI/clock_overlay.gd" id="1_acvlg"]
 [ext_resource type="Texture2D" uid="uid://sivvie54tv51" path="res://Entities/Items/Art/minute_hand.png" id="2_eoouj"]
 [ext_resource type="Texture2D" uid="uid://c1wvyc5uovt7r" path="res://Entities/Items/Art/hour_hand.png" id="3_1rcra"]
+[ext_resource type="Script" path="res://Entities/npc.gd" id="3_elngo"]
+[ext_resource type="Resource" uid="uid://b5dcvxjoelf8x" path="res://Entities/Dialogues/scene_objects.dialogue" id="4_daic8"]
 [ext_resource type="AudioStream" uid="uid://bthv5exd8hu1u" path="res://Entities/Audio/clock_ticking.mp3" id="5_jlnpx"]
+[ext_resource type="Resource" uid="uid://cvkka6hrkyvbw" path="res://Entities/Items/Kazoo.tres" id="5_xjv4h"]
 
 [node name="ClockFace" type="TextureRect" node_paths=PackedStringArray("minute_hand", "hour_hand")]
 offset_right = 40.0
@@ -13,6 +16,19 @@ texture = ExtResource("1_7kvy0")
 script = ExtResource("1_acvlg")
 minute_hand = NodePath("Hands/Minute")
 hour_hand = NodePath("Hands/Hour")
+
+[node name="NPC" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 245.0
+offset_top = 18.0
+offset_right = 721.0
+offset_bottom = 519.0
+script = ExtResource("3_elngo")
+dialogue_resource = ExtResource("4_daic8")
+item_titles = {
+ExtResource("5_xjv4h"): "clock_kazoo"
+}
+dialogue_start = "clock_kazoo"
 
 [node name="Hands" type="Control" parent="."]
 anchors_preset = 0

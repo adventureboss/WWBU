@@ -81,3 +81,16 @@ do PersistenceSystem.found_kazoo.emit()
 You cut the pillow with a knife because why not? 
 	Is that a kazoo?
 => items/room_translator
+
+~ clock_start
+Time is running out..
+=> items/room_translator
+
+~ clock_kazoo
+do play_sound("kazoo_music")
+You stare intently at the clock and play the kazoo.
+% Nothing happens.
+% Are you insane?
+% Is the pressure getting to you?
+
+=> items/room_translator
