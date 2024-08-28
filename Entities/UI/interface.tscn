@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://dlnnfto6a8v3l"]
+[gd_scene load_steps=20 format=3 uid="uid://dlnnfto6a8v3l"]
 
 [ext_resource type="Script" path="res://Utilities/game_start.gd" id="1_l8uv4"]
 [ext_resource type="Script" path="res://Entities/UI/inventory_ui.gd" id="1_ofw8k"]
@@ -12,6 +12,7 @@
 [ext_resource type="AudioStream" uid="uid://co2u1plquphwn" path="res://Entities/Audio/open_note_or_book.mp3" id="10_3y4jf"]
 [ext_resource type="AudioStream" uid="uid://omtpaceahpi4" path="res://Entities/Audio/lighting_candle.mp3" id="11_3g4m4"]
 [ext_resource type="AudioStream" uid="uid://bfuybm8wtve8" path="res://Entities/Audio/hanger_opens_car_door.mp3" id="12_t3vfb"]
+[ext_resource type="AudioStream" uid="uid://dqyi61ngmyr5s" path="res://Entities/Audio/kazoo.mp3" id="13_trfn6"]
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_6rnje"]
 shader = ExtResource("4_q3p0e")
@@ -243,6 +244,7 @@ text = "Response example"
 script = ExtResource("9_clay4")
 named_sfx = {
 "jimmy_door": ExtResource("12_t3vfb"),
+"kazoo_music": ExtResource("13_trfn6"),
 "light_candles": ExtResource("11_3g4m4"),
 "note_rustle": ExtResource("10_3y4jf")
 }
